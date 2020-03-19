@@ -1,0 +1,14 @@
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.Service.deps.json
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.Service.dll
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.Service.pdb
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.Common.dll
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.DataAccess.dll
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.Common.pdb
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/bin/Release/netcoreapp2.2/CoV.DataAccess.pdb
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.csprojAssemblyReference.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.csproj.CoreCompileInputs.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.AssemblyInfoInputs.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.AssemblyInfo.cs
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.csproj.CopyComplete
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.dll
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/Release/netcoreapp2.2/CoV.Service.pdb

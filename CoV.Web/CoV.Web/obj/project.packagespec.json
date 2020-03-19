@@ -1,0 +1,168 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/CoV.Web.csproj",
+    "projectName": "CoV.Web",
+    "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/CoV.Web.csproj",
+    "outputPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+            "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+          },
+          "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+            "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
+          },
+          "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/CoV.Service.csproj": {
+            "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/CoV.Service.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "AspNet.Core.SharePoint.Addin.Authentication": {
+          "target": "Package",
+          "version": "[0.0.0.2, )"
+        },
+        "AuthorizationMiddlewareExtension": {
+          "target": "Package",
+          "version": "[1.2.3, )"
+        },
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[9.0.0, )"
+        },
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[7.0.0, )"
+        },
+        "ClaimsCookie": {
+          "target": "Package",
+          "version": "[1.1.0, )"
+        },
+        "EcoLogic.ErrorHandlingMiddleware": {
+          "target": "Package",
+          "version": "[0.6.0, )"
+        },
+        "FluentValidation": {
+          "target": "Package",
+          "version": "[8.6.1, )"
+        },
+        "FluentValidation.AspNetCore": {
+          "target": "Package",
+          "version": "[8.6.1, )"
+        },
+        "FluentValidation.Mvc5": {
+          "target": "Package",
+          "version": "[8.6.1, )"
+        },
+        "GreenWhale.ApplicationDbContext": {
+          "target": "Package",
+          "version": "[1.0.3, )"
+        },
+        "Logger": {
+          "target": "Package",
+          "version": "[1.0.9.3, )"
+        },
+        "LoggerApplication": {
+          "target": "Package",
+          "version": "[2.1.2, )"
+        },
+        "Mappers": {
+          "target": "Package",
+          "version": "[1.6.0, )"
+        },
+        "Microsoft.AspNetCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Microsoft.AspNetCore.Authorization": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.CookiePolicy": {
+          "target": "Package",
+          "version": "[2.2.8, )"
+        },
+        "Microsoft.AspNetCore.MiddlewareAnalysis": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Razor.Design": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Logging.Console": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Logging.Debug": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Logging.EventSource": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Logging.TraceSource": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Moq": {
+          "target": "Package",
+          "version": "[4.13.1, )"
+        },
+        "Serilog.Extensions.Logging.File": {
+          "target": "Package",
+          "version": "[2.0.0-dev-00039, )"
+        },
+        "System.Security.Claims": {
+          "target": "Package",
+          "version": "[4.3.0, )"
+        },
+        "Useful.LoggerFactory.Log4net": {
+          "target": "Package",
+          "version": "[1.0.1, )"
+        },
+        "jquery.dataTables.TypeScript.DefinitelyTyped": {
+          "target": "Package",
+          "version": "[0.6.7, )"
+        },
+        "xunit": {
+          "target": "Package",
+          "version": "[2.4.1, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

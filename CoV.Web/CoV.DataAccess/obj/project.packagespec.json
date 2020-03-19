@@ -1,0 +1,51 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
+    "projectName": "CoV.DataAccess",
+    "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
+    "outputPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+            "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "Microsoft.EntityFrameworkCore.SqlServer": {
+          "target": "Package",
+          "version": "[2.2.4, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

@@ -1,0 +1,560 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>Trang Chủ</title>
+    <link rel="stylesheet" href="~/Frontend/css/template.css">
+    <link rel="stylesheet" href="~/Frontend/css/style.css">
+    <link rel="stylesheet" href="~/Frontend/css/owl.css">
+    <link rel="stylesheet" href="~/Frontend/css/font-icon.css">
+    <link rel="stylesheet" href="~/Frontend/css/font-arsenal.css">
+    <link rel="stylesheet" href="~/Frontend/css/animate.css">
+</head>
+<body>
+<header>
+	<div class="container p-0">
+		<div class="row align-items-center">
+
+			<div class="col-md-8">
+				<ul class="">
+					<li>
+						<a  asp-controller="Home"  asp-action="About" >
+							Giới thiệu
+						</a>
+					</li>
+					<li>
+						<a asp-action="Contact"  asp-controller="Home">
+							Liên hệ
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							Tin tức sự kiện
+						</a>
+					</li>
+							
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<ul class="justify-content-end">
+					<li>
+						<a asp-controller="Home" asp-action="Singin">
+							<i class="fas fa-sign-in-alt"></i>
+							Đăng nhập
+						</a>
+					</li>
+					<li>
+						<a asp-controller="Home" asp-action="SingUp">
+							<i class="fas fa-sign-out-alt"></i>
+							Đăng ký
+						</a>
+					</li>
+							
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+<nav class="main_menu" id="main_menu">
+			<div class="container p-0">
+				<div class="row align-items-center">
+					<div class="col-md-2">
+						<div class="logo">
+							<a asp-controller="Home" asp-action="Home">
+								<img src="~/Frontend/images/my-logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<ul class="ul_main">
+							<li class="active">
+								<a  asp-controller="Home" asp-action="Home">
+									TRANG CHỦ
+								</a>
+							</li>
+							<li>
+								<a asp-controller="Home" asp-action="Blog">
+									GIÀY NAM 
+								</a>
+								<ul class="ul_sub">
+									<li>
+										<a href="blog.html">Giày Cao Cổ</a>
+									</li>
+									<li>
+										<a href="blog.html">Giày da</a>
+									</li>
+									<li>
+										<a href="blog.html">Giày thể thao</a>
+									</li>
+								</ul>
+								
+							</li>
+							<li>
+								<a href="product.html">
+									GIÀY NỮ
+								</a>
+								<ul class="ul_sub">
+									<li>
+										<a href="product.html">Giày cao cổ</a>
+									</li>
+									<li>
+										<a href="product.html">Giày công sở</a>
+									</li>
+								</ul>
+								
+							</li>
+							<li>
+								<a href="product.html">
+									GIÀY TRẺ EM 
+								</a>
+								<ul class="ul_sub">
+									<li>
+										<a href="product.html">Đáng yêu</a>
+									</li>
+									<li>
+										<a href="product.html">Phong cách</a>
+									</li>
+								</ul>
+								
+							</li>
+							<li>
+								<a href="#">
+									GIÀY THỂ THAO 
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									GIÀY CÔNG SỞ
+								</a>
+							</li>
+							<li class="control_search">
+								<a href="javascript:void(0)">
+									<i class="fas fa-search"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="ul_main justify-content-end">
+							<li>
+								<a href="#">
+									<i class="far fa-heart"></i>
+								</a>
+							</li>
+							<li>
+								<a asp-controller="Home" asp-action="Cart">
+									<i class="fas fa-shopping-cart"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="search">
+					<div class="row justify-content-center">
+						<div class="col-md-12">
+							<form action="#" class="form-search">
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Tìm kiếm" />
+									<button class="btn-search" type="submit">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<nav class="main_menu" id="fixed_menu">
+			<div class="container p-0">
+				<div class="row align-items-center">
+					<div class="col-md-2">
+						<div class="logo">
+							<a href="index.html">
+								<img src="~/Frontend/images/my-logo.png" alt="">
+							</a>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<ul class="ul_main">
+							<li class="active">
+								<a href="index.html">
+									Trang Chủ
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Nam
+								</a>
+							</li>
+							<li>
+								<a href="blog.html">
+									Nữ
+								</a>
+								<ul class="ul_sub">
+									<li>
+										<a href="blog.html">Tin nhà đất</a>
+									</li>
+									<li>
+										<a href="blog.html">Tin nhà đất</a>
+									</li>
+									<li>
+										<a href="blog.html">Tin nhà đất</a>
+									</li>
+								</ul>
+								
+							</li>
+							<li>
+								<a href="product.html">
+									Bé trai
+								</a>
+								<ul class="ul_sub">
+									<li>
+										<a href="product.html">Nấm con cua</a>
+									</li>
+									<li>
+										<a href="product.html">Nấm con bò</a>
+									</li>
+								</ul>
+								
+							</li>
+							<li>
+								<a href="#">
+									Bé gái
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Công sở
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Thể thao
+								</a>
+							</li>
+							<li class="control_search">
+								<a href="javascript:void(0)">
+									<i class="fas fa-search"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+
+					<div class="col-md-2">
+						<ul class="ul_main justify-content-end">
+							<li>
+								<a href="#">
+									<i class="far fa-heart"></i>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fas fa-shopping-cart"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="search">
+					<div class="row justify-content-center">
+						<div class="col-md-12">
+							<form action="#" class="form-search">
+								<div class="form-group">
+									<input class="form-control" type="text" placeholder="Tìm kiếm" />
+									<button class="btn-search" type="submit">
+										<i class="fas fa-search"></i>
+									</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</nav>
+		
+		<section class="banner-top">
+			<div class="owl-carousel owl-theme" id="main_slide">
+				<div class="item">
+					<div class="banner">
+						<div class="img-banner">
+							<img src="~/Frontend/images/banner-top-01.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="banner">
+						<div class="img-banner">
+							<img src="~/Frontend/images/banner-top-02.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="banner">
+						<div class="img-banner">
+							<img src="~/Images/banner-6.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="banner">
+						<div class="img-banner">
+							<img src="~/Images/banner-5.jpg" alt="">
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+		
+@RenderBody()
+
+<footer class="footer">
+<div class="container p-0">
+<div class="top-footer">
+	<div class="row">
+		<div class="col-md-3">
+			<h3 class="title">
+				Trợ giúp
+			</h3>	
+			<div class="list-link">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Trạng thái đơn hàng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hình thức giao hàng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hình thức thanh toán
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Chính sách đổi trả
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Chính sách bảo hành
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Chính sách khách hàng thân thiết
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h3 class="title">
+				Thông tin
+			</h3>
+			<div class="list-link">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Tuyển Dụng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hệ thống cửa hàng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Liên hệ hợp tác
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Q&A
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h3 class="title">
+				Về chúng tôi
+			</h3>
+			<div class="list-link">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Về Bitis
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Câu chuyện Biti's
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Bước tiến phát triển
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hoạt Động
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Liên hệ
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h3 class="title">
+				Liên hệ với chúng tôi
+			</h3>
+			<div class="list-contact">
+				<ul>
+					<li>
+						<div class="icon">
+							<i class="fas fa-map-marker-alt"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								ADDRESS
+							</h4>
+							<div class="dt-txt">
+								Minh Khai - Bắc Từ Liêm - Hà Nội
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="icon">
+							<i class="fas fa-mobile"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								PHONE
+							</h4>
+							<div class="dt-txt">
+								0965319086 (24/7 Support Line)
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="icon">
+							<i class="fas fa-fax"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								FAX
+							</h4>
+							<div class="dt-txt">
+								(123) 123-4567
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="icon">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								EMAIL
+							</h4>
+							<div class="dt-txt">
+								Chuonghvc2901@gmail.com
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bot-footer">
+	<div class="row align-items-center justify-content-center">
+		<div class="col-md-4">
+			<ul class="list-ft">
+				<li>
+					<a href="#">
+						Điều khoản
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Chính sách bảo mật
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Hướng dẫn sử dụng
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+			<div class="img-ddk">
+				<img src="~/Frontend/images/Da-dang-ky-bo-cong-thuong.png" alt="">
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div>
+				Giấy CNĐKDN: 0301340497 được cấp ngày 20/01/1992,
+				được sửa đổi lần thứ 20 ngày 28/12/2015 bởi Sở Kế hoạch và Đầu tư TPHCM
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</footer>
+<button class="back-to-top">
+	<i class="fas fa-chevron-up"></i>
+</button>
+
+<button id="btn_to_form_book">
+	<i class="fas fa-share"></i>
+</button>
+
+
+<script src="~/Frontend/js/jquery.js"></script>
+<script src="~/Frontend/js/owl.js"></script>
+<script src="~/Frontend/js/app.js"></script>
+<script src="~/Frontend/js/wow.js"></script>
+<script>
+	new WOW().init();
+</script>
+@RenderSection("Scripts", required: false)
+</body>
+
+</html>

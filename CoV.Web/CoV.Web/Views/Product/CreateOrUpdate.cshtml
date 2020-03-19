@@ -1,0 +1,165 @@
+﻿@model CoV.Service.DataModel.ProductViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <form enctype="multipart/form-data"  asp-controller="Product" asp-action="CreateOrUpdate" method="post">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label >Tên sản phẩm </label>
+                            <input class="form-control" placeholder="....." required asp-for="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label >Mã sản phẩm</label>
+                            <input class="form-control" placeholder="....." asp-for="Sku">
+                        </div>
+
+                        <div class="form-group">
+                            <label >Giá sản phẩm</label>
+                            <input class="form-control" placeholder="....." min="0" asp-for="Price">
+                        </div>
+
+                        <div class="form-group">
+                            <label >Mô tả sản phẩm</label>
+                            <input class="form-control" placeholder="....." asp-for="Details">
+                        </div>
+
+                        <div class="form-group">
+                            <label >Kho nhập phẩm</label>
+                            <input class="form-control" placeholder="....." asp-for="AddressProduction">
+                        </div>
+
+                        <div class="form-group">
+                            <label >Số Lượng sản phẩm</label>
+                            <input class="form-control" placeholder="....." min="0" asp-for="Number">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label >Hãng sản phẩm</label>
+                            <select class="custom-select" asp-for="MakerProductId">
+
+                                @foreach (var item in Model.MakerProductViewModels)
+                                {
+                                    <option value="@item.Id">@item.MakerName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label >Trạng thái sản phẩm</label>
+                            <select class="custom-select" asp-for="StatusProductId">
+
+                                @foreach (var item in Model.StatusProductViewModels)
+                                {
+                                    <option value="@item.Id">@item.Status</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label >Màu sắc</label>
+                            <select class="custom-select" asp-for="ColorProductId">
+
+                                @foreach (var item in Model.ColorProductViewModels)
+                                {
+                                    <option value="@item.Id">@item.Color</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label >Giới tính </label>
+                            <select class="custom-select" asp-for="GenderProductId">
+
+                                @foreach (var item in Model.GenderViewModels)
+                                {
+                                    <option value="@item.Id">@item.GenderName</option>
+                                }
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label >Thể loại </label>
+                            <select class="custom-select" asp-for="CategoryProductId">
+
+                                @foreach (var item in Model.CategoryProductViewModels)
+                                {
+                                    <option value="@item.Id">@item.CategoryName</option>
+                                }
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label> Avatar</label>
+                            <div class="input-group ">
+                                <div class="custom-file">
+                                    <input id="imgInp" type="file" class="custom-file-input" id="validatedCustomFile" class="rounded-pill" asp-for="photoPath">
+                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                    <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div >
+                            <input class="custom-file-input" asp-for="AvatarDetails">
+                            <img id="blah" src="~/Images/@Model.AvatarDetails" alt="Responsive image" class="rounded-pill"/>
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-4">
+                        <div class="card-footer" style="text-align: center">
+                            <button type="submit" class="btn btn-primary">Tạo/Cập nhật sản phẩm </button>
+                        </div>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+               
+              
+            </div>
+        </form>
+    </div>
+    <div class="col-sm-7">
+
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+@section Scripts
+{
+    <script>
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#blah').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(input.files[0]);
+            }
+        };
+
+        $("#imgInp").change(function() {
+            readURL(this);
+        });
+    </script>
+}

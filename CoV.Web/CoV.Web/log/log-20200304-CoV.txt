@@ -1,0 +1,998 @@
+2020-03-04 09:39:20.380 +07:00 [Error] Login with account :admin
+2020-03-04 09:39:20.703 +07:00 [Error]  Error 404
+2020-03-04 09:39:32.628 +07:00 [Error]  Error 404
+2020-03-04 09:40:01.487 +07:00 [Error]  Error 404
+2020-03-04 09:40:04.492 +07:00 [Error]  Error 404
+2020-03-04 09:46:41.833 +07:00 [Error]  Error 404
+2020-03-04 09:48:40.108 +07:00 [Error]  Error 404
+2020-03-04 10:02:17.900 +07:00 [Error]  Error 404
+2020-03-04 10:02:39.550 +07:00 [Error]  Error 404
+2020-03-04 10:03:45.204 +07:00 [Error] Login with account :Admin
+2020-03-04 10:03:45.396 +07:00 [Error]  Error 404
+2020-03-04 10:05:13.790 +07:00 [Error]  Error 404
+2020-03-04 10:05:34.168 +07:00 [Error]  Error 404
+2020-03-04 10:05:54.302 +07:00 [Error]  Error 404
+2020-03-04 10:06:13.289 +07:00 [Error]  Error 404
+2020-03-04 10:06:58.760 +07:00 [Error]  Error 404
+2020-03-04 10:07:54.954 +07:00 [Error]  Error 404
+2020-03-04 10:08:01.453 +07:00 [Error]  Error 404
+2020-03-04 10:09:02.455 +07:00 [Error]  Error 404
+2020-03-04 10:10:26.975 +07:00 [Error]  Error 404
+2020-03-04 10:11:03.401 +07:00 [Error]  Error 404
+2020-03-04 10:11:11.652 +07:00 [Error]  Error 404
+2020-03-04 10:12:14.147 +07:00 [Error]  Error 404
+2020-03-04 10:12:23.597 +07:00 [Error] Failed executing DbCommand ("76"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [x].[Id], [x].[AddressProduction], [x].[AvatarDetails], [x].[CategoryProductId], [x].[ColorProductId], [x].[Details], [x].[FirstDate], [x].[GenderProductId], [x].[MakerProductId], [x].[Number], [x].[Price], [x].[Sku], [x].[StatusProductId], [x].[name], [x.StatusProduct].[Id], [x.StatusProduct].[status], [x.MakerProduct].[Id], [x.MakerProduct].[MakerName], [x.CategoryProduct].[Id], [x.CategoryProduct].[CategoryName], [x.ColorProduct].[Id], [x.ColorProduct].[Color], [x.Gender].[Id], [x.Gender].[GenderName]
+FROM [Product] AS [x]
+INNER JOIN [StatusProduct] AS [x.StatusProduct] ON [x].[StatusProductId] = [x.StatusProduct].[Id]
+INNER JOIN [MakerProduct] AS [x.MakerProduct] ON [x].[MakerProductId] = [x.MakerProduct].[Id]
+INNER JOIN [CategoryProduct] AS [x.CategoryProduct] ON [x].[CategoryProductId] = [x.CategoryProduct].[Id]
+INNER JOIN [ColorProduct] AS [x.ColorProduct] ON [x].[ColorProductId] = [x.ColorProduct].[Id]
+INNER JOIN [Gender] AS [x.Gender] ON [x].[GenderProductId] = [x.Gender].[Id]"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:ec53a3bb-cb3c-4187-a6b9-4f0c878d4873
+Error Number:208,State:1,Class:16
+2020-03-04 10:12:23.745 +07:00 [Error] An exception occurred while iterating over the results of a query for context type '"CoV.DataAccess.Data.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:ec53a3bb-cb3c-4187-a6b9-4f0c878d4873
+Error Number:208,State:1,Class:16"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:ec53a3bb-cb3c-4187-a6b9-4f0c878d4873
+Error Number:208,State:1,Class:16
+2020-03-04 10:12:23.943 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at System.Linq.Enumerable.SelectEnumerableIterator`2.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at CoV.Service.Service.ProductService.GetAll() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 68
+   at CoV.Web.Controllers.ProductController.GetAll() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/ProductController/ProductController.cs:line 22
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:ec53a3bb-cb3c-4187-a6b9-4f0c878d4873
+Error Number:208,State:1,Class:16
+2020-03-04 10:14:00.627 +07:00 [Error]  Error 404
+2020-03-04 10:14:10.298 +07:00 [Error]  Error 404
+2020-03-04 10:14:10.299 +07:00 [Error]  Error 404
+2020-03-04 10:25:48.141 +07:00 [Error] Login with account :Admin
+2020-03-04 10:25:48.846 +07:00 [Error]  Error 404
+2020-03-04 10:26:58.957 +07:00 [Error]  Error 404
+2020-03-04 10:29:07.978 +07:00 [Error]  Error 404
+2020-03-04 10:30:12.227 +07:00 [Error]  Error 404
+2020-03-04 10:30:46.591 +07:00 [Error]  Error 404
+2020-03-04 10:31:07.419 +07:00 [Error]  Error 404
+2020-03-04 10:31:40.867 +07:00 [Error]  Error 404
+2020-03-04 10:32:17.240 +07:00 [Error]  Error 404
+2020-03-04 10:32:33.579 +07:00 [Error]  Error 404
+2020-03-04 10:32:36.252 +07:00 [Error]  Error 404
+2020-03-04 10:32:44.742 +07:00 [Error]  Error 404
+2020-03-04 10:32:47.344 +07:00 [Error]  Error 404
+2020-03-04 10:33:15.654 +07:00 [Error]  Error 404
+2020-03-04 10:33:26.671 +07:00 [Error] Failed executing DbCommand ("25"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[MakerName]
+FROM [MakerProduct] AS [m]"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:33:26.748 +07:00 [Error] An exception occurred while iterating over the results of a query for context type '"CoV.DataAccess.Data.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:33:26.962 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at CoV.Service.Repository.GenericRepository`1.GetAll() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Repository/GenericRepository.cs:line 67
+   at CoV.Service.Service.ProductService.GetById(Int32 id) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 108
+   at CoV.Web.Controllers.ProductController.CreateOrUpdate(Int32 Id) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/ProductController/ProductController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:33:29.392 +07:00 [Error]  Error 404
+2020-03-04 10:33:34.841 +07:00 [Error] Failed executing DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[MakerName]
+FROM [MakerProduct] AS [m]"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:33:34.845 +07:00 [Error] An exception occurred while iterating over the results of a query for context type '"CoV.DataAccess.Data.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:33:34.853 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at CoV.Service.Repository.GenericRepository`1.GetAll() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Repository/GenericRepository.cs:line 67
+   at CoV.Service.Service.ProductService.GetById(Int32 id) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 108
+   at CoV.Web.Controllers.ProductController.CreateOrUpdate(Int32 Id) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/ProductController/ProductController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:34:54.006 +07:00 [Error]  Error 404
+2020-03-04 10:35:20.507 +07:00 [Error]  Error 404
+2020-03-04 10:35:59.700 +07:00 [Error]  Error 404
+2020-03-04 10:36:42.778 +07:00 [Error]  Error 404
+2020-03-04 10:37:56.024 +07:00 [Error] Failed executing DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT [m].[Id], [m].[MakerName]
+FROM [MakerProduct] AS [m]"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:37:56.032 +07:00 [Error] An exception occurred while iterating over the results of a query for context type '"CoV.DataAccess.Data.AppDbContext"'."
+""System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16"
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:37:56.040 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.Data.SqlClient.SqlException (0x80131904): Invalid object name 'MakerProduct'.
+   at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.ExecuteReader()
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.Execute(IRelationalConnection connection, DbCommandMethod executeMethod, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Storage.Internal.RelationalCommand.ExecuteReader(IRelationalConnection connection, IReadOnlyDictionary`2 parameterValues)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.BufferlessMoveNext(DbContext _, Boolean buffer)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.Execute[TState,TResult](TState state, Func`3 operation, Func`3 verifySucceeded)
+   at Microsoft.EntityFrameworkCore.Query.Internal.QueryingEnumerable`1.Enumerator.MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider._TrackEntities[TOut,TIn](IEnumerable`1 results, QueryContext queryContext, IList`1 entityTrackingInfos, IList`1 entityAccessors)+MoveNext()
+   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()
+   at System.Collections.Generic.List`1.AddEnumerable(IEnumerable`1 enumerable)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at CoV.Service.Repository.GenericRepository`1.GetAll() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Repository/GenericRepository.cs:line 67
+   at CoV.Service.Service.ProductService.GetById(Int32 id) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 108
+   at CoV.Web.Controllers.ProductController.CreateOrUpdate(Int32 Id) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/ProductController/ProductController.cs:line 35
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+ClientConnectionId:fc09f590-4b78-4c09-8b4d-ae99ef94aabf
+Error Number:208,State:1,Class:16
+2020-03-04 10:37:58.756 +07:00 [Error]  Error 404
+2020-03-04 10:42:15.454 +07:00 [Error]  Error 404
+2020-03-04 10:42:20.725 +07:00 [Error] Login with account :Admin
+2020-03-04 10:42:20.795 +07:00 [Error]  Error 404
+2020-03-04 10:43:59.076 +07:00 [Error] Login with account :Admin
+2020-03-04 10:43:59.806 +07:00 [Error]  Error 404
+2020-03-04 10:44:19.344 +07:00 [Error]  Error 404
+2020-03-04 10:44:26.225 +07:00 [Error]  Error 404
+2020-03-04 10:44:46.184 +07:00 [Error]  Error 404
+2020-03-04 10:44:48.193 +07:00 [Error]  Error 404
+2020-03-04 10:45:29.412 +07:00 [Error]  Error 404
+2020-03-04 10:45:33.093 +07:00 [Error]  Error 404
+2020-03-04 10:45:59.310 +07:00 [Error]  Error 404
+2020-03-04 10:46:04.988 +07:00 [Error]  Error 404
+2020-03-04 10:46:20.561 +07:00 [Error]  Error 404
+2020-03-04 10:47:04.476 +07:00 [Error]  Error 404
+2020-03-04 10:47:50.852 +07:00 [Error]  Error 404
+2020-03-04 10:47:59.988 +07:00 [Error]  Error 404
+2020-03-04 10:48:17.841 +07:00 [Error]  Error 404
+2020-03-04 10:48:48.378 +07:00 [Error]  Error 404
+2020-03-04 10:49:13.812 +07:00 [Error]  Error 404
+2020-03-04 10:49:30.656 +07:00 [Error]  Error 404
+2020-03-04 10:49:47.159 +07:00 [Error]  Error 404
+2020-03-04 10:51:01.150 +07:00 [Error]  Error 404
+2020-03-04 11:00:47.379 +07:00 [Error]  Error 404
+2020-03-04 11:01:10.597 +07:00 [Error]  Error 404
+2020-03-04 11:02:39.828 +07:00 [Error]  Error 404
+2020-03-04 11:03:56.550 +07:00 [Error]  Error 404
+2020-03-04 11:04:20.437 +07:00 [Error]  Error 404
+2020-03-04 11:04:44.021 +07:00 [Error]  Error 404
+2020-03-04 11:05:21.260 +07:00 [Error]  Error 404
+2020-03-04 11:05:46.327 +07:00 [Error]  Error 404
+2020-03-04 11:06:03.204 +07:00 [Error]  Error 404
+2020-03-04 11:08:25.374 +07:00 [Error]  Error 404
+2020-03-04 11:10:06.438 +07:00 [Error]  Error 404
+2020-03-04 11:10:38.699 +07:00 [Error]  Error 404
+2020-03-04 11:11:55.836 +07:00 [Error]  Error 404
+2020-03-04 11:12:15.718 +07:00 [Error]  Error 404
+2020-03-04 11:12:45.937 +07:00 [Error]  Error 404
+2020-03-04 11:13:07.310 +07:00 [Error]  Error 404
+2020-03-04 11:13:55.290 +07:00 [Error]  Error 404
+2020-03-04 11:14:52.362 +07:00 [Error]  Error 404
+2020-03-04 11:15:02.186 +07:00 [Error]  Error 404
+2020-03-04 11:15:22.484 +07:00 [Error]  Error 404
+2020-03-04 11:15:39.213 +07:00 [Error]  Error 404
+2020-03-04 11:15:46.866 +07:00 [Error]  Error 404
+2020-03-04 11:16:04.462 +07:00 [Error]  Error 404
+2020-03-04 11:17:54.961 +07:00 [Error]  Error 404
+2020-03-04 11:18:22.209 +07:00 [Error]  Error 404
+2020-03-04 11:19:01.501 +07:00 [Error]  Error 404
+2020-03-04 11:19:30.395 +07:00 [Error]  Error 404
+2020-03-04 11:21:08.738 +07:00 [Error]  Error 404
+2020-03-04 11:21:39.590 +07:00 [Error]  Error 404
+2020-03-04 11:21:45.030 +07:00 [Error]  Error 404
+2020-03-04 11:22:15.592 +07:00 [Error]  Error 404
+2020-03-04 11:22:18.190 +07:00 [Error]  Error 404
+2020-03-04 11:22:29.850 +07:00 [Error]  Error 404
+2020-03-04 11:22:40.189 +07:00 [Error]  Error 404
+2020-03-04 11:23:11.196 +07:00 [Error]  Error 404
+2020-03-04 11:27:03.076 +07:00 [Error]  Error 404
+2020-03-04 11:28:21.625 +07:00 [Error]  Error 404
+2020-03-04 11:28:49.632 +07:00 [Error]  Error 404
+2020-03-04 11:29:14.916 +07:00 [Error]  Error 404
+2020-03-04 11:29:30.899 +07:00 [Error]  Error 404
+2020-03-04 11:30:14.029 +07:00 [Error]  Error 404
+2020-03-04 11:30:19.002 +07:00 [Error]  Error 404
+2020-03-04 11:30:25.455 +07:00 [Error]  Error 404
+2020-03-04 11:30:28.103 +07:00 [Error]  Error 404
+2020-03-04 11:30:32.197 +07:00 [Error]  Error 404
+2020-03-04 11:30:36.128 +07:00 [Error]  Error 404
+2020-03-04 11:31:58.095 +07:00 [Error]  Error 404
+2020-03-04 11:32:50.245 +07:00 [Error]  Error 404
+2020-03-04 11:32:52.658 +07:00 [Error]  Error 404
+2020-03-04 11:34:05.735 +07:00 [Error]  Error 404
+2020-03-04 11:34:08.293 +07:00 [Error]  Error 404
+2020-03-04 11:34:47.269 +07:00 [Error]  Error 404
+2020-03-04 11:34:51.719 +07:00 [Error]  Error 404
+2020-03-04 11:37:25.525 +07:00 [Error]  Error 404
+2020-03-04 11:39:14.326 +07:00 [Error]  Error 404
+2020-03-04 11:39:38.701 +07:00 [Error]  Error 404
+2020-03-04 11:39:56.806 +07:00 [Error]  Error 404
+2020-03-04 11:41:20.045 +07:00 [Error]  Error 404
+2020-03-04 11:42:15.429 +07:00 [Error]  Error 404
+2020-03-04 11:42:20.437 +07:00 [Error]  Error 404
+2020-03-04 11:43:13.357 +07:00 [Error]  Error 404
+2020-03-04 11:43:22.570 +07:00 [Error]  Error 404
+2020-03-04 11:44:21.242 +07:00 [Error]  Error 404
+2020-03-04 11:45:07.109 +07:00 [Error]  Error 404
+2020-03-04 11:45:34.174 +07:00 [Error]  Error 404
+2020-03-04 11:45:38.782 +07:00 [Error]  Error 404
+2020-03-04 11:46:21.293 +07:00 [Error]  Error 404
+2020-03-04 11:47:27.502 +07:00 [Error]  Error 404
+2020-03-04 11:47:38.263 +07:00 [Error]  Error 404
+2020-03-04 11:47:43.492 +07:00 [Error]  Error 404
+2020-03-04 11:48:42.980 +07:00 [Error]  Error 404
+2020-03-04 11:49:19.004 +07:00 [Error] Login with account :Admin
+2020-03-04 11:49:19.166 +07:00 [Error]  Error 404
+2020-03-04 11:49:58.298 +07:00 [Error]  Error 404
+2020-03-04 11:50:05.153 +07:00 [Error]  Error 404
+2020-03-04 11:50:19.174 +07:00 [Error]  Error 404
+2020-03-04 11:50:44.536 +07:00 [Error]  Error 404
+2020-03-04 11:50:49.170 +07:00 [Error]  Error 404
+2020-03-04 11:51:02.811 +07:00 [Error]  Error 404
+2020-03-04 11:52:07.601 +07:00 [Error]  Error 404
+2020-03-04 11:52:09.757 +07:00 [Error]  Error 404
+2020-03-04 13:02:33.697 +07:00 [Error]  Error 404
+2020-03-04 13:03:30.768 +07:00 [Error]  Error 404
+2020-03-04 13:04:14.347 +07:00 [Error]  Error 404
+2020-03-04 13:05:52.695 +07:00 [Error]  Error 404
+2020-03-04 13:06:19.929 +07:00 [Error]  Error 404
+2020-03-04 13:06:22.734 +07:00 [Error]  Error 404
+2020-03-04 13:07:14.754 +07:00 [Error]  Error 404
+2020-03-04 13:07:31.310 +07:00 [Error]  Error 404
+2020-03-04 13:07:39.454 +07:00 [Error]  Error 404
+2020-03-04 13:07:48.787 +07:00 [Error]  Error 404
+2020-03-04 13:08:07.387 +07:00 [Error]  Error 404
+2020-03-04 13:08:18.231 +07:00 [Error]  Error 404
+2020-03-04 13:08:53.340 +07:00 [Error]  Error 404
+2020-03-04 13:09:15.743 +07:00 [Error]  Error 404
+2020-03-04 13:09:31.777 +07:00 [Error]  Error 404
+2020-03-04 13:09:39.415 +07:00 [Error]  Error 404
+2020-03-04 13:10:00.945 +07:00 [Error]  Error 404
+2020-03-04 13:10:18.153 +07:00 [Error]  Error 404
+2020-03-04 13:11:20.513 +07:00 [Error]  Error 404
+2020-03-04 13:11:30.496 +07:00 [Error]  Error 404
+2020-03-04 13:11:33.460 +07:00 [Error]  Error 404
+2020-03-04 13:11:56.926 +07:00 [Error]  Error 404
+2020-03-04 13:16:29.988 +07:00 [Error]  Error 404
+2020-03-04 13:16:33.030 +07:00 [Error]  Error 404
+2020-03-04 13:17:18.595 +07:00 [Error]  Error 404
+2020-03-04 13:17:30.953 +07:00 [Error]  Error 404
+2020-03-04 13:18:14.035 +07:00 [Error]  Error 404
+2020-03-04 13:18:54.245 +07:00 [Error]  Error 404
+2020-03-04 13:43:41.084 +07:00 [Error] Login with account :Admin
+2020-03-04 14:38:12.030 +07:00 [Error] Login with account :Admin
+2020-03-04 15:28:38.836 +07:00 [Error] Login with account :Admin
+2020-03-04 15:28:43.397 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'CoV.Service.Service.ProductService' while attempting to activate 'CoV.Web.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 15:34:02.017 +07:00 [Error] Login with account :Admin
+2020-03-04 15:34:12.535 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'CoV.Service.Service.ProductService' while attempting to activate 'CoV.Web.Controllers.HomeController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass4_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass5_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 15:37:37.901 +07:00 [Error] Login with account :Admin
+2020-03-04 15:37:42.052 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+List`1 -> ProductViewModel
+System.Collections.Generic.List`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] -> CoV.Service.DataModel.ProductViewModel
+   at lambda_method(Closure , List`1 , ProductViewModel , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 35
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 192
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 15:43:31.148 +07:00 [Error] Login with account :Admin
+2020-03-04 15:43:34.417 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] -> System.Collections.Generic.IEnumerable`1[[CoV.Service.DataModel.ProductViewModel, CoV.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Boolean -> ProductViewModel
+System.Boolean -> CoV.Service.DataModel.ProductViewModel
+   at lambda_method(Closure , Boolean , ProductViewModel , ResolutionContext )
+   at lambda_method(Closure , List`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , IEnumerable`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 35
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 191
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 15:49:03.469 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] -> System.Collections.Generic.IEnumerable`1[[CoV.Service.DataModel.ProductViewModel, CoV.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Boolean -> ProductViewModel
+System.Boolean -> CoV.Service.DataModel.ProductViewModel
+   at lambda_method(Closure , Boolean , ProductViewModel , ResolutionContext )
+   at AutoMapper.Mapper.Map[TSource,TDestination](TSource source, TDestination destination, ResolutionContext context, IMemberMap memberMap) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 198
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination, IMemberMap memberMap) in C:\projects\automapper\src\AutoMapper\ResolutionContext.cs:line 203
+   at lambda_method(Closure , List`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , IEnumerable`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 37
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 191
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 15:49:03.469 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+List`1 -> IEnumerable`1
+System.Collections.Generic.List`1[[System.Boolean, System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]] -> System.Collections.Generic.IEnumerable`1[[CoV.Service.DataModel.ProductViewModel, CoV.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> AutoMapper.AutoMapperMappingException: Missing type map configuration or unsupported mapping.
+
+Mapping types:
+Boolean -> ProductViewModel
+System.Boolean -> CoV.Service.DataModel.ProductViewModel
+   at lambda_method(Closure , Boolean , ProductViewModel , ResolutionContext )
+   at AutoMapper.Mapper.Map[TSource,TDestination](TSource source, TDestination destination, ResolutionContext context, IMemberMap memberMap) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 198
+   at AutoMapper.ResolutionContext.Map[TSource,TDestination](TSource source, TDestination destination, IMemberMap memberMap) in C:\projects\automapper\src\AutoMapper\ResolutionContext.cs:line 203
+   at lambda_method(Closure , List`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , List`1 , IEnumerable`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 37
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 191
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 16:07:01.296 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+WhereListIterator`1 -> IEnumerable`1
+System.Linq.Enumerable+WhereListIterator`1[[CoV.DataAccess.Data.Product, CoV.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[CoV.Service.DataModel.ProductViewModel, CoV.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Service.Service.ProductService.<>c.<GetListShoesFemale>b__8_0(Product x) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 190
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at lambda_method(Closure , WhereListIterator`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , WhereListIterator`1 , IEnumerable`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 35
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 191
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 16:07:01.296 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+WhereListIterator`1 -> IEnumerable`1
+System.Linq.Enumerable+WhereListIterator`1[[CoV.DataAccess.Data.Product, CoV.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[CoV.Service.DataModel.ProductViewModel, CoV.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Service.Service.ProductService.<>c.<GetListShoesFemale>b__8_0(Product x) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 190
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at lambda_method(Closure , WhereListIterator`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , WhereListIterator`1 , IEnumerable`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 35
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 191
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 16:07:41.942 +07:00 [Error] An unhandled exception has occurred while executing the request.
+AutoMapper.AutoMapperMappingException: Error mapping types.
+
+Mapping types:
+WhereListIterator`1 -> IEnumerable`1
+System.Linq.Enumerable+WhereListIterator`1[[CoV.DataAccess.Data.Product, CoV.DataAccess, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] -> System.Collections.Generic.IEnumerable`1[[CoV.Service.DataModel.ProductViewModel, CoV.Service, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] ---> System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Service.Service.ProductService.<>c.<GetListShoesFemale>b__8_0(Product x) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 190
+   at System.Linq.Enumerable.WhereListIterator`1.MoveNext()
+   at lambda_method(Closure , WhereListIterator`1 , IEnumerable`1 , ResolutionContext )
+   --- End of inner exception stack trace ---
+   at lambda_method(Closure , WhereListIterator`1 , IEnumerable`1 , ResolutionContext )
+   at lambda_method(Closure , Object , Object , ResolutionContext )
+   at AutoMapper.Mapper.Map[TDestination](Object source) in C:\projects\automapper\src\AutoMapper\Mapper.cs:line 35
+   at CoV.Service.Service.ProductService.GetListShoesFemale() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/Service/ProductService/ProductService.cs:line 191
+   at CoV.Web.Controllers.HomeController.Home() in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Controllers/HomeController.cs:line 19
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 17:35:41.286 +07:00 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.AspNetCore.Mvc.Razor.Compilation.CompilationFailedException: One or more compilation failures occurred:
+/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Views/Home/Home.cshtml(57,1): Error RZ1031: The tag helper 'img' must not have C# in the element's attribute declaration area.
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.CompileAndEmit(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.RazorViewCompiler.OnCacheMiss(String normalizedPath)
+--- End of stack trace from previous location where exception was thrown ---
+   at Microsoft.AspNetCore.Mvc.Razor.Internal.DefaultRazorPageFactoryProvider.CreateFactory(String relativePath)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.CreateCacheResult(HashSet`1 expirationTokens, String relativePath, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.OnCacheMiss(ViewLocationExpanderContext expanderContext, ViewLocationCacheKey cacheKey)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.LocatePageFromViewLocations(ActionContext actionContext, String pageName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewEngines.CompositeViewEngine.FindView(ActionContext context, String viewName, Boolean isMainPage)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.FindView(ActionContext actionContext, ViewResult viewResult)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-04 17:44:31.508 +07:00 [Error]  Error 404
+2020-03-04 17:45:04.684 +07:00 [Error]  Error 404
+2020-03-04 17:45:04.755 +07:00 [Error]  Error 404
+2020-03-04 17:45:05.410 +07:00 [Error]  Error 404
+2020-03-04 17:47:54.337 +07:00 [Error]  Error 404
+2020-03-04 17:48:54.571 +07:00 [Error]  Error 404
+2020-03-04 17:49:46.444 +07:00 [Error]  Error 404
+2020-03-04 17:50:06.225 +07:00 [Error]  Error 404
+2020-03-04 17:50:14.974 +07:00 [Error]  Error 404
+2020-03-04 17:50:47.756 +07:00 [Error]  Error 404
+2020-03-04 17:56:05.956 +07:00 [Error] Login with account :Admin
+2020-03-04 23:44:04.901 +07:00 [Error] login with acoount not pound
+2020-03-04 23:44:13.450 +07:00 [Error] Login with account :Admin

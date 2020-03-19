@@ -1,0 +1,21 @@
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
+WORKDIR /app   #Point out the working directory inside the image is the app folder, this is the folder inside the Image.
+
+
+# Copy csproj and restore as distinct layers
+COPY *.sln .
+COPY CoV.Web./*csproj ./CoV.Web/
+RUN dotnet restore
+
+# Copy everything else and build
+COPY CoV.Web./ ./CoV.Web/
+WORKDIR /app/CoV.Web 
+RUN dotnet publish -c Release -o out
+
+# Build runtime image
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
+WORKDIR /app
+COPY published /app/CoV.Web.dll ./
+ENTRYPOINT ["dotnet", "CoV.Web.dll"]
+
+

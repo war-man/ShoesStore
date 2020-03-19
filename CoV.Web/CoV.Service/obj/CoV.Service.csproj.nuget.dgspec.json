@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj": {}
+  },
+  "projects": {
+    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
+        "projectName": "CoV.Common",
+        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
+        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
+        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[8.6.1, )"
+            },
+            "Kore.Providers.Messages.Resource": {
+              "target": "Package",
+              "version": "[1.1.2, )"
+            },
+            "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Http.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Localization": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.TagHelpers": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Localization.Abstractions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
+        "projectName": "CoV.DataAccess",
+        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
+        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
+        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[2.2.4, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
+    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+        "projectName": "CoV.Service",
+        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
+        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {
+              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+              },
+              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Mappers": {
+              "target": "Package",
+              "version": "[1.6.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.9.1-dev-01154, )"
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}

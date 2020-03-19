@@ -1,0 +1,360 @@
+2020-03-18 00:09:26.352 +07:00 [Error]  Error 404
+2020-03-18 00:11:19.874 +07:00 [Error]  Error 404
+2020-03-18 00:11:39.662 +07:00 [Error]  Error 404
+2020-03-18 00:13:17.273 +07:00 [Error]  Error 404
+2020-03-18 00:13:26.018 +07:00 [Error]  Error 404
+2020-03-18 00:13:41.400 +07:00 [Error]  Error 404
+2020-03-18 00:15:33.288 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_ProductDetail.ExecuteAsync() in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Views/Home/ProductDetail.cshtml:line 25
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-18 00:16:34.705 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_ProductDetail.ExecuteAsync() in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Views/Home/ProductDetail.cshtml:line 25
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-18 00:16:39.103 +07:00 [Error]  Error 404
+2020-03-18 00:17:15.383 +07:00 [Error]  Error 404
+2020-03-18 00:22:16.936 +07:00 [Error] Login with account :admin
+2020-03-18 01:00:55.830 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.838 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.843 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.892 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.893 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.895 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.971 +07:00 [Error]  Error 404
+2020-03-18 01:00:55.974 +07:00 [Error]  Error 404
+2020-03-18 01:00:56.064 +07:00 [Error]  Error 404
+2020-03-18 01:00:56.104 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.143 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.149 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.151 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.187 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.187 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.189 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.189 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.206 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.245 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.297 +07:00 [Error]  Error 404
+2020-03-18 01:02:09.308 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.316 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.340 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.344 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.377 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.380 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.396 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.397 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.398 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.420 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.523 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.554 +07:00 [Error]  Error 404
+2020-03-18 01:02:20.578 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.748 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.750 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.750 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.765 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.778 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.780 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.799 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.852 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.883 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.899 +07:00 [Error]  Error 404
+2020-03-18 01:02:28.914 +07:00 [Error]  Error 404
+2020-03-18 01:02:55.978 +07:00 [Error]  Error 404
+2020-03-18 01:02:55.980 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.003 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.003 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.004 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.006 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.009 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.065 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.108 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.141 +07:00 [Error]  Error 404
+2020-03-18 01:02:56.174 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.650 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.651 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.653 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.658 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.661 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.671 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.675 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.719 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.775 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.809 +07:00 [Error]  Error 404
+2020-03-18 01:03:08.826 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.816 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.819 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.847 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.853 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.859 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.872 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.873 +07:00 [Error]  Error 404
+2020-03-18 01:03:52.947 +07:00 [Error]  Error 404
+2020-03-18 01:04:01.695 +07:00 [Error]  Error 404
+2020-03-18 01:04:01.700 +07:00 [Error]  Error 404
+2020-03-18 01:05:55.967 +07:00 [Error]  Error 404
+2020-03-18 01:05:55.975 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.022 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.036 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.040 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.058 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.059 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.101 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.116 +07:00 [Error]  Error 404
+2020-03-18 01:05:56.128 +07:00 [Error]  Error 404
+2020-03-18 01:06:00.903 +07:00 [Error]  Error 404
+2020-03-18 01:06:00.904 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.598 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.615 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.647 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.688 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.698 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.707 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.708 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.857 +07:00 [Error]  Error 404
+2020-03-18 01:06:58.873 +07:00 [Error]  Error 404
+2020-03-18 01:07:10.064 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.425 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.448 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.455 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.479 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.495 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.528 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.546 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.628 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.649 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.650 +07:00 [Error]  Error 404
+2020-03-18 01:09:44.660 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.787 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.788 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.922 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.928 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.942 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.947 +07:00 [Error]  Error 404
+2020-03-18 01:11:15.950 +07:00 [Error]  Error 404
+2020-03-18 01:11:44.435 +07:00 [Error]  Error 404
+2020-03-18 01:11:44.538 +07:00 [Error]  Error 404
+2020-03-18 01:11:44.543 +07:00 [Error]  Error 404
+2020-03-18 01:11:44.545 +07:00 [Error]  Error 404
+2020-03-18 01:11:44.554 +07:00 [Error]  Error 404
+2020-03-18 01:11:44.559 +07:00 [Error]  Error 404
+2020-03-18 01:12:07.786 +07:00 [Error]  Error 404
+2020-03-18 01:12:07.866 +07:00 [Error]  Error 404
+2020-03-18 01:12:07.867 +07:00 [Error]  Error 404
+2020-03-18 01:12:07.872 +07:00 [Error]  Error 404
+2020-03-18 01:12:07.879 +07:00 [Error]  Error 404
+2020-03-18 01:12:07.895 +07:00 [Error]  Error 404
+2020-03-18 01:16:06.018 +07:00 [Error]  Error 404
+2020-03-18 01:16:06.139 +07:00 [Error]  Error 404
+2020-03-18 01:16:06.163 +07:00 [Error]  Error 404
+2020-03-18 01:16:06.169 +07:00 [Error]  Error 404
+2020-03-18 01:16:06.191 +07:00 [Error]  Error 404
+2020-03-18 01:16:06.196 +07:00 [Error]  Error 404
+2020-03-18 01:17:49.179 +07:00 [Error]  Error 404
+2020-03-18 01:17:49.251 +07:00 [Error]  Error 404
+2020-03-18 01:17:49.258 +07:00 [Error]  Error 404
+2020-03-18 01:17:49.271 +07:00 [Error]  Error 404
+2020-03-18 01:17:49.284 +07:00 [Error]  Error 404
+2020-03-18 01:17:49.295 +07:00 [Error]  Error 404
+2020-03-18 01:19:49.153 +07:00 [Error]  Error 404
+2020-03-18 01:19:49.259 +07:00 [Error]  Error 404
+2020-03-18 01:19:49.270 +07:00 [Error]  Error 404
+2020-03-18 01:19:49.292 +07:00 [Error]  Error 404
+2020-03-18 01:19:49.306 +07:00 [Error]  Error 404
+2020-03-18 01:19:49.321 +07:00 [Error]  Error 404
+2020-03-18 01:20:24.084 +07:00 [Error]  Error 404
+2020-03-18 01:20:24.177 +07:00 [Error]  Error 404
+2020-03-18 01:20:24.180 +07:00 [Error]  Error 404
+2020-03-18 01:20:24.186 +07:00 [Error]  Error 404
+2020-03-18 01:20:24.191 +07:00 [Error]  Error 404
+2020-03-18 01:20:24.238 +07:00 [Error]  Error 404
+2020-03-18 14:51:56.844 +07:00 [Error]  Error 404
+2020-03-18 14:51:56.847 +07:00 [Error]  Error 404
+2020-03-18 14:52:48.142 +07:00 [Error]  Error 404
+2020-03-18 14:52:48.152 +07:00 [Error]  Error 404
+2020-03-18 14:53:55.208 +07:00 [Error]  Error 404
+2020-03-18 14:58:04.788 +07:00 [Error]  Error 404
+2020-03-18 14:58:20.890 +07:00 [Error]  Error 404
+2020-03-18 14:58:20.892 +07:00 [Error]  Error 404
+2020-03-18 15:09:46.496 +07:00 [Error]  Error 404
+2020-03-18 15:09:46.508 +07:00 [Error]  Error 404
+2020-03-18 15:12:31.897 +07:00 [Error]  Error 404
+2020-03-18 15:12:31.902 +07:00 [Error]  Error 404
+2020-03-18 15:13:13.621 +07:00 [Error]  Error 404
+2020-03-18 15:13:13.630 +07:00 [Error]  Error 404
+2020-03-18 15:16:15.735 +07:00 [Error]  Error 404
+2020-03-18 15:16:15.736 +07:00 [Error]  Error 404
+2020-03-18 15:27:42.741 +07:00 [Error]  Error 404
+2020-03-18 15:27:42.742 +07:00 [Error]  Error 404
+2020-03-18 15:33:04.087 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_ProductDetail.ExecuteAsync() in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Views/Home/ProductDetail.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-18 15:33:20.566 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at AspNetCore.Views_Home_ProductDetail.ExecuteAsync() in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Views/Home/ProductDetail.cshtml:line 23
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageCoreAsync(IRazorPage page, ViewContext context)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderPageAsync(IRazorPage page, ViewContext context, Boolean invokeViewStarts)
+   at Microsoft.AspNetCore.Mvc.Razor.RazorView.RenderAsync(ViewContext context)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ViewContext viewContext, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewExecutor.ExecuteAsync(ActionContext actionContext, IView view, ViewDataDictionary viewData, ITempDataDictionary tempData, String contentType, Nullable`1 statusCode)
+   at Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor.ExecuteAsync(ActionContext context, ViewResult result)
+   at Microsoft.AspNetCore.Mvc.ViewResult.ExecuteResultAsync(ActionContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultAsync(IActionResult result)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResultExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeResultFilters()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-03-18 15:52:29.347 +07:00 [Error]  Error 404
+2020-03-18 15:52:29.347 +07:00 [Error]  Error 404
+2020-03-18 15:55:46.288 +07:00 [Error]  Error 404
+2020-03-18 15:55:46.297 +07:00 [Error]  Error 404
+2020-03-18 15:56:00.816 +07:00 [Error]  Error 404
+2020-03-18 16:02:19.000 +07:00 [Error]  Error 404
+2020-03-18 16:02:19.005 +07:00 [Error]  Error 404
+2020-03-18 16:06:15.474 +07:00 [Error]  Error 404
+2020-03-18 16:06:15.476 +07:00 [Error]  Error 404
+2020-03-18 16:08:57.421 +07:00 [Error]  Error 404
+2020-03-18 16:08:57.431 +07:00 [Error]  Error 404
+2020-03-18 16:09:34.686 +07:00 [Error]  Error 404
+2020-03-18 16:09:34.693 +07:00 [Error]  Error 404
+2020-03-18 16:13:25.796 +07:00 [Error]  Error 404
+2020-03-18 16:13:25.796 +07:00 [Error]  Error 404
+2020-03-18 16:13:29.898 +07:00 [Error]  Error 404
+2020-03-18 16:13:29.906 +07:00 [Error]  Error 404
+2020-03-18 16:13:40.246 +07:00 [Error]  Error 404
+2020-03-18 16:13:40.256 +07:00 [Error]  Error 404
+2020-03-18 16:13:49.660 +07:00 [Error]  Error 404
+2020-03-18 16:13:49.662 +07:00 [Error]  Error 404
+2020-03-18 16:14:25.979 +07:00 [Error]  Error 404
+2020-03-18 16:14:25.982 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.040 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.052 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.057 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.061 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.111 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.196 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.198 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.793 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.799 +07:00 [Error]  Error 404
+2020-03-18 16:16:29.800 +07:00 [Error]  Error 404
+2020-03-18 16:17:02.330 +07:00 [Error]  Error 404
+2020-03-18 16:18:01.020 +07:00 [Error]  Error 404
+2020-03-18 16:18:59.803 +07:00 [Error]  Error 404
+2020-03-18 16:18:59.803 +07:00 [Error]  Error 404
+2020-03-18 16:20:38.707 +07:00 [Error]  Error 404
+2020-03-18 16:20:38.710 +07:00 [Error]  Error 404
+2020-03-18 16:21:47.001 +07:00 [Error]  Error 404
+2020-03-18 16:21:47.087 +07:00 [Error]  Error 404
+2020-03-18 16:21:47.088 +07:00 [Error]  Error 404
+2020-03-18 16:22:54.211 +07:00 [Error]  Error 404
+2020-03-18 16:22:54.328 +07:00 [Error]  Error 404
+2020-03-18 16:22:54.339 +07:00 [Error]  Error 404
+2020-03-18 16:23:29.485 +07:00 [Error]  Error 404
+2020-03-18 16:23:29.635 +07:00 [Error]  Error 404
+2020-03-18 16:23:29.639 +07:00 [Error]  Error 404
+2020-03-18 16:23:30.200 +07:00 [Error]  Error 404
+2020-03-18 16:25:36.210 +07:00 [Error]  Error 404
+2020-03-18 16:25:36.475 +07:00 [Error]  Error 404
+2020-03-18 16:25:36.484 +07:00 [Error]  Error 404
+2020-03-18 16:26:13.352 +07:00 [Error]  Error 404
+2020-03-18 16:26:13.364 +07:00 [Error]  Error 404
+2020-03-18 16:26:36.123 +07:00 [Error]  Error 404
+2020-03-18 16:26:36.126 +07:00 [Error]  Error 404
+2020-03-18 16:27:45.713 +07:00 [Error]  Error 404
+2020-03-18 16:27:45.741 +07:00 [Error]  Error 404
+2020-03-18 16:30:26.190 +07:00 [Error]  Error 404
+2020-03-18 16:30:26.336 +07:00 [Error]  Error 404
+2020-03-18 16:30:26.337 +07:00 [Error]  Error 404
+2020-03-18 16:32:33.766 +07:00 [Error]  Error 404
+2020-03-18 16:32:33.782 +07:00 [Error]  Error 404
+2020-03-18 16:33:44.723 +07:00 [Error]  Error 404
+2020-03-18 16:33:44.728 +07:00 [Error]  Error 404

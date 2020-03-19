@@ -1,0 +1,45 @@
+﻿@model IEnumerable<CoV.Service.DataModel.RoleViewModel>
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary " asp-controller="" asp-action="">Create User</a>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <table id="ShowClass" class="table table-bordered table-hover">
+                <thead class="thead-light">       
+                <tr style="background-color: darkgrey"> 
+                    <td >Role Name</td>
+                    <td style="text-align: center">Update - Delete</td>
+                </tr>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>  
+                        <td>@item.RoleName</td>
+                        <td style="text-align: center">
+                            <a class="btn btn-primary " asp-controller="" asp-action=""   >Update</a>
+                            <a class="btn btn-primary "   asp-action="" asp-controller="">Delete</a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+                </thead>
+
+            </table>
+        </div>
+
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $('#ShowClass').DataTable();
+        });
+    </script>
+}

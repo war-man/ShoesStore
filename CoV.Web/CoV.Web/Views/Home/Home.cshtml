@@ -1,0 +1,816 @@
+﻿@using CoV.Service.DataModel
+@{
+    ViewBag.Title = "title";
+    Layout = "_FrontEndLayout";
+	var listFamale = (List<ProductViewModel>) ViewBag.getLishFamale;
+	var listMale = (List<ProductViewModel>) ViewBag.getLishMale;
+}
+<section class="banner-ss">
+	<div class="container p-0">
+		<div class="row">
+			<div class="col-md-2">
+				<div class="item-banner-ss first-item">
+					<a href="#">
+						<img src="~/Frontend/images/img-banner-ss-01.png" style="height:410px" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="item-banner-ss">
+					<a href="#">
+						<img src="~/Frontend/images/img-banner-ss-02.png" alt="">
+					</a>
+				</div>
+				<div class="item-banner-ss">
+					<a href="#">
+						<img src="~/Frontend/images/img-banner-ss-03.jpg" alt="">
+					</a>
+				</div>
+			</div>
+			<div class="col-md-5">
+				<div class="item-banner-ss">
+					<a href="#">
+						<img src="~/Frontend/images/img-banner-ss-03.jpg" alt="">
+					</a>
+				</div>
+				<div class="item-banner-ss">
+					<a href="#">
+						<img src="~/Frontend/images/img-banner-ss-02.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<div class="wrapper">
+<section class="product-ss">
+<div class="container p-0">
+<div class="row">
+<div class="col-md-12">
+	<h2 class="name-cate">
+		Giành cho nam
+	</h2>
+</div>
+<div class="col-md-12">
+<div class="owl-carousel owl-theme product_slide" id="product_slide_men">
+@foreach (var item in listFamale )
+{
+	<div class="item">
+		<div class="item-product">
+			<div class="img-item">
+				<a>
+					<img src="~/Images/@item.AvatarDetails" alt="">
+				</a>
+			</div>
+			<div class="box-size">
+				<div class="count-size">
+					+9 size
+				</div>
+				<div class="list-size">
+					<span>36</span>
+					<span>37</span>
+					<span>38</span>
+					<span>39</span>
+					<span>40</span>
+					<span>41</span>
+					<span>42</span>
+					<span>43</span>
+					<span>44</span>
+					<span>45</span>
+				</div>
+			</div>
+									
+			<h3 class="name-product">
+				<a href="#">
+					@item.name
+				</a>
+			</h3>
+			<div class="price-product">
+				<span>@item.Price đ</span>
+				@* <del> *@
+				@* 	@item.Price *@
+				@* </del> *@
+			</div>
+			<div class="add-to-cart">
+				<a  asp-route-id="@item.Id"   asp-controller="Home"  asp-action="cart" >
+					Mua hàng
+				</a>
+			</div>
+		</div>
+	</div>
+}
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+
+<section class="product-ss">
+<div class="container p-0">
+<div class="row">
+<div class="col-md-12">
+	<h2 class="name-cate">
+		Giành cho nữ
+	</h2>
+</div>
+<div class="col-md-12">
+<div class="owl-carousel owl-theme product_slide" id="product_slide_girl">
+@foreach (var item in listMale)
+{
+	<div class="item">
+		<div class="item-product">
+			<div class="img-item">
+				<a href="#">
+					<img src="~/Images/@item.AvatarDetails" alt="">
+				</a>
+			</div>
+			<div class="box-size">
+				<div class="count-size">
+					+9 size
+				</div>
+				<div class="list-size">
+					<span>36</span>
+					<span>37</span>
+					<span>38</span>
+					<span>39</span>
+					<span>40</span>
+					<span>41</span>
+					<span>42</span>
+					<span>43</span>
+					<span>44</span>
+					<span>45</span>
+				</div>
+			</div>
+									
+			<h3 class="name-product">
+				<a href="#">
+					@item.name
+				</a>
+			</h3>
+			<div class="price-product">
+				<span>@item.Price đ</span>
+				@* <del> *@
+				@* 	399.000 đ *@
+				@* </del> *@
+			</div>
+			<div class="add-to-cart">
+				<a href="#">
+					Mua hàng
+				</a>
+			</div>
+		</div>
+	</div>
+}
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="banner-ss-full">
+	<div class="container p-0">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="img-banner-ss">
+					<a href="#">
+						<img src="~/Frontend/images/banner-ss-01.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="product-ss">
+<div class="container p-0">
+<div class="row">
+<div class="col-md-12">
+	<h2 class="name-cate">
+		Giành cho bé trai
+	</h2>
+</div>
+<div class="col-md-12">
+<div class="owl-carousel owl-theme product_slide" id="product_slide_child_girl">
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-01.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-02.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-03.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-04.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-05.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-01.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="banner-ss-full">
+	<div class="container p-0">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="img-banner-ss">
+					<a href="#">
+						<img src="~/Frontend/images/banner-ss-02.png" alt="">
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="product-ss">
+<div class="container p-0">
+<div class="row">
+<div class="col-md-12">
+	<h2 class="name-cate">
+		Giành cho bé gái
+	</h2>
+</div>
+<div class="col-md-12">
+<div class="owl-carousel owl-theme product_slide" id="product_slide_child_men">
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-01.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-02.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-03.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-04.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-05.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+<div class="item">
+	<div class="item-product">
+		<div class="img-item">
+			<a href="#">
+				<img src="~/Frontend/images/img-product-01.jpg" alt="">
+			</a>
+		</div>
+		<div class="box-size">
+			<div class="count-size">
+				+7 size
+			</div>
+			<div class="list-size">
+				<span>38</span>
+				<span>39</span>
+				<span>40</span>
+				<span>41</span>
+				<span>42</span>
+				<span>43</span>
+				<span>44</span>
+				<span>45</span>
+			</div>
+		</div>
+									
+		<h3 class="name-product">
+			<a href="#">
+				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+			</a>
+		</h3>
+		<div class="price-product">
+			<span>299.000 đ</span>
+			<del>
+				399.000 đ
+			</del>
+		</div>
+		<div class="add-to-cart">
+			<a href="#">
+				Mua hàng
+			</a>
+		</div>
+	</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="the-news">
+	<div class="container p-0">
+		<div class="row">
+			<div class="col-md-12 text-center mb-1">
+				<h2 class="title-section">Tin tức</h2>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="item-farm p-0">
+					<div class="img-item">
+						<a href="#">
+							<img src="~/Frontend/images/img-product-01.jpg" alt="">
+						</a>
+					</div>
+					<div class="p-1">
+						<h3 class="title">
+							<a href="#">
+								Đâu là địa chỉ nha khoa Quận 1 Sài Gòn an toàn – uy tín?
+							</a>
+						</h3>
+						<div class="summary">
+							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="item-farm p-0">
+					<div class="img-item">
+						<a href="#">
+							<img src="~/Frontend/images/img-product-02.jpg" alt="">
+						</a>
+					</div>
+					<div class="p-1">
+						<h3 class="title">
+							<a href="#">
+								Răng bị chết tủy phải làm sao? Quy trình điều trị răng chết tủy như thế nào?
+							</a>
+						</h3>
+						<div class="summary">
+							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="item-farm p-0">
+					<div class="img-item">
+						<a href="#">
+							<img src="~/Frontend/images/img-product-04.jpg" alt="">
+						</a>
+					</div>
+					<div class="p-1">
+						<h3 class="title">
+							<a href="#">
+								Những lưu ý sau khi tẩy trắng răng tại nhà bạn không nên bỏ qua
+							</a>
+						</h3>
+						<div class="summary">
+							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<div class="item-farm p-0">
+					<div class="img-item">
+						<a href="#">
+							<img src="~/Frontend/images/img-product-01.jpg" alt="">
+						</a>
+					</div>
+					<div class="p-1">
+						<h3 class="title">
+							<a href="#">
+								Đâu là địa chỉ nha khoa Quận 1 Sài Gòn an toàn – uy tín?
+							</a>
+						</h3>
+						<div class="summary">
+							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+</div>

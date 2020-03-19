@@ -1,0 +1,70 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+    "projectName": "CoV.Service",
+    "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+    "outputPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {
+          "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+            "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+          },
+          "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+            "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
+          }
+        }
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[9.0.0, )"
+        },
+        "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+          "target": "Package",
+          "version": "[7.0.0, )"
+        },
+        "Mappers": {
+          "target": "Package",
+          "version": "[1.6.0, )"
+        },
+        "Microsoft.AspNetCore.Authentication.JwtBearer": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        },
+        "Serilog": {
+          "target": "Package",
+          "version": "[2.9.1-dev-01154, )"
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/bin/Release/netcoreapp2.2/CoV.Common.deps.json
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/bin/Release/netcoreapp2.2/CoV.Common.dll
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/bin/Release/netcoreapp2.2/CoV.Common.pdb
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.csprojAssemblyReference.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.Resources.CommonResource.resources
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.Resources.MessageResource.resources
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.Resources.SideBar.resources
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.csproj.GenerateResource.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.csproj.CoreCompileInputs.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.AssemblyInfoInputs.cache
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.AssemblyInfo.cs
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.dll
+/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/Release/netcoreapp2.2/CoV.Common.pdb

@@ -1,0 +1,71 @@
+﻿{
+  "version": "1.0.0",
+  "restore": {
+    "projectUniqueName": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
+    "projectName": "CoV.Common",
+    "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
+    "outputPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/",
+    "projectStyle": "PackageReference",
+    "fallbackFolders": [
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+    ],
+    "originalTargetFrameworks": [
+      "netcoreapp2.2"
+    ],
+    "frameworks": {
+      "netcoreapp2.2": {
+        "projectReferences": {}
+      }
+    },
+    "warningProperties": {
+      "warnAsError": [
+        "NU1605"
+      ]
+    }
+  },
+  "frameworks": {
+    "netcoreapp2.2": {
+      "dependencies": {
+        "FluentValidation": {
+          "target": "Package",
+          "version": "[8.6.1, )"
+        },
+        "Kore.Providers.Messages.Resource": {
+          "target": "Package",
+          "version": "[1.1.2, )"
+        },
+        "Microsoft.AspNetCore.Cryptography.KeyDerivation": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Http.Abstractions": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Mvc.Localization": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.AspNetCore.Mvc.TagHelpers": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.Extensions.Localization.Abstractions": {
+          "target": "Package",
+          "version": "[2.2.0, )"
+        },
+        "Microsoft.NETCore.App": {
+          "suppressParent": "All",
+          "target": "Package",
+          "version": "[2.2.0, )",
+          "autoReferenced": true
+        }
+      },
+      "imports": [
+        "net461"
+      ],
+      "assetTargetFallback": true,
+      "warn": true
+    }
+  }
+}

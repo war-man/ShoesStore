@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CoV.Service.DataModel.CreateClasserModel>
+
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary " asp-controller="Classes" asp-action="CreateClass">Create Class</a>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+            <table id="ShowClass" class="table table-bordered table-hover">
+                <thead class="thead-light">       
+                <tr style="background-color: darkgrey">
+                    <td >ID</td>
+                    <td >Class Name</td>
+                    <td >Class Member</td>
+                  
+                    <td style="text-align: center">Update - Delete</td>
+                </tr>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td >@item.Id</td>
+                        <td>@item.ClassName</td>
+                        <td>@item.ClassMember</td>
+                  
+                        <td style="text-align: center">
+                            <a  asp-controller="Classes" asp-action="Update" asp-route-id="@item.Id"  ><i class="fas fa-edit"></i></a>
+                            <a  asp-route-id="@item.Id" asp-action="DeleteClass" asp-controller="Classes"><i style="color: red" class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+                </thead>
+
+            </table>
+        </div>
+
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $('#ShowClass').DataTable();
+        });
+    </script>
+}
+
+   
+

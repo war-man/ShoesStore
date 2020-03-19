@@ -1,0 +1,77 @@
+﻿@model CoV.Service.DataModel.LoginModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Loginx";
+}
+
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100">
+      <form  class="login100-form " asp-action="Login" asp-controller="Account" method="post">
+        <span class="login100-form-title p-b-43" >
+          <h4 style="font-family: -apple-system; font-weight: bold; color:teal" >HỆ THỐNG GIÀY DÉP TULI STORE</h4>
+        </span>
+        <div asp-validation-summary="ModelOnly" class="text-danger"  style="text-align: center"></div>	
+        <div class="wrap-input100 " >
+          <input class="input100" type="text"  asp-for="Username">
+          <span class="focus-input100"></span>
+          <span class="label-input100">Email</span>
+          
+        </div>
+        <span asp-validation-for="Username" class="text-danger"></span>
+        
+        <div class="wrap-input100 validate-input" >
+          <input class="input100" type="password" asp-for="Password">
+          <span class="focus-input100"></span>
+          <span class="label-input100">Password</span>
+         
+        </div>
+        <span asp-validation-for="Password" class="text-danger"></span>
+        
+        <div class="flex-sb-m w-full p-t-3 p-b-32">
+          <div >
+            <input class="input-checkbox100" type="checkbox" name="remember-me">
+            <label class="label-checkbox100" >
+              Remember me
+            </label>
+          </div>
+
+          <div>
+            <a href="#" class="txt1">
+              Forgot Password?
+            </a>
+          </div>
+        </div>
+			
+
+        <div class="container-login100-form-btn">
+          <button class="login100-form-btn">
+            Login
+          </button>
+        </div>
+					
+        <div class="text-center p-t-46 p-b-20">
+          <span class="txt2">
+            or sign up using
+          </span>
+        </div>
+
+        <div class="login100-form-social flex-c-m">
+          <a href="#" class="login100-form-social-item flex-c-m bg1 m-r-5">
+            <i class="fa fa-facebook-f" aria-hidden="true"></i>
+          </a>
+
+          <a href="#" class="login100-form-social-item flex-c-m bg2 m-r-5">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+        </div>
+      </form>
+
+      <div class="login100-more" style="background-image: url('/Images/5a6c07a9-be05-42d0-b7b4-1ac0b9f1c555_hinh-anh-nhung-chu-cho-de-thuong-nhat.jpg');">
+      </div>
+    </div>
+  </div>
+</div>
+
+
