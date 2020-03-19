@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace CoV.Web.Infrastructure.Helper
 {
-    public class SessionHelper
+    public static class SessionHelper
     {
         public static void SetObjectAsJson(this ISession session, string key, object value)
         {

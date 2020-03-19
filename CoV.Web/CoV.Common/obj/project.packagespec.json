@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
+    "projectUniqueName": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj",
     "projectName": "CoV.Common",
-    "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
-    "outputPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/obj/",
+    "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj",
+    "outputPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/obj/",
     "projectStyle": "PackageReference",
     "fallbackFolders": [
       "/usr/share/dotnet/sdk/NuGetFallbackFolder"

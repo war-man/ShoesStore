@@ -62,8 +62,6 @@ namespace CoV.Web
             services.AddScoped<ExpireDateUserFilter>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUserService, UserService>();
-            services.AddScoped<IClassesService, ClassesService>();
-            services.AddScoped<IStudentService, StudentService>();
             services.AddScoped<IRoleService, RoleService>();
             //Producct Add Scoped
             services.AddScoped<IProductService, ProductService>();
@@ -80,8 +78,6 @@ namespace CoV.Web
             //add mapping
             //services.AddAutoMapper(typeof(UserMapper.UserMapping));
             services.AddAutoMapper(typeof(UserMapper));
-            services.AddAutoMapper(typeof(ClassesMapper));
-            services.AddAutoMapper(typeof(StudentMapper));
             services.AddAutoMapper(typeof(RoleMapper));
             //Products
             services.AddAutoMapper(typeof(ProductMapper));

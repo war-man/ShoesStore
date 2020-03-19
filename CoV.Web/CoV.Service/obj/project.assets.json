@@ -9466,11 +9466,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+      "projectUniqueName": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj",
       "projectName": "CoV.Service",
-      "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+      "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj",
       "packagesPath": "/home/cap/.nuget/packages/",
-      "outputPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Service/obj/",
+      "outputPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/share/dotnet/sdk/NuGetFallbackFolder"
@@ -9487,11 +9487,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
-              "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+            "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj": {
+              "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj"
             },
-            "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
-              "projectPath": "/home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
+            "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+              "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
             }
           }
         }
