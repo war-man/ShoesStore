@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.2",
-    "signature": "d5e8ab2916221e0b273379b1fc65675b42aca12d"
+    "signature": "c9362ac67c0797d4654ae3210afe6a8a0768bf2e"
   },
   "compilationOptions": {
     "defines": [
@@ -25,6 +25,7 @@
       "CoV.Web/1.0.0": {
         "dependencies": {
           "AspNet.Core.SharePoint.Addin.Authentication": "0.0.0.2",
+          "AspNetCoreCurrentRequestContext": "2.0.0",
           "AuthorizationMiddlewareExtension": "1.2.3",
           "AutoMapper": "9.0.0",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
@@ -40,18 +41,22 @@
           "Logger": "1.0.9.3",
           "LoggerApplication": "2.1.2",
           "Mappers": "1.6.0",
+          "Microsoft.AspNet.Session": "1.0.0-rc1-final",
           "Microsoft.AspNetCore.App": "2.2.0",
           "Microsoft.AspNetCore.Authorization": "2.2.0",
           "Microsoft.AspNetCore.CookiePolicy": "2.2.8",
           "Microsoft.AspNetCore.MiddlewareAnalysis": "2.2.0",
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
+          "Microsoft.AspNetCore.Session": "2.2.0",
           "Microsoft.Extensions.Logging.Console": "2.2.0",
           "Microsoft.Extensions.Logging.Debug": "2.2.0",
           "Microsoft.Extensions.Logging.EventSource": "2.2.0",
           "Microsoft.Extensions.Logging.TraceSource": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Moq": "4.13.1",
+          "Serilog.Enrichers.AspNetCore.HttpContext": "1.0.1",
           "Serilog.Extensions.Logging.File": "2.0.0-dev-00039",
+          "SessionManager": "1.0.1",
           "System.Security.Claims": "4.3.0",
           "Useful.LoggerFactory.Log4net": "1.0.1",
           "jquery.dataTables.TypeScript.DefinitelyTyped": "0.6.7",
@@ -73,6 +78,20 @@
         },
         "compile": {
           "lib/net451/AspNet.Core.SharePoint.Addin.Authentication.dll": {}
+        }
+      },
+      "AspNetCoreCurrentRequestContext/2.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNetCoreCurrentRequestContext.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNetCoreCurrentRequestContext.dll": {}
         }
       },
       "AuthorizationMiddlewareExtension/1.2.3": {
@@ -415,6 +434,17 @@
         },
         "compile": {
           "lib/net40/Mappers.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.11116"
+          }
+        },
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
         }
       },
       "Microsoft.AspNetCore.CookiePolicy/2.2.8": {
@@ -787,6 +817,22 @@
           "lib/netstandard2.0/Serilog.dll": {}
         }
       },
+      "Serilog.Enrichers.AspNetCore.HttpContext/1.0.1": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.Extensions.Options": "2.2.0",
+          "Serilog": "2.9.1-dev-01154"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Enrichers.AspNetCore.HttpContext.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Enrichers.AspNetCore.HttpContext.dll": {}
+        }
+      },
       "Serilog.Extensions.Logging/2.0.2": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "2.2.0",
@@ -887,6 +933,17 @@
         },
         "compile": {
           "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
+        }
+      },
+      "SessionManager/1.0.1": {
+        "runtime": {
+          "lib/netstandard2.0/SessionManager.dll": {
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/SessionManager.dll": {}
         }
       },
       "System.Collections.Immutable/1.5.0": {},
@@ -4248,6 +4305,13 @@
       "path": "aspnet.core.sharepoint.addin.authentication/0.0.0.2",
       "hashPath": "aspnet.core.sharepoint.addin.authentication.0.0.0.2.nupkg.sha512"
     },
+    "AspNetCoreCurrentRequestContext/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YU164lvs4Hdr0lIzHiqX4bcMd8hwdUf0FzM4Mw34kxI0Vx4aUayu+HIE8u2YPRT4xW5wqfnS1LLaD6ryN2R6+A==",
+      "path": "aspnetcorecurrentrequestcontext/2.0.0",
+      "hashPath": "aspnetcorecurrentrequestcontext.2.0.0.nupkg.sha512"
+    },
     "AuthorizationMiddlewareExtension/1.2.3": {
       "type": "package",
       "serviceable": true,
@@ -4416,6 +4480,13 @@
       "path": "mappers/1.6.0",
       "hashPath": "mappers.1.6.0.nupkg.sha512"
     },
+    "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3tjDeRpV1jpyocCT2bupJzQD9+aEfC5HMDTEfc1Me69zorL9yFI2dzo/9aBrHdNIKthhiutP0LhT5slqoToMhQ==",
+      "path": "microsoft.aspnet.session/1.0.0-rc1-final",
+      "hashPath": "microsoft.aspnet.session.1.0.0-rc1-final.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.CookiePolicy/2.2.8": {
       "type": "package",
       "serviceable": true,
@@ -4556,6 +4627,13 @@
       "path": "serilog/2.9.1-dev-01154",
       "hashPath": "serilog.2.9.1-dev-01154.nupkg.sha512"
     },
+    "Serilog.Enrichers.AspNetCore.HttpContext/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9MZJU3zMZxbjZ3efx1I2hUo0MIKrJwekEB7vc02pW2f1gEH3PmR2aNgJTOgbVCHwAhCCJiC44adDBIwB6PhGoA==",
+      "path": "serilog.enrichers.aspnetcore.httpcontext/1.0.1",
+      "hashPath": "serilog.enrichers.aspnetcore.httpcontext.1.0.1.nupkg.sha512"
+    },
     "Serilog.Extensions.Logging/2.0.2": {
       "type": "package",
       "serviceable": true,
@@ -4597,6 +4675,13 @@
       "sha512": "sha512-iBTJlu/YGishKRZ5SkSXkAly3zSezopfnKWbbh4eesHAacMqv7G+Cx32ytlkjbmymMWYB/nrNwS4IBSqAiF/OA==",
       "path": "serilog.sinks.rollingfile/3.3.0",
       "hashPath": "serilog.sinks.rollingfile.3.3.0.nupkg.sha512"
+    },
+    "SessionManager/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5dzlqPgbB1/eGUOYJZoTGql4X2brXl1WcjPcMBwk5MYGiHD5PpKbOI83KSQnyz+p7tVJsLScXIStxQheisZF3Q==",
+      "path": "sessionmanager/1.0.1",
+      "hashPath": "sessionmanager.1.0.1.nupkg.sha512"
     },
     "System.Collections.Immutable/1.5.0": {
       "type": "package",

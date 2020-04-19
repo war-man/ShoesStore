@@ -1,16 +1,23 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <title>Trang Chủ</title>
+	<title>Trang Chủ</title>
     <link rel="stylesheet" href="~/Frontend/css/template.css">
     <link rel="stylesheet" href="~/Frontend/css/style.css">
     <link rel="stylesheet" href="~/Frontend/css/owl.css">
     <link rel="stylesheet" href="~/Frontend/css/font-icon.css">
     <link rel="stylesheet" href="~/Frontend/css/font-arsenal.css">
-    <link rel="stylesheet" href="~/Frontend/css/animate.css">
+	<link rel="stylesheet" href="~/Frontend/css/animate.css">
+	
+	<link rel="stylesheet" href="~/Frontend/css/dialog_modal.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </head>
 <body>
 <header>
@@ -39,19 +46,30 @@
 			</div>
 			<div class="col-md-4">
 				<ul class="justify-content-end">
-					<li>
-						<a asp-controller="Home" asp-action="Singin">
+					<li id="login_Customer">
+						<a asp-controller="Customer" asp-action="LoginCustomer">
 							<i class="fas fa-sign-in-alt"></i>
-							Đăng nhập
+							Đăng nhập 
 						</a>
 					</li>
-					<li>
-						<a asp-controller="Home" asp-action="SingUp">
+					<li id="Create_Customer" >
+						<a asp-controller="Customer" asp-action="CreateAndUpdate">
 							<i class="fas fa-sign-out-alt"></i>
 							Đăng ký
 						</a>
 					</li>
-							
+					<li id="logout-Customer" >
+						<a asp-controller="Customer" asp-action="Logout">
+							<i class="fas fa-sign-out-alt"></i>
+							Đăng xuất
+						</a>
+					</li>
+					<li  id="icon-customer">
+						<a asp-controller="" asp-action="">
+							<i class="fas fa-user-cog"></i>
+							@Context.Session.GetString("SessionName")
+						</a>
+					</li>
 				</ul>
 			</div>
 		</div>
@@ -145,7 +163,7 @@
 								</a>
 							</li>
 							<li>
-								<a asp-controller="Home" asp-action="Cart">
+								<a  asp-controller="Cart" asp-action="Index">
 									<i class="fas fa-shopping-cart"></i>
 								</a>
 							</li>
@@ -552,9 +570,25 @@
 <script src="~/Frontend/js/app.js"></script>
 <script src="~/Frontend/js/wow.js"></script>
 <script>
-	new WOW().init();
+    new WOW().init();
 </script>
 @RenderSection("Scripts", required: false)
+<script>
+    // login logout customer
+    var SessionEmail = '@HttpContextAccessor.HttpContext.Session.GetString("SessionName")';
+    if (SessionEmail == "") {
+        $("#icon-customer").attr("hidden", "");
+	    $("#logout-Customer").attr("hidden", "");
+
+    } else {
+        $("#Create_Customer").attr("hidden", "");
+        $("#login_Customer").attr("hidden", "");
+        $("#icon-customer").show();
+    }
+    
+    
+</script>
 </body>
 
 </html>
+

@@ -34,10 +34,9 @@ namespace CoV.Web
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            Log.Logger = new LoggerConfiguration().
-                MinimumLevel.Error().
-                WriteTo.RollingFile("log/log-{Date}-CoV.txt",LogEventLevel.Error)
-                .CreateLogger();         
+            Log.Logger = new LoggerConfiguration().MinimumLevel.Error().WriteTo
+                .RollingFile("log/log-{Date}-CoV.txt", LogEventLevel.Error)
+                .CreateLogger();
         }
 
         public IConfiguration Configuration { get; }
@@ -46,6 +45,7 @@ namespace CoV.Web
         public void ConfigureServices(IServiceCollection services)
         {
             #region framework services
+
             services.Configure<CookiePolicyOptions>(options =>
             {
                 // This lambda determines whether user consent for non-essential cookies is needed for a given request.
@@ -57,7 +57,7 @@ namespace CoV.Web
             //this is connect db
             services.AddDbContext<AppDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
+
             //add scope UnitOfWork    
             services.AddScoped<ExpireDateUserFilter>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
@@ -66,15 +66,17 @@ namespace CoV.Web
             //Producct Add Scoped
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<ICategoryProductService, CategoryProductService>();
-            services.AddScoped<IColorProductService, ColorProductService >();
-            services.AddScoped<IGenderService, GenderService >();
-            services.AddScoped<IImageProductService, ImageProductService >();
-            services.AddScoped<ISizeProductService,SizeProductService >();
-            services.AddScoped< IStatusProductService,StatusProductService>();
-            
+            services.AddScoped<IColorProductService, ColorProductService>();
+            services.AddScoped<IGenderService, GenderService>();
+            services.AddScoped<IImageProductService, ImageProductService>();
+            services.AddScoped<ISizeProductService, SizeProductService>();
+            services.AddScoped<IStatusProductService, StatusProductService>();
+            services.AddScoped<ICartService, CartService>();
+            services.AddScoped<ICustomerService, CustomerService>();
+
             services.AddTransient<IValidator<LoginModel>, LoginValidation>();
             services.AddTransient<IValidator<UserViewModel>, UserViewValidation>();
-            
+
             //add mapping
             //services.AddAutoMapper(typeof(UserMapper.UserMapping));
             services.AddAutoMapper(typeof(UserMapper));
@@ -86,8 +88,9 @@ namespace CoV.Web
             services.AddAutoMapper(typeof(SizeProductMapper));
             services.AddAutoMapper(typeof(GenderMapper));
             services.AddAutoMapper(typeof(StatusProductMapper));
+            services.AddAutoMapper(typeof(CustomerMapper));
+            services.AddAutoMapper(typeof(CartMapper));
 
-            services.AddSession();
             // Config authentication
             services.AddAuthentication(options =>
                 {
@@ -95,12 +98,9 @@ namespace CoV.Web
                     options.DefaultAuthenticateScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = CookieAuthenticationDefaults.AuthenticationScheme;
                 })
-                .AddCookie(options =>
-                {
-                options.AccessDeniedPath = Constants.Route.AccessDenied;
-                }         
+                .AddCookie(options => { options.AccessDeniedPath = Constants.Route.AccessDenied; }
                 );
-            
+
             // Json web token
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
@@ -117,36 +117,37 @@ namespace CoV.Web
                             .UTF8.GetBytes(Configuration[Constants.JwtKey]))
                     };
                 });
-            
+
             // serilog
             services.AddLogging();
             //Claims base Authorize
             services.AddAuthorization(options =>
             {
-                options.AddPolicy("Admin", policy => policy.RequireAssertion(context => 
+                options.AddPolicy("Admin", policy => policy.RequireAssertion(context =>
                     context.User.IsInRole(Constants.Role.Admin)));
-                options.AddPolicy("User", policy => policy.RequireAssertion(context => 
+                options.AddPolicy("User", policy => policy.RequireAssertion(context =>
                     context.User.IsInRole(Constants.Role.User) || context.User.IsInRole(Constants.Role.Admin)));
-                
             });
-            
+
             // Adds a default in-memory implementation of IDistributedCache
-            services.AddDistributedMemoryCache();
-            
+
+
+            services.AddDistributedMemoryCache(); // Đăng ký dịch vụ lưu cache trong bộ nhớ (Session sẽ sử dụng nó)
             services.AddSession(options =>
             {
-                options.Cookie.Name = Constants.AppSession;
-                options.IdleTimeout = TimeSpan.FromMinutes(Convert
-                    .ToDouble(Configuration[Constants.Settings.ExpiredSessionTime] ?? "60"));
+                //options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+//                options.Cookie.IsEssential = true;
             });
-            
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddFluentValidation();
+
             #endregion
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env ,ILoggerFactory loggerFactory)
-        {    
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -158,18 +159,18 @@ namespace CoV.Web
                 app.UseHsts();
             }
             // add file log exception
- 
-            app.UseStaticFiles();  
+            
+            app.UseStaticFiles();
             app.UseHttpsRedirection();
-            app.UseAuthentication();  
-            app.UseHttpsRedirection();          
+            app.UseAuthentication();
+            app.UseHttpsRedirection();
             app.UseCookiePolicy();
             app.UseSession();
-            
+
             // Use page logger
             loggerFactory.AddDebug();
             loggerFactory.AddSerilog();
-            
+
             // Middleware : Page not pound 404
             app.UseRequestCulture();
             //page Authorize Accessdenid
@@ -179,7 +180,7 @@ namespace CoV.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=home}/{action=home}/{id?}");
+                    template: "{controller=Customer}/{action=CreateAndUpdate}/{id?}");
             });
         }
     }

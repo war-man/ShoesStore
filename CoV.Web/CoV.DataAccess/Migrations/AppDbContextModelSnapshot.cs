@@ -19,6 +19,23 @@ namespace CoV.DataAccess.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+            modelBuilder.Entity("CoV.DataAccess.Data.Cart", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("Quantity");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Cart");
+                });
+
             modelBuilder.Entity("CoV.DataAccess.Data.CategoryProduct", b =>
                 {
                     b.Property<int>("Id")
@@ -30,21 +47,6 @@ namespace CoV.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("CategoryProduct");
-                });
-
-            modelBuilder.Entity("CoV.DataAccess.Data.Classes", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ClassMember");
-
-                    b.Property<string>("ClassName");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Classses");
                 });
 
             modelBuilder.Entity("CoV.DataAccess.Data.ColorProduct", b =>
@@ -59,6 +61,35 @@ namespace CoV.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ColorProduct");
+                });
+
+            modelBuilder.Entity("CoV.DataAccess.Data.Customer", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Address");
+
+                    b.Property<string>("City");
+
+                    b.Property<DateTime?>("CreateDate");
+
+                    b.Property<DateTime?>("CreateUpdate");
+
+                    b.Property<string>("Email");
+
+                    b.Property<string>("FirstName");
+
+                    b.Property<string>("LastName");
+
+                    b.Property<string>("PassWord");
+
+                    b.Property<string>("PhoneNumber");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Customer");
                 });
 
             modelBuilder.Entity("CoV.DataAccess.Data.Gender", b =>
@@ -166,32 +197,6 @@ namespace CoV.DataAccess.Migrations
                     b.ToTable("StatusProduct");
                 });
 
-            modelBuilder.Entity("CoV.DataAccess.Data.Student", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("ClasserId");
-
-                    b.Property<string>("StudentAddress");
-
-                    b.Property<int>("StudentAge");
-
-                    b.Property<string>("StudentAvatar");
-
-                    b.Property<int>("StudentMasv");
-
-                    b.Property<string>("StudentName")
-                        .HasColumnType("nvarchar(50)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClasserId");
-
-                    b.ToTable("Student");
-                });
-
             modelBuilder.Entity("CoV.DataAccess.Data.User", b =>
                 {
                     b.Property<int>("Id")
@@ -222,6 +227,14 @@ namespace CoV.DataAccess.Migrations
                     b.ToTable("User");
                 });
 
+            modelBuilder.Entity("CoV.DataAccess.Data.Cart", b =>
+                {
+                    b.HasOne("CoV.DataAccess.Data.Product", "Product")
+                        .WithMany("Carts")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
             modelBuilder.Entity("CoV.DataAccess.Data.Product", b =>
                 {
                     b.HasOne("CoV.DataAccess.Data.CategoryProduct", "CategoryProduct")
@@ -247,14 +260,6 @@ namespace CoV.DataAccess.Migrations
                     b.HasOne("CoV.DataAccess.Data.StatusProduct", "StatusProduct")
                         .WithMany("StatusProducts")
                         .HasForeignKey("StatusProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("CoV.DataAccess.Data.Student", b =>
-                {
-                    b.HasOne("CoV.DataAccess.Data.Classes", "Classes")
-                        .WithMany("Students")
-                        .HasForeignKey("ClasserId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 

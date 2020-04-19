@@ -36,9 +36,6 @@ namespace CoV.DataAccess.Data
                     context.Roles.Add(role2);
                     context.Roles.Add(role3);
                     context.SaveChanges();
-                    
-                    
-
                 }
                 
                 // Add User 
@@ -121,23 +118,6 @@ namespace CoV.DataAccess.Data
                     
                     context.SaveChanges();
                     
-                }
-
-               
-                // insert classes auto
-                if (!context.Classeses.Any())
-                {
-                    for (int i = 0; i < 50; i++)
-                    {
-                        var classes = new Classes
-                        {
-                            ClassName = Constants.Classes.ClassName + " " + i,
-                            ClassMember = Constants.Classes.ClassMember + i,
-                        };
-                        context.Classeses.Add(classes);
-                    }
-
-                    context.SaveChanges();
                 }
                 
                 // Inser Color

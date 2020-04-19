@@ -130,3 +130,15 @@
 /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.csproj.CopyComplete
 /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.dll
 /home/cap/Desktop/gitlab/cov/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.pdb
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/bin/Debug/netcoreapp2.2/CoV.DataAccess.deps.json
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/bin/Debug/netcoreapp2.2/CoV.DataAccess.dll
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/bin/Debug/netcoreapp2.2/CoV.DataAccess.pdb
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/bin/Debug/netcoreapp2.2/CoV.Common.dll
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/bin/Debug/netcoreapp2.2/CoV.Common.pdb
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.csprojAssemblyReference.cache
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.csproj.CoreCompileInputs.cache
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.AssemblyInfoInputs.cache
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.AssemblyInfo.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.csproj.CopyComplete
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.dll
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/Debug/netcoreapp2.2/CoV.DataAccess.pdb

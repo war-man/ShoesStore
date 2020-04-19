@@ -26,6 +26,8 @@ namespace CoV.Service.Service
         /// <param name="id"></param>
         /// <returns></returns>
         ProductViewModel GetById(int id);
+        ProductViewModel GetByIdCart(int id);
+
         
         /// <summary>
         /// Create And Update Product
@@ -148,6 +150,15 @@ namespace CoV.Service.Service
                 return  productmodel ;
             }
         }
+
+        public ProductViewModel GetByIdCart(int id)
+        {
+            var productNew = _unitOfWork.ProductRespository.GetById(id);
+            
+            return _mapper.Map<ProductViewModel>(productNew);
+        }
+        
+        
         
         /// <summary>
         /// Funtion process Create and Update Product 

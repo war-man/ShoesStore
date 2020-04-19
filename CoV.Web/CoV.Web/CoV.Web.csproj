@@ -5,6 +5,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="AspNet.Core.SharePoint.Addin.Authentication" Version="0.0.0.2" />
+    <PackageReference Include="AspNetCoreCurrentRequestContext" Version="2.0.0" />
     <PackageReference Include="AuthorizationMiddlewareExtension" Version="1.2.3" />
     <PackageReference Include="AutoMapper" Version="9.0.0" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
@@ -18,17 +19,21 @@
     <PackageReference Include="Logger" Version="1.0.9.3" />
     <PackageReference Include="LoggerApplication" Version="2.1.2" />
     <PackageReference Include="Mappers" Version="1.6.0" />
+    <PackageReference Include="Microsoft.AspNet.Session" Version="1.0.0-rc1-final" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.CookiePolicy" Version="2.2.8" />
     <PackageReference Include="Microsoft.AspNetCore.MiddlewareAnalysis" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="Microsoft.AspNetCore.Session" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.EventSource" Version="2.2.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.TraceSource" Version="2.2.0" />
     <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="Serilog.Enrichers.AspNetCore.HttpContext" Version="1.0.1" />
     <PackageReference Include="Serilog.Extensions.Logging.File" Version="2.0.0-dev-00039" />
+    <PackageReference Include="SessionManager" Version="1.0.1" />
     <PackageReference Include="System.Security.Claims" Version="4.3.0" />
     <PackageReference Include="Useful.LoggerFactory.Log4net" Version="1.0.1" />
     <PackageReference Include="xunit" Version="2.4.1" />
@@ -39,6 +44,7 @@
     <ProjectReference Include="..\CoV.Service\CoV.Service.csproj" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Infrastructure\SessionHelper" />
     <Folder Include="wwwroot\Images" />
     <Folder Include="wwwroot\Login" />
   </ItemGroup>
@@ -2176,5 +2182,10 @@
     <_ContentIncludedByDefault Remove="Views\Home\Singin.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Home\SingUp.cshtml" />
     <_ContentIncludedByDefault Remove="Views\Home\TemplateInvoid.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Classes\CreateClass.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Classes\Show.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Classes\Update.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Student\CreateOrUpdate.cshtml" />
+    <_ContentIncludedByDefault Remove="Views\Student\Show.cshtml" />
   </ItemGroup>
 </Project>

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/CoV.Web.csproj": {}
+    "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/CoV.Web.csproj": {}
   },
   "projects": {
-    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
+    "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
+        "projectUniqueName": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj",
         "projectName": "CoV.Common",
-        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj",
-        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
-        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/obj/",
+        "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj",
+        "packagesPath": "/home/cap/.nuget/packages/",
+        "outputPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+          "/home/cap/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -82,20 +82,20 @@
         }
       }
     },
-    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+    "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
+        "projectUniqueName": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
         "projectName": "CoV.DataAccess",
-        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
-        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
-        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/obj/",
+        "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj",
+        "packagesPath": "/home/cap/.nuget/packages/",
+        "outputPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+          "/home/cap/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -106,8 +106,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
-                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+              "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj": {
+                "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj"
               }
             }
           }
@@ -140,20 +140,20 @@
         }
       }
     },
-    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj": {
+    "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
+        "projectUniqueName": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj",
         "projectName": "CoV.Service",
-        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj",
-        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
-        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/obj/",
+        "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj",
+        "packagesPath": "/home/cap/.nuget/packages/",
+        "outputPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+          "/home/cap/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -164,11 +164,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
-                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+              "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj": {
+                "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj"
               },
-              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
-                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
+              "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+                "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
               }
             }
           }
@@ -217,20 +217,20 @@
         }
       }
     },
-    "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/CoV.Web.csproj": {
+    "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/CoV.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/CoV.Web.csproj",
+        "projectUniqueName": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/CoV.Web.csproj",
         "projectName": "CoV.Web",
-        "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/CoV.Web.csproj",
-        "packagesPath": "/home/local/3SI/chuong.hv/.nuget/packages/",
-        "outputPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Web/obj/",
+        "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/CoV.Web.csproj",
+        "packagesPath": "/home/cap/.nuget/packages/",
+        "outputPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "/home/local/3SI/chuong.hv/.nuget/NuGet/NuGet.Config"
+          "/home/cap/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.2"
@@ -241,14 +241,14 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj": {
-                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Common/CoV.Common.csproj"
+              "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj": {
+                "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Common/CoV.Common.csproj"
               },
-              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
-                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
+              "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj": {
+                "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.DataAccess/CoV.DataAccess.csproj"
               },
-              "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj": {
-                "projectPath": "/home/local/3SI/chuong.hv/Desktop/gitlub/cov/CoV.Web/CoV.Service/CoV.Service.csproj"
+              "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj": {
+                "projectPath": "/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Service/CoV.Service.csproj"
               }
             }
           }

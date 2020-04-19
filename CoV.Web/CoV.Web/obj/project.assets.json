@@ -11,6 +11,18 @@
           "lib/net451/AspNet.Core.SharePoint.Addin.Authentication.dll": {}
         }
       },
+      "AspNetCoreCurrentRequestContext/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/AspNetCoreCurrentRequestContext.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/AspNetCoreCurrentRequestContext.dll": {}
+        }
+      },
       "AuthorizationMiddlewareExtension/1.2.3": {
         "type": "package",
         "dependencies": {
@@ -310,6 +322,15 @@
         },
         "runtime": {
           "lib/net40/Mappers.dll": {}
+        }
+      },
+      "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+        "type": "package",
+        "compile": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.AspNet.Session.dll": {}
         }
       },
       "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -3406,6 +3427,20 @@
           "lib/netstandard2.0/Serilog.dll": {}
         }
       },
+      "Serilog.Enrichers.AspNetCore.HttpContext/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Abstractions": "2.0.0",
+          "Microsoft.Extensions.Options": "2.0.0",
+          "Serilog": "2.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Serilog.Enrichers.AspNetCore.HttpContext.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Serilog.Enrichers.AspNetCore.HttpContext.dll": {}
+        }
+      },
       "Serilog.Extensions.Logging/2.0.2": {
         "type": "package",
         "dependencies": {
@@ -3494,6 +3529,15 @@
         },
         "runtime": {
           "lib/netstandard1.3/Serilog.Sinks.RollingFile.dll": {}
+        }
+      },
+      "SessionManager/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/SessionManager.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/SessionManager.dll": {}
         }
       },
       "System.AppContext/4.3.0": {
@@ -5311,6 +5355,22 @@
         "lib/net451/AspNet.Core.SharePoint.Addin.Authentication.dll"
       ]
     },
+    "AspNetCoreCurrentRequestContext/2.0.0": {
+      "sha512": "YU164lvs4Hdr0lIzHiqX4bcMd8hwdUf0FzM4Mw34kxI0Vx4aUayu+HIE8u2YPRT4xW5wqfnS1LLaD6ryN2R6+A==",
+      "type": "package",
+      "path": "aspnetcorecurrentrequestcontext/2.0.0",
+      "files": [
+        ".signature.p7s",
+        "aspnetcorecurrentrequestcontext.2.0.0.nupkg.sha512",
+        "aspnetcorecurrentrequestcontext.nuspec",
+        "lib/net46/AspNetCoreCurrentRequestContext.dll",
+        "lib/net46/AspNetCoreCurrentRequestContext.xml",
+        "lib/netstandard1.6/AspNetCoreCurrentRequestContext.dll",
+        "lib/netstandard1.6/AspNetCoreCurrentRequestContext.xml",
+        "lib/netstandard2.0/AspNetCoreCurrentRequestContext.dll",
+        "lib/netstandard2.0/AspNetCoreCurrentRequestContext.xml"
+      ]
+    },
     "AuthorizationMiddlewareExtension/1.2.3": {
       "sha512": "gTiFG2M9Ym9KpY4rQ0/hs/pmOVODn6zeTnPqZsAhHW207Bzlss96vIv0sjK3GslCvdG9sZxPNywc0DFQkEvNng==",
       "type": "package",
@@ -5429,6 +5489,7 @@
       "type": "package",
       "path": "fluentvalidation.aspnetcore/8.6.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.aspnetcore.8.6.1.nupkg.sha512",
         "fluentvalidation.aspnetcore.nuspec",
@@ -5445,6 +5506,7 @@
       "type": "package",
       "path": "fluentvalidation.dependencyinjectionextensions/8.6.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.dependencyinjectionextensions.8.6.1.nupkg.sha512",
         "fluentvalidation.dependencyinjectionextensions.nuspec",
@@ -5457,6 +5519,7 @@
       "type": "package",
       "path": "fluentvalidation.mvc5/8.6.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "fluentvalidation.mvc5.8.6.1.nupkg.sha512",
         "fluentvalidation.mvc5.nuspec",
@@ -5655,6 +5718,20 @@
         "lib/net40/Mappers.pdb",
         "mappers.1.6.0.nupkg.sha512",
         "mappers.nuspec"
+      ]
+    },
+    "Microsoft.AspNet.Session/1.0.0-rc1-final": {
+      "sha512": "3tjDeRpV1jpyocCT2bupJzQD9+aEfC5HMDTEfc1Me69zorL9yFI2dzo/9aBrHdNIKthhiutP0LhT5slqoToMhQ==",
+      "type": "package",
+      "path": "microsoft.aspnet.session/1.0.0-rc1-final",
+      "files": [
+        ".signature.p7s",
+        "lib/dotnet5.4/Microsoft.AspNet.Session.dll",
+        "lib/dotnet5.4/Microsoft.AspNet.Session.xml",
+        "lib/net451/Microsoft.AspNet.Session.dll",
+        "lib/net451/Microsoft.AspNet.Session.xml",
+        "microsoft.aspnet.session.1.0.0-rc1-final.nupkg.sha512",
+        "microsoft.aspnet.session.nuspec"
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.6": {
@@ -9077,6 +9154,17 @@
         "serilog.nuspec"
       ]
     },
+    "Serilog.Enrichers.AspNetCore.HttpContext/1.0.1": {
+      "sha512": "9MZJU3zMZxbjZ3efx1I2hUo0MIKrJwekEB7vc02pW2f1gEH3PmR2aNgJTOgbVCHwAhCCJiC44adDBIwB6PhGoA==",
+      "type": "package",
+      "path": "serilog.enrichers.aspnetcore.httpcontext/1.0.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/Serilog.Enrichers.AspNetCore.HttpContext.dll",
+        "serilog.enrichers.aspnetcore.httpcontext.1.0.1.nupkg.sha512",
+        "serilog.enrichers.aspnetcore.httpcontext.nuspec"
+      ]
+    },
     "Serilog.Extensions.Logging/2.0.2": {
       "sha512": "6zGo0AmWHWVICQ49DiODo9qboYKTqpg9osNWS0TBdRk/Af8HDgWsK+rYfl7TuNyzRgVhFZMbBElqjPyBQ2AQLg==",
       "type": "package",
@@ -9171,6 +9259,17 @@
         "lib/netstandard1.3/Serilog.Sinks.RollingFile.xml",
         "serilog.sinks.rollingfile.3.3.0.nupkg.sha512",
         "serilog.sinks.rollingfile.nuspec"
+      ]
+    },
+    "SessionManager/1.0.1": {
+      "sha512": "5dzlqPgbB1/eGUOYJZoTGql4X2brXl1WcjPcMBwk5MYGiHD5PpKbOI83KSQnyz+p7tVJsLScXIStxQheisZF3Q==",
+      "type": "package",
+      "path": "sessionmanager/1.0.1",
+      "files": [
+        ".signature.p7s",
+        "lib/netstandard2.0/SessionManager.dll",
+        "sessionmanager.1.0.1.nupkg.sha512",
+        "sessionmanager.nuspec"
       ]
     },
     "System.AppContext/4.3.0": {
@@ -14124,6 +14223,7 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "AspNet.Core.SharePoint.Addin.Authentication >= 0.0.0.2",
+      "AspNetCoreCurrentRequestContext >= 2.0.0",
       "AuthorizationMiddlewareExtension >= 1.2.3",
       "AutoMapper >= 9.0.0",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 7.0.0",
@@ -14139,18 +14239,22 @@
       "Logger >= 1.0.9.3",
       "LoggerApplication >= 2.1.2",
       "Mappers >= 1.6.0",
+      "Microsoft.AspNet.Session >= 1.0.0-rc1-final",
       "Microsoft.AspNetCore.App >= 2.2.0",
       "Microsoft.AspNetCore.Authorization >= 2.2.0",
       "Microsoft.AspNetCore.CookiePolicy >= 2.2.8",
       "Microsoft.AspNetCore.MiddlewareAnalysis >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
+      "Microsoft.AspNetCore.Session >= 2.2.0",
       "Microsoft.Extensions.Logging.Console >= 2.2.0",
       "Microsoft.Extensions.Logging.Debug >= 2.2.0",
       "Microsoft.Extensions.Logging.EventSource >= 2.2.0",
       "Microsoft.Extensions.Logging.TraceSource >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Moq >= 4.13.1",
+      "Serilog.Enrichers.AspNetCore.HttpContext >= 1.0.1",
       "Serilog.Extensions.Logging.File >= 2.0.0-dev-00039",
+      "SessionManager >= 1.0.1",
       "System.Security.Claims >= 4.3.0",
       "Useful.LoggerFactory.Log4net >= 1.0.1",
       "jquery.dataTables.TypeScript.DefinitelyTyped >= 0.6.7",
@@ -14210,6 +14314,10 @@
             "target": "Package",
             "version": "[0.0.0.2, )"
           },
+          "AspNetCoreCurrentRequestContext": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "AuthorizationMiddlewareExtension": {
             "target": "Package",
             "version": "[1.2.3, )"
@@ -14258,6 +14366,10 @@
             "target": "Package",
             "version": "[1.6.0, )"
           },
+          "Microsoft.AspNet.Session": {
+            "target": "Package",
+            "version": "[1.0.0-rc1-final, )"
+          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -14278,6 +14390,10 @@
           },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
+          "Microsoft.AspNetCore.Session": {
             "target": "Package",
             "version": "[2.2.0, )"
           },
@@ -14307,9 +14423,17 @@
             "target": "Package",
             "version": "[4.13.1, )"
           },
+          "Serilog.Enrichers.AspNetCore.HttpContext": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Serilog.Extensions.Logging.File": {
             "target": "Package",
             "version": "[2.0.0-dev-00039, )"
+          },
+          "SessionManager": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           },
           "System.Security.Claims": {
             "target": "Package",
@@ -14423,6 +14547,16 @@
       "warningLevel": 1,
       "message": "Package 'Mappers 1.6.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
       "libraryId": "Mappers",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.2"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.AspNet.Session 1.0.0-rc1-final' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.2'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.AspNet.Session",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.2"
       ]

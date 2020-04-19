@@ -1,7 +1,5 @@
 ﻿using System;
 using CoV.Common.Resources;
-using CoV.Service.DataModel;
-using CoV.Service.Service;
 using Microsoft.AspNetCore.Mvc;
 using Serilog;
 

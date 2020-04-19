@@ -228,6 +228,12 @@
   <data name="UserLoginFailed" xml:space="preserve">
     <value>Tài khoản hoặc mật khẩu không đúng</value>
   </data>
+  <data name="LoginCustomerSingUpFailed" xml:space="preserve">
+    <value>Email hoặc số điện thoại  đã tồn  tại </value>
+  </data>
+    <data name="CustomerSingUpFailed" xml:space="preserve">
+    <value>Email hoặc số điện thoại chưa tồn  tại </value>
+  </data>
   <data name="RecordNotFound" xml:space="preserve">
     <value>Record not found.</value>
   </data>
@@ -248,6 +254,9 @@
   </data>
   <data name="NullPassword" xml:space="preserve">
     <value>Vui lòng nhập mật khẩu!</value>
+  </data>
+    <data name="ConfiguePassword" xml:space="preserve">
+    <value>Vui lòng nhập mật khẩu trùng nhau!</value>
   </data>
   <data name="NullPasswordConfirm" xml:space="preserve">
     <value>Vui lòng nhập lại mật khẩu!</value>

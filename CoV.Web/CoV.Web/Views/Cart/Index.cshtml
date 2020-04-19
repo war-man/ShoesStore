@@ -1,0 +1,175 @@
+﻿@using CoV.Service.DataModel
+
+@{
+	ViewBag.Title = "title";
+	Layout = "_FrontEndLayout";
+	var cart = (IEnumerable<CartViewModel>) ViewBag.cart;
+	var i = cart.Count();
+}
+
+<div class="nen-mo"></div>
+<div class="hop-thoai">
+	<i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%; opacity: 1;" class="far fa-check-circle "></i>
+	<h3 style="color: white;">Sản phẩm được thêm vào giỏ hàng</h3>
+</div>
+
+
+<section class='cart'>
+	<div class='container p-0'>
+		<div class='row'>
+			<div class="col-md-12">
+				<h2 class="title-page">
+					Giỏ hàng của @Context.Session.GetString("SessionName")
+				</h2>
+			</div>
+			<div class='col-md-12'>
+				<div class='list-cart table'>
+
+					<table class="text-center">
+						<thead>
+						<tr>
+							<th>STT</th>
+							<th>Ảnh sản phẩm</th>
+							<th>Tên sản phẩm</th>
+							<th>Giá</th>
+							<th>Số lượng</th>
+							<th>Thành tiền</th>
+							<th>Thao tác</th>
+						</tr>
+						</thead>
+						<tbody>
+
+						@foreach (var  item in cart)
+						{
+							<td hidden>
+								@(i = i - 1);
+							</td>
+							<tr class='item-cart' id="cart_customer">
+								<td>
+									@(cart.Count() - i)
+								</td>
+								<td>
+									<img src='~/Images/@item.Product.AvatarDetails'>
+								</td>
+								<td class='w-300px'>@item.Product.name</td>
+								<td id="Price">
+									@item.Product.Price
+								</td>
+								<td class='w-200px'>
+									<form action='#' class='form-update-cart'>
+										<input class="Quantity" id="@item.Product.Id" min="1" type='number' value='@item.Quantity'step="1" data-val-range-min="0">
+										<input id="product_id" type='number' value='@item.Product.Id' hidden>
+										<button class='up-qty' type='button'>
+											<i class='fas fa-plus'></i>
+										</button>
+										<button class='down-qty' type='button'>
+											<i class='fas fa-minus'></i>
+										</button>
+									</form>
+								</td>
+								<td id="total_price"></td>
+								<td>
+									<a class="btn-open" asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Product.Id">
+										<button class='btn-danger' type='button'>
+											<i class='fas fa-trash'></i>
+										</button>
+									</a>
+								</td>
+							</tr>
+						}
+						<tr>
+							<td class='text-right' colspan='5'>
+								<h3>Tổng hóa đơn:</h3>
+							</td>
+							<td colspan='2'>
+								<h3></h3>
+							</td>
+						</tr>
+						<tr>
+							<td colspan='7'>
+								<div class='row justify-content-end'>
+									<a class='to-checkout'>
+										Thanh toán
+									</a>
+								</div>
+							</td>
+						</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+@section Scripts
+{
+	<script>
+		// giam so luong don hang
+		$(document).ready(function() {
+
+
+			$(".down-qty").off('click').on('click',
+				function(e) {
+					var id = parseInt($("#Quantity").val());
+					var idProduct = parseInt($("#product_id").val());
+					e.preventDefault();
+					$.ajax({
+						url: '@Url.Action("EditQuantityDown", "Cart")',
+						type: "GET",
+						contentType: "application/json; charset=utf-8",
+						dataType: "json",
+						data: { 'id': idProduct, 'quantity': id },
+						async: true,
+						cache: false,
+						success: function() {
+							$("#Quantity").val(id - 1);
+						}
+					});
+				});
+
+			//thay doi so san pham : susscess
+			$(".Quantity").on('mouseleave',function(e) {
+				e.preventDefault();
+				var id = parseInt($(this).val());
+				var idProduct = e.target.id;
+				var price = parseInt($("#Price").html());
+				$.ajax({
+					url: '@Url.Action("EditQuantityMouseleave", "Cart")',
+					type: "GET",
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					data: { 'id': idProduct, 'quantity': id },
+					async: true,
+					cache: false,
+					success: function() {
+						$(this).val(id);
+					}
+				});
+			});
+			$(".price").each(function() {
+				$(this).text("a");
+			});
+				
+			// tang so luong don hang
+			$(".up-qty").click(function(e) {
+				e.preventDefault();
+				var idProduct = parseInt($("#product_id").val());
+				$.ajax({
+					url: '@Url.Action("EditQuantity", "Cart")',
+					type: "GET",
+					contentType: "application/json; charset=utf-8",
+					dataType: "json",
+					data: { 'id': idProduct, 'quantity': id },
+					async: true,
+					cache: false,
+					success: function() {
+						$("#Quantity").val(id + 1);
+					}
+				});
+			});
+		});
+	</script>
+}
+
+

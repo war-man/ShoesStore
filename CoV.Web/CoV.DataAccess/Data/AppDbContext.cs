@@ -13,14 +13,14 @@ namespace CoV.DataAccess.Data
         
         public  virtual  DbSet<User> Users { get; set; }
         public  virtual  DbSet<Role> Roles { get; set; }
-        public  virtual  DbSet<Classes> Classeses { get; set; }
-        public  virtual  DbSet<Student> Students { get; set; }
         public  virtual  DbSet<Product> Products { get; set; }
         public  virtual  DbSet<ColorProduct> ColorProducts { get; set; }
         public  virtual  DbSet<MakerProduct> MakerProducts { get; set; }
         public  virtual  DbSet<StatusProduct> StatusProducts { get; set; }
         public  virtual  DbSet<CategoryProduct> CategoryProducts { get; set; }
         public  virtual  DbSet<Gender> Genders { get; set; }
+        public  virtual  DbSet<Cart> Carts { get; set; }
+        public  virtual  DbSet<Customer> Customers { get; set; }
         
         /// <summary>
         /// Name Tabel
@@ -31,10 +31,6 @@ namespace CoV.DataAccess.Data
             modelBuilder.Entity<User>().ToTable("User");
             
             modelBuilder.Entity<Role>().ToTable("Role");
-            
-            modelBuilder.Entity<Classes>().ToTable("Classses");
-            
-            modelBuilder.Entity<Student>().ToTable("Student"); 
             
             modelBuilder.Entity<Product>().ToTable("Product"); 
             
@@ -47,6 +43,10 @@ namespace CoV.DataAccess.Data
             modelBuilder.Entity<CategoryProduct>().ToTable("CategoryProduct");
             
             modelBuilder.Entity<Gender>().ToTable("Gender");   
+            
+            modelBuilder.Entity<Cart>().ToTable("Cart");
+
+            modelBuilder.Entity<Customer>().ToTable("Customer");
         } 
     }
 }

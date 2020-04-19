@@ -4,7 +4,7 @@ using CoV.Service.Service;
 
 namespace CoV.Service.Repository
 {
-    /// <summary>
+/// <summary>
       /// interface for UnitOfWork
       /// </summary>
       public interface IUnitOfWork
@@ -13,16 +13,6 @@ namespace CoV.Service.Repository
             ///  Repository User
             /// </summary>
             IUserRepositoy UserRepository { get; }
-            
-            /// <summary>
-            ///  Repository Studentt
-            /// </summary>
-            IStudentRepository StudentRepository { get; }
-            
-            /// <summary>
-            ///  Repository Class
-            /// </summary>
-            IClassesRepository ClassRepository { get; }
             
             /// <summary>
             ///  Repository role
@@ -65,6 +55,16 @@ namespace CoV.Service.Repository
             ICategoryProductRepository CategoryProductRepository { get; }
             
             /// <summary>
+            ///  Respository Product Customer
+            /// </summary>
+            ICustomerRespository CustomerRespository { get; }
+            
+            /// <summary>
+            /// Repository Product Category
+            /// </summary>
+            ICartRespository CartRespository { get; }
+            
+            /// <summary>
             ///  AppDbContext
             /// </summary>
             AppDbContext AppDbContext { get; }
@@ -86,8 +86,6 @@ namespace CoV.Service.Repository
         #region Properties
         private readonly AppDbContext _appDbContext;
         private UserRepositoy _userRepository;
-        private StudentRepository _studentRepository;
-        private ClassesRepository _classesRepository;
         private RoleRepository _roleRepository;
         private ProductRespository _productRespository;
         private CategoryProductRepository _categoryProductRepository;
@@ -96,6 +94,8 @@ namespace CoV.Service.Repository
         private ImageRepository _imageRepository;
         private MakerProductRepository _makerProductRepository;
         private StatusProductRepository _statusProductRepository;
+        private CartRespository _cartRespository;
+        private CustomerRespository _customerRespository;
         #endregion
         
         /// <summary>
@@ -137,28 +137,7 @@ namespace CoV.Service.Repository
                     _userRepository ?? new UserRepositoy(_appDbContext);
             }
         }
-        
-        /// <summary>
-        /// initalization studentReository
-        /// </summary>
-        public IStudentRepository StudentRepository
-        {
-            get
-            {
-                return _studentRepository =
-                    _studentRepository ?? new StudentRepository(_appDbContext);
-            }
-        }
-        
-        /// <summary>
-        /// initialization class repository
-        /// </summary>
-        public IClassesRepository ClassRepository
-        {
-            get { return _classesRepository = 
-                _classesRepository ?? new ClassesRepository(_appDbContext); }
-        }
-        
+
         /// <summary>
         /// Initialization Role repository 
         /// </summary>
@@ -244,6 +223,28 @@ namespace CoV.Service.Repository
             get {
                 return _statusProductRepository = 
                     _statusProductRepository ?? new StatusProductRepository(_appDbContext);
+            }
+        }
+        
+        /// <summary>
+        /// Initialization cart   Product repository 1
+        /// </summary>
+        public  ICartRespository CartRespository 
+        {
+            get {
+                return _cartRespository = 
+                    _cartRespository ?? new CartRespository(_appDbContext);
+            }
+        }
+        
+        /// <summary>
+        /// Initialization cart   Product repository 1
+        /// </summary>
+        public  ICustomerRespository CustomerRespository 
+        {
+            get {
+                return _customerRespository = 
+                    _customerRespository ?? new CustomerRespository(_appDbContext);
             }
         }
         

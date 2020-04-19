@@ -268,6 +268,18 @@ namespace CoV.Common.Resources {
             }
         }
         
+        public static string LoginCustomerSingUpFailed {
+            get {
+                return ResourceManager.GetString("LoginCustomerSingUpFailed", resourceCulture);
+            }
+        }
+        
+        public static string CustomerSingUpFailed {
+            get {
+                return ResourceManager.GetString("CustomerSingUpFailed", resourceCulture);
+            }
+        }
+        
         public static string RecordNotFound {
             get {
                 return ResourceManager.GetString("RecordNotFound", resourceCulture);
@@ -307,6 +319,12 @@ namespace CoV.Common.Resources {
         public static string NullPassword {
             get {
                 return ResourceManager.GetString("NullPassword", resourceCulture);
+            }
+        }
+        
+        public static string ConfiguePassword {
+            get {
+                return ResourceManager.GetString("ConfiguePassword", resourceCulture);
             }
         }
         

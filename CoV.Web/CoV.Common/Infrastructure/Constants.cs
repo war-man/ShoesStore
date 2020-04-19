@@ -169,11 +169,6 @@
                 "002f1d1f-e239-4409-b8e6-72efa2824ba7_photo-1-15611010487262059848050.png";
         }
         
-        public class Classes
-        {
-            public const string ClassName = "Class A";
-            public const int ClassMember = 50;
-        }
         
         public class  Document
         {

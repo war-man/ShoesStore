@@ -1,4 +1,5 @@
 ﻿using CoV.Service.Service;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CoV.Web.Controllers
@@ -18,15 +19,12 @@ namespace CoV.Web.Controllers
         {
             ViewBag.getLishFamale = _productService.GetListShoesFemale();
             ViewBag.getLishMale = _productService.GetListShoesMale();
+            ViewBag.Name = HttpContext.Session.GetString("SessionName");  
+            ViewBag.Email = HttpContext.Session.GetString("SessionEmail");  
             return View();
         }
         
         public IActionResult Singin()
-        {
-            return View();
-        }
-        
-        public IActionResult SingUp()
         {
             return View();
         }
@@ -51,10 +49,7 @@ namespace CoV.Web.Controllers
             return View();
         }
         
-        public IActionResult Cart()
-        {
-            return View();
-        }
+
         
         public IActionResult Checkout01()
         {

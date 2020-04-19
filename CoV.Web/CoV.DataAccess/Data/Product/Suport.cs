@@ -4,7 +4,8 @@
     {
         public int Id { get; set; }
         
-        public string name  { get; set; }
         public int tel  { get; set; }
+        
+        
     }
 }

@@ -1,0 +1,62 @@
+﻿@model IEnumerable<CoV.Service.DataModel.CustomerViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+    <div class="row">
+        <div class="col-12" style="text-align: center">
+           <h1> <a  asp-controller="Customer" asp-action="GetAll">DANH SÁCH TÀI KHOẢN KHÁCH HÀNG</a></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+            <table  id="ShowClass" class="table table-bordered table-hover">
+                <thead class="thead-light">       
+                <tr style="background-color: darkgrey"> 
+                    <td>Tên khách hàng</td>
+                    <td>PhoneNumber</td>
+                    <td>Email</td>
+                    <td>Ngày tạo </td>
+                    <td>Địa chỉ</td>
+                    <td>Thành phố</td>
+                    <td style="text-align: center">Update - Delete</td>
+                </tr>
+                <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>  
+                        <td>@item.FirstName  @item.LastName</td>
+                        <td>@item.PhoneNumber</td>
+                        <td>@item.Email</td>
+                        <td>@item.CreateDate</td>
+                        <td>@item.Address</td>
+                        <td>@item.City</td>
+                        <td style="text-align: center">
+                            <a  asp-route-id="@item.Id" asp-controller="Customer" asp-action=""   > <i  class="fas fa-edit"></i></a>
+                            <a  asp-route-id="@item.Id" asp-action="delete" asp-controller="Customer"> <i style="color: red" class="fas fa-user-times"></i></a>
+                        </td>
+                    </tr>
+                }
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function() {
+            $('#ShowClass').DataTable();
+        });
+    </script>
+}
+
+
+
+
+
+
+

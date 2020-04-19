@@ -1,0 +1,84 @@
+﻿@model CoV.Service.DataModel.CustomerViewModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_FrontEndLayout";
+}
+<style>
+    ul {
+	    list-style-type: none;
+    }
+</style>
+<section class="signin">
+			<div class="container p-0">
+				<div class="row">
+					<div class="col-md-12 text-center mb-2">
+						<h1 class="">
+							Đăng ký
+						</h1>
+					</div>
+				</div>
+				<div class="row justify-content-center">
+					<div class="col-md-6">
+						<div class="form">
+							<form  asp-action="CreateAndUpdate" asp-controller="Customer" method="post">
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Họ*" asp-for="FirstName" />
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Tên*" asp-for="LastName" />
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Số điện thoại*" asp-for="PhoneNumber" />
+								</div>
+								<div class="form-group">
+									<input type="email" class="form-control" placeholder="Email*" asp-for="Email" /> 
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Địa chỉ" asp-for="Address" />
+								</div>
+								<div class="form-group">
+									<input type="text" class="form-control" placeholder="Thành phố " asp-for="City" />
+								</div>
+								@* <div class="form-group select"> *@
+								@* 	<select  class="form-control" asp-for="City"> *@
+								@* 		<option value="">Tỉnh / Thành phố*</option> *@
+								@* 		<option value="1">Thái Bình</option> *@
+								@* 		<option value="2">Hà Nội</option> *@
+								@* 	</select> *@
+								@* 	<span class="icon-select"> *@
+								@* 		<i class="fas fa-chevron-down"></i> *@
+								@* 	</span> *@
+								@* </div> *@
+								@* <div class="form-group select"> *@
+								@* 	<select  class="form-control" asp-for="Address"> *@
+								@* 		<option value="">Quận / Huyện*</option> *@
+								@* 		<option value="1">Kiến Xương</option> *@
+								@* 		<option value="2">Ba Đình</option> *@
+								@* 	</select> *@
+								@* 	<span class="icon-select"> *@
+								@* 		<i class="fas fa-chevron-down"></i> *@
+								@* 	</span> *@
+								@* </div> *@
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Mật khẩu*"  asp-for="PassWord" />
+								</div>
+								<div class="form-group">
+									<input type="password" class="form-control" placeholder="Nhập lại mật khẩu*" asp-for="ConfiguePassWord" />
+								</div>
+								<div  asp-validation-summary="ModelOnly" class="text-danger"  style="list-style-type: none; ;color: red; text-align: center"></div>	
+								<div class="form-group">
+									<button class="btn-blue w-100" type="submit" >
+										Đăng ký
+									</button>
+								</div>
+
+								<div class="form-group">
+									Bạn đã có tài khoản? <a class="color-blue" asp-action="LoginCustomer" asp-controller="Customer" >Đăng nhập ngay</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>

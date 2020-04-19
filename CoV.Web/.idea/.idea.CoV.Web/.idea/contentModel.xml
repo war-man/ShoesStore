@@ -44,32 +44,26 @@
         <e p="CoV.DataAccess.csproj" t="IncludeRecursive" />
         <e p="Data" t="Include">
           <e p="AppDbContext.cs" t="Include" />
-          <e p="Classes.cs" t="Include" />
           <e p="Product" t="Include">
             <e p="Cart.cs" t="Include" />
             <e p="CategoryProduct.cs" t="Include" />
             <e p="ColorProduct.cs" t="Include" />
+            <e p="Customer.cs" t="Include" />
             <e p="Gender.cs" t="Include" />
             <e p="Image.cs" t="Include" />
             <e p="MakerProduct.cs" t="Include" />
+            <e p="Order.cs" t="Include" />
             <e p="Product.cs" t="Include" />
             <e p="StatusProduct.cs" t="Include" />
             <e p="Suport.cs" t="Include" />
           </e>
           <e p="Role.cs" t="Include" />
-          <e p="Student.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="DbInitializer.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20200225091733_mydaynew12.Designer.cs" t="Include" />
-          <e p="20200225091733_mydaynew12.cs" t="Include" />
-          <e p="20200304032046_product1.Designer.cs" t="Include" />
-          <e p="20200304032046_product1.cs" t="Include" />
-          <e p="20200304032406_product2.Designer.cs" t="Include" />
-          <e p="20200304032406_product2.cs" t="Include" />
-          <e p="20200304073233_product3.Designer.cs" t="Include" />
-          <e p="20200304073233_product3.cs" t="Include" />
+          <e p="20200322123118_customer23.Designer.cs" t="Include" />
+          <e p="20200322123118_customer23.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -85,27 +79,30 @@
         <e p="CoV.Service.csproj" t="IncludeRecursive" />
         <e p="DataModel" t="Include">
           <e p="ChangePassWordModel.cs" t="Include" />
-          <e p="CreateClasserModel.cs" t="Include" />
           <e p="LoginModel.cs" t="Include" />
           <e p="Product" t="Include">
+            <e p="CartViewModel.cs" t="Include" />
             <e p="CategoryProductViewModel.cs" t="Include" />
             <e p="ColorProductViewModel.cs" t="Include" />
+            <e p="CustomerViewModel.cs" t="Include" />
             <e p="GenderViewModel.cs" t="Include" />
             <e p="ImageProductViewModel.cs" t="Include" />
             <e p="MakerProductViewModel.cs" t="Include" />
+            <e p="ProductViewCart.cs" t="Include" />
             <e p="ProductViewModel.cs" t="Include" />
             <e p="StatusProductViewModel.cs" t="Include" />
+            <e p="loginCustomerViewModel.cs" t="Include" />
           </e>
           <e p="RoleViewModel.cs" t="Include" />
-          <e p="StudentViewModel.cs" t="Include" />
           <e p="UserViewModel.cs" t="Include" />
         </e>
         <e p="Repository" t="Include">
-          <e p="ClassesRepository.cs" t="Include" />
           <e p="GenericRepository.cs" t="Include" />
           <e p="Product" t="Include">
+            <e p="CartRespository.cs" t="Include" />
             <e p="CategoryProductRepository.cs" t="Include" />
             <e p="ColorCategoryRepository.cs" t="Include" />
+            <e p="CustomerRespository.cs" t="Include" />
             <e p="GenderRepository.cs" t="Include" />
             <e p="ImageRepository.cs" t="Include" />
             <e p="MakerProductRepository.cs" t="Include" />
@@ -113,23 +110,23 @@
             <e p="StatusProduct.cs" t="Include" />
           </e>
           <e p="RoleRepository.cs" t="Include" />
-          <e p="StudentRepository.cs" t="Include" />
           <e p="UnitOfWork.cs" t="Include" />
           <e p="UserRepositoy.cs" t="Include" />
         </e>
         <e p="Service" t="Include">
-          <e p="ClassesService.cs" t="Include" />
           <e p="ProductService" t="Include">
+            <e p="CartService.cs" t="Include" />
             <e p="CategoryProductService.cs" t="Include" />
             <e p="ColorProductService.cs" t="Include" />
+            <e p="CustomerService.cs" t="Include" />
             <e p="GenderService.cs" t="Include" />
             <e p="ImageProductService.cs" t="Include" />
+            <e p="Oder Detail.cs" t="Include" />
             <e p="ProductService.cs" t="Include" />
             <e p="SizeProductService.cs" t="Include" />
             <e p="StatusProductService.cs" t="Include" />
           </e>
           <e p="RoleService.cs" t="Include" />
-          <e p="StudentService.cs" t="Include" />
           <e p="UserService.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -146,14 +143,12 @@
         <e p="Controllers" t="Include">
           <e p="AccountController.cs" t="Include" />
           <e p="AdminController.cs" t="Include" />
-          <e p="ClassesController.cs" t="Include" />
+          <e p="CartController.cs" t="Include" />
+          <e p="CustomerController.cs" t="Include" />
           <e p="ErrorController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
-          <e p="ProductController" t="Include">
-            <e p="ProductController.cs" t="Include" />
-          </e>
+          <e p="ProductController.cs" t="Include" />
           <e p="RoleController.cs" t="Include" />
-          <e p="StudentController.cs" t="Include" />
           <e p="TokenController.cs" t="Include" />
           <e p="UserApiController.cs" t="Include" />
         </e>
@@ -168,14 +163,15 @@
             <e p="MySampleActionFilter.cs" t="Include" />
             <e p="ValidateRequestFilter.cs" t="Include" />
           </e>
-          <e p="Helper" t="Include">
+          <e p="Helpers" t="Include">
             <e p="SessionHelper.cs" t="Include" />
           </e>
           <e p="Mapper" t="Include">
-            <e p="ClassesMapper.cs" t="Include" />
             <e p="ProductMapper" t="Include">
+              <e p="CartMapper.cs" t="Include" />
               <e p="CategoryMapper.cs" t="Include" />
               <e p="ColorProductMapper.cs" t="Include" />
+              <e p="CustomerMapper.cs" t="Include" />
               <e p="GenderMapper.cs" t="Include" />
               <e p="ProductMapper.cs" t="Include" />
               <e p="SizeProductMapper.cs" t="Include" />
@@ -183,13 +179,13 @@
               <e p="imageMapper.cs" t="Include" />
             </e>
             <e p="RoleMapper.cs" t="Include" />
-            <e p="StudentMapper.cs" t="Include" />
             <e p="UserMapper.cs" t="Include" />
           </e>
           <e p="Middleware" t="Include">
             <e p="PageAccessdenied.cs" t="Include" />
             <e p="PageNotFound.cs" t="Include" />
           </e>
+          <e p="SessionHelper" t="Include" />
           <e p="Validations" t="Include">
             <e p="LoginValidation.cs" t="Include" />
             <e p="UserViewValidation.cs" t="Include" />
@@ -213,10 +209,13 @@
           <e p="Admin" t="Include">
             <e p="Index.cshtml" t="Include" />
           </e>
-          <e p="Classes" t="Include">
-            <e p="CreateClass.cshtml" t="Include" />
-            <e p="Show.cshtml" t="Include" />
-            <e p="Update.cshtml" t="Include" />
+          <e p="Cart" t="Include">
+            <e p="Index.cshtml" t="Include" />
+          </e>
+          <e p="Customer" t="Include">
+            <e p="CreateAndUpdate.cshtml" t="Include" />
+            <e p="GetAll.cshtml" t="Include" />
+            <e p="loginCustomer.cshtml" t="Include" />
           </e>
           <e p="Error" t="Include">
             <e p="accessdenied.cshtml" t="Include" />
@@ -227,14 +226,12 @@
             <e p="About.cshtml" t="Include" />
             <e p="Blog.cshtml" t="Include" />
             <e p="BlogDetail.cshtml" t="Include" />
-            <e p="Cart.cshtml" t="Include" />
             <e p="Checkout01.cshtml" t="Include" />
             <e p="Checkout02.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
             <e p="Home.cshtml" t="Include" />
             <e p="Product.cshtml" t="Include" />
             <e p="ProductDetail.cshtml" t="Include" />
-            <e p="SingUp.cshtml" t="Include" />
             <e p="Singin.cshtml" t="Include" />
             <e p="TemplateInvoid.cshtml" t="Include" />
           </e>
@@ -259,10 +256,6 @@
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="_head.cshtml" t="Include" />
           </e>
-          <e p="Student" t="Include">
-            <e p="CreateOrUpdate.cshtml" t="Include" />
-            <e p="Show.cshtml" t="Include" />
-          </e>
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
         </e>
@@ -270,8 +263,6 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="log" t="Include">
-          <e p="log-20200218-CoV.txt" t="Include" />
-          <e p="log-20200219-CoV.txt" t="Include" />
           <e p="log-20200220-CoV.txt" t="Include" />
           <e p="log-20200221-CoV.txt" t="Include" />
           <e p="log-20200223-CoV.txt" t="Include" />
@@ -284,6 +275,25 @@
           <e p="log-20200313-CoV.txt" t="Include" />
           <e p="log-20200317-CoV.txt" t="Include" />
           <e p="log-20200318-CoV.txt" t="Include" />
+          <e p="log-20200319-CoV.txt" t="Include" />
+          <e p="log-20200321-CoV.txt" t="Include" />
+          <e p="log-20200322-CoV.txt" t="Include" />
+          <e p="log-20200323-CoV.txt" t="Include" />
+          <e p="log-20200324-CoV.txt" t="Include" />
+          <e p="log-20200331-CoV.txt" t="Include" />
+          <e p="log-20200401-CoV.txt" t="Include" />
+          <e p="log-20200402-CoV.txt" t="Include" />
+          <e p="log-20200404-CoV.txt" t="Include" />
+          <e p="log-20200406-CoV.txt" t="Include" />
+          <e p="log-20200408-CoV.txt" t="Include" />
+          <e p="log-20200409-CoV.txt" t="Include" />
+          <e p="log-20200411-CoV.txt" t="Include" />
+          <e p="log-20200413-CoV.txt" t="Include" />
+          <e p="log-20200414-CoV.txt" t="Include" />
+          <e p="log-20200416-CoV.txt" t="Include" />
+          <e p="log-20200417-CoV.txt" t="Include" />
+          <e p="log-20200418-CoV.txt" t="Include" />
+          <e p="log-20200419-CoV.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -3075,6 +3085,7 @@
               <e p="animate.css" t="Include" />
               <e p="custom.css" t="Include" />
               <e p="customcss.css" t="Include" />
+              <e p="dialog_modal.css" t="Include" />
               <e p="font-arsenal.css" t="Include" />
               <e p="font-icon.css" t="Include" />
               <e p="ninja-slider.css" t="Include" />
@@ -3125,6 +3136,34 @@
               <e p="template.js" t="Include" />
               <e p="thumbnail-slider.js" t="Include" />
               <e p="wow.js" t="Include" />
+            </e>
+            <e p="lib" t="Include">
+              <e p="bootstrap" t="Include">
+                <e p="css" t="Include">
+                  <e p="bootstrap-grid.css" t="Include" />
+                  <e p="bootstrap-grid.css.map" t="Include" />
+                  <e p="bootstrap-grid.min.css" t="Include" />
+                  <e p="bootstrap-grid.min.css.map" t="Include" />
+                  <e p="bootstrap-reboot.css" t="Include" />
+                  <e p="bootstrap-reboot.css.map" t="Include" />
+                  <e p="bootstrap-reboot.min.css" t="Include" />
+                  <e p="bootstrap-reboot.min.css.map" t="Include" />
+                  <e p="bootstrap.css" t="Include" />
+                  <e p="bootstrap.css.map" t="Include" />
+                  <e p="bootstrap.min.css" t="Include" />
+                  <e p="bootstrap.min.css.map" t="Include" />
+                </e>
+                <e p="js" t="Include">
+                  <e p="bootstrap.bundle.js" t="Include" />
+                  <e p="bootstrap.bundle.js.map" t="Include" />
+                  <e p="bootstrap.bundle.min.js" t="Include" />
+                  <e p="bootstrap.bundle.min.js.map" t="Include" />
+                  <e p="bootstrap.js" t="Include" />
+                  <e p="bootstrap.js.map" t="Include" />
+                  <e p="bootstrap.min.js" t="Include" />
+                  <e p="bootstrap.min.js.map" t="Include" />
+                </e>
+              </e>
             </e>
             <e p="package.json" t="Include" />
             <e p="scss" t="Include">
