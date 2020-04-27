@@ -24,21 +24,31 @@
 							<form  asp-action="CreateAndUpdate" asp-controller="Customer" method="post">
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Họ*" asp-for="FirstName" />
+									<span asp-validation-for="FirstName" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Tên*" asp-for="LastName" />
+									<span asp-validation-for="LastName" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
+
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Số điện thoại*" asp-for="PhoneNumber" />
+									<span asp-validation-for="PhoneNumber" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
+
 								</div>
 								<div class="form-group">
 									<input type="email" class="form-control" placeholder="Email*" asp-for="Email" /> 
+									<span asp-validation-for="Email" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
+
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Địa chỉ" asp-for="Address" />
+									<span asp-validation-for="Address" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
+
 								</div>
 								<div class="form-group">
 									<input type="text" class="form-control" placeholder="Thành phố " asp-for="City" />
+									<span asp-validation-for="City" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
 								</div>
 								@* <div class="form-group select"> *@
 								@* 	<select  class="form-control" asp-for="City"> *@
@@ -62,11 +72,13 @@
 								@* </div> *@
 								<div class="form-group">
 									<input type="password" class="form-control" placeholder="Mật khẩu*"  asp-for="PassWord" />
+									<span asp-validation-for="PassWord" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
 								</div>
 								<div class="form-group">
 									<input type="password" class="form-control" placeholder="Nhập lại mật khẩu*" asp-for="ConfiguePassWord" />
+									<span asp-validation-for="ConfiguePassWord" class="text-danger" style="list-style-type: none; ;color: red; text-align: center"></span>
 								</div>
-								<div  asp-validation-summary="ModelOnly" class="text-danger"  style="list-style-type: none; ;color: red; text-align: center"></div>	
+								<div  asp-validation-summary="ModelOnly" class="text-danger"  style="list-style-type: none; ;color: red; text-align: center" ></div>	
 								<div class="form-group">
 									<button class="btn-blue w-100" type="submit" >
 										Đăng ký

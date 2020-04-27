@@ -29,12 +29,16 @@ namespace CoV.DataAccess.Data
                     };
                     var role3 = new Role
                     {
-                        RoleName = Constants.Role.Customer,
+                        RoleName = Constants.Role.Employee,
                     };
-                    
+                    var role4 = new Role
+                    {
+                        RoleName = Constants.Role.Shiper,
+                    };
                     context.Roles.Add(role);
                     context.Roles.Add(role2);
                     context.Roles.Add(role3);
+                    context.Roles.Add(role4);
                     context.SaveChanges();
                 }
                 
@@ -79,8 +83,8 @@ namespace CoV.DataAccess.Data
                     
                     var Customer = new User
                     {
-                        UserName = Constants.Role.Customer,
-                        Password = Constants.Role.Customer,
+                        UserName = Constants.Role.Employee,
+                        Password = Constants.Role.Employee,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
                         ExpiredDate = DateTime.Now.AddDays(-5),
@@ -263,7 +267,7 @@ namespace CoV.DataAccess.Data
                         Details = "Product new ",
                         AddressProduction = "HA NOI",
                         Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
+                        AvatarDetails = "6ba6d9ca-3757-4114-afd4-f13c5b12329a_Adidas-Ultra-Boost-4-0-Running-White-Product.jpg",
                         ColorProductId = 1,
                         MakerProductId = 1,
                         StatusProductId = 1,
@@ -442,6 +446,37 @@ namespace CoV.DataAccess.Data
                     context.Products.Add(product8);
                     context.Products.Add(product9);
                   
+                    context.SaveChanges();
+                }
+                
+                
+                if (!context.StatusOrder.Any())
+                {
+                    var status = new StatusOrder
+                    {
+                        Status = Constants.StatusOrder.XN,
+                    };
+                    var status1 = new StatusOrder
+                    {
+                        Status = Constants.StatusOrder.HoanHang,
+                    };
+                    var status2 = new StatusOrder
+                    {
+                        Status = Constants.StatusOrder.WIN,
+                    };
+                    var status3 = new StatusOrder
+                    {
+                        Status = Constants.StatusOrder.DVC,
+                    };
+                    var status4 = new StatusOrder
+                    {
+                        Status = Constants.StatusOrder.DC,
+                    };
+                    context.StatusOrder.Add(status);
+                    context.StatusOrder.Add(status1);
+                    context.StatusOrder.Add(status2);
+                    context.StatusOrder.Add(status3);
+                    context.StatusOrder.Add(status4);
                     context.SaveChanges();
                 }
             }

@@ -399,5 +399,35 @@ namespace CoV.Common.Resources {
                 return ResourceManager.GetString("DateTimeMin", resourceCulture);
             }
         }
+        
+        public static string NotNullValue {
+            get {
+                return ResourceManager.GetString("NotNullValue", resourceCulture);
+            }
+        }
+        
+        public static string MaxWord {
+            get {
+                return ResourceManager.GetString("MaxWord", resourceCulture);
+            }
+        }
+        
+        public static string MinWord {
+            get {
+                return ResourceManager.GetString("MinWord", resourceCulture);
+            }
+        }
+        
+        public static string MaxlengthNumber {
+            get {
+                return ResourceManager.GetString("MaxlengthNumber", resourceCulture);
+            }
+        }
+        
+        public static string MinlengthNumber {
+            get {
+                return ResourceManager.GetString("MinlengthNumber", resourceCulture);
+            }
+        }
     }
 }

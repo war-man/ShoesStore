@@ -106,7 +106,7 @@ namespace CoV.Service.Service
         {
             var emailCustomer = _unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x => x.Email.Equals(email));
             if (emailCustomer != null) return true ;
-            return false; //phone not pound
+            return false; //email not pound
         }
         
         public bool GetByPhone( string phone)
@@ -127,26 +127,52 @@ namespace CoV.Service.Service
         
         public  bool CheckLoginAccountCustomer(loginCustomerViewModel model)
         {
-            if (GetByEmail(model.Email) == true  || GetByPhone(model.PhoneNumber) == true)
+            if (model.Email != null)
             {
-                return true; //  ton tai =true
+                var customerEmail = _unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x =>
+                    x.Email.Equals(model.Email));
+                if (customerEmail != null)
+                {
+                    return true;
+                }
+                
+                var customerPhone = _unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x =>
+                    x.PhoneNumber.Equals(model.Email));
+                if (customerPhone != null)
+                {
+                    return true;
+                }
             }
             return false;
         }
 
         public bool CheckPass(loginCustomerViewModel model)
         {
-            var pass = _unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x =>
-                x.PassWord.Equals(model.PassWord));
-            if (CheckLoginAccountCustomer(model) == true && pass != null)
-                return true;
+            if (model.Email != null)
+            {
+                var customerEmail = _unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x =>
+                    x.Email.Equals(model.Email));
+                if (customerEmail != null && customerEmail.PassWord.Equals(model.PassWord))
+                {
+                    return true;
+                }
+                
+                var customerPhone = _unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x =>
+                    x.PhoneNumber.Equals(model.Email));
+                if (customerPhone != null && customerPhone.PassWord.Equals(model.PassWord))
+                {
+                    return true;
+                }
+            }
             return false;
         }
 
         public CustomerViewModel GetByName(string name)
         {
-            var customer =_unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x => x.Email.Equals(name));
-            return _mapper.Map<CustomerViewModel>(customer);
+            var customerEmail =_unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x => x.Email.Equals(name));
+            var customerPhone =_unitOfWork.CustomerRespository.ObjectContext.FirstOrDefault(x => x.PhoneNumber.Equals(name));
+            if (customerPhone != null) return _mapper.Map<CustomerViewModel>(customerPhone);
+            return _mapper.Map<CustomerViewModel>(customerEmail);
         }
     }
 }

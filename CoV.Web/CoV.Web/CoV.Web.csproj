@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Infrastructure\SessionHelper" />
+    <Folder Include="Pages" />
     <Folder Include="wwwroot\Images" />
     <Folder Include="wwwroot\Login" />
   </ItemGroup>

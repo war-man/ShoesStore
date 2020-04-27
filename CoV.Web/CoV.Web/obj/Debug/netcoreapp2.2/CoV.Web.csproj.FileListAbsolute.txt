@@ -655,6 +655,7 @@
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Admin/Index.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Cart/Index.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Checkout02/Checkout02.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Customer/CreateAndUpdate.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Customer/GetAll.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Customer/loginCustomer.g.cshtml.cs
@@ -695,3 +696,5 @@
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/CoV.Web.csproj.CopyComplete
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/CoV.Web.dll
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/CoV.Web.pdb
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Cart/index2.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Order/GetAll.g.cshtml.cs

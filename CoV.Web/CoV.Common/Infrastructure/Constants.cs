@@ -159,10 +159,20 @@
             public const string Admin = "Admin";
             public const string User = "User";
             public const string UserEndDate = "User1";
-            public const string Customer = "Customer";
+            public const string Employee = "Employee";
+            public const string Shiper = "Shiper";
             public const string CustomerNew = "CustomerNew";
         }
-
+        
+        public class StatusOrder
+        {
+            public const string XN = "Xác nhận";
+            public const string DVC = "Đang Giao";
+            public const string HoanHang = "Hoàn Hàng";
+            public const string WIN = "Giao thành công";
+            public const string DC = "Đang chờ shiper";
+        }
+        
         public class ImageUserDefail
         {
             public const string imageAvatar =

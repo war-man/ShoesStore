@@ -4,7 +4,10 @@
 	ViewBag.Title = "title";
 	Layout = "_FrontEndLayout";
 	var cart = (IEnumerable<CartViewModel>) ViewBag.cart;
-	var i = cart.Count();
+	var i = ViewBag.total;
+	var totalPrice = 0;
+	var a = 1;
+	var b = 0;
 }
 
 <div class="nen-mo"></div>
@@ -32,63 +35,79 @@
 							<th>Ảnh sản phẩm</th>
 							<th>Tên sản phẩm</th>
 							<th>Giá</th>
+							<th>Size</th>
 							<th>Số lượng</th>
 							<th>Thành tiền</th>
 							<th>Thao tác</th>
 						</tr>
 						</thead>
 						<tbody>
-
+							@foreach (var  item in cart)
+							 {
+								 <td hidden>
+									 @(i = i -1 );
+									 @(a= 1000)
+									 @(a = a+@item.Product.Id)
+								 </td>
+								 <tr class='item-cart' id="cart_customer">
+									 <td>
+										 @(cart.Count() - i +1)
+									 </td>
+									 <td>
+										 <img src='~/Images/@item.Product.AvatarDetails'>
+									 </td>
+									 <td class='w-300px'>@item.Product.name</td>
+								
+									 <td >
+										 <p id="@a">@item.Product.Price </p>
+									 </td>
+									 <td class='w-200px'>
+										 <form action='#' class='form-update-cart'>
+											 <input style="border: 0px solid;"  class="QuantitySize"  id="@item.Product.Id"  min="34" max="46" type='number' value='@item.Size'step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
+											 <input id="product_id" type='number' value='@item.Product.Id' hidden>
+										 </form>
+									 </td>
+									 <td class='w-200px'>
+										 <form action='#' class='form-update-cart'>
+											 <input class="Quantity" id="@item.Product.Id"   min="1" type='number' value='@item.Quantity'step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')" >
+											 <input id="product_id" type='number' value='@item.Product.Id' hidden>
+											 <button class='up-qty' id="@item.Product.Id" type='button'>
+												 <i class='fas fa-plus'></i>
+											 </button>
+											 <button class='down-qty' type='button'>
+												 <i class='fas fa-minus'></i>
+											 </button>
+										 </form>
+									 </td>
+									 <td class="@item.Product.Id" > @item.TotalPrice</td>
+									 <td>
+										 <a class="btn-open" asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Product.Id">
+											 <button class='btn-danger' type='button'>
+												 <i class='fas fa-trash'></i>
+											 </button>
+										 </a>
+									 </td>
+								 </tr>
+							 }
+						<tr>
+							
+							<td class='text-right' colspan='5'>
+								<h3 id ="100">Tổng hóa đơn:</h3>
+							</td>
+						
 						@foreach (var  item in cart)
 						{
-							<td hidden>
-								@(i = i - 1);
-							</td>
-							<tr class='item-cart' id="cart_customer">
-								<td>
-									@(cart.Count() - i)
-								</td>
-								<td>
-									<img src='~/Images/@item.Product.AvatarDetails'>
-								</td>
-								<td class='w-300px'>@item.Product.name</td>
-								<td id="Price">
-									@item.Product.Price
-								</td>
-								<td class='w-200px'>
-									<form action='#' class='form-update-cart'>
-										<input class="Quantity" id="@item.Product.Id" min="1" type='number' value='@item.Quantity'step="1" data-val-range-min="0">
-										<input id="product_id" type='number' value='@item.Product.Id' hidden>
-										<button class='up-qty' type='button'>
-											<i class='fas fa-plus'></i>
-										</button>
-										<button class='down-qty' type='button'>
-											<i class='fas fa-minus'></i>
-										</button>
-									</form>
-								</td>
-								<td id="total_price"></td>
-								<td>
-									<a class="btn-open" asp-action="Remove" asp-controller="Cart" asp-route-id="@item.Product.Id">
-										<button class='btn-danger' type='button'>
-											<i class='fas fa-trash'></i>
-										</button>
-									</a>
-								</td>
-							</tr>
+							totalPrice += item.TotalPrice;
 						}
-						<tr>
-							<td class='text-right' colspan='5'>
-								<h3>Tổng hóa đơn:</h3>
-							</td>
-							<td colspan='2'>
-								<h3></h3>
+							<td colspan='5'>
+								<h3 id="formatpriceHidden" hidden> @totalPrice</h3>
+								<h3 id="formatprice"> @totalPrice</h3>
 							</td>
 						</tr>
 						<tr>
-							<td colspan='7'>
+							<td colspan='9'>
 								<div class='row justify-content-end'>
-									<a class='to-checkout'>
+									<a class='to-checkout' asp-action="Checkout02" asp-controller="Checkout02" >
 										Thanh toán
 									</a>
 								</div>
@@ -108,32 +127,36 @@
 		// giam so luong don hang
 		$(document).ready(function() {
 
-
-			$(".down-qty").off('click').on('click',
-				function(e) {
-					var id = parseInt($("#Quantity").val());
-					var idProduct = parseInt($("#product_id").val());
-					e.preventDefault();
-					$.ajax({
-						url: '@Url.Action("EditQuantityDown", "Cart")',
-						type: "GET",
-						contentType: "application/json; charset=utf-8",
-						dataType: "json",
-						data: { 'id': idProduct, 'quantity': id },
-						async: true,
-						cache: false,
-						success: function() {
-							$("#Quantity").val(id - 1);
-						}
-					});
-				});
+//			$(".down-qty").off('click').on('click',
+//				function(e) {
+//					var id = parseInt($("#Quantity").val());
+//					var idProduct = parseInt($("#product_id").val());
+//					e.preventDefault();
+//					$.ajax({
+//						url: '@Url.Action("EditQuantityDown", "Cart")',
+//						type: "GET",
+//						contentType: "application/json; charset=utf-8",
+//						dataType: "json",
+//						data: { 'id': idProduct, 'quantity': id },
+//						async: true,
+//						cache: false,
+//						success: function() {
+//							$("#Quantity").val(id - 1);
+//						}
+//					});
+//				});
+			
 
 			//thay doi so san pham : susscess
-			$(".Quantity").on('mouseleave',function(e) {
+			$(".Quantity").on('keyup click change mouseleave',function(e) {
 				e.preventDefault();
+				var productid = $(this).attr('id');
+				
+				var productPriceId =parseInt(productid) +1000;
+				var price = parseInt($('#' + productPriceId).html());
 				var id = parseInt($(this).val());
+				//id product
 				var idProduct = e.target.id;
-				var price = parseInt($("#Price").html());
 				$.ajax({
 					url: '@Url.Action("EditQuantityMouseleave", "Cart")',
 					type: "GET",
@@ -144,30 +167,70 @@
 					cache: false,
 					success: function() {
 						$(this).val(id);
+						if (id<=0 || id.isNullOrUndef) {
+							$('.' + productid).text(0);
+
+						} else {
+							$('.' + productid).text(id *price );
+
+						}
+						
 					}
 				});
 			});
-			$(".price").each(function() {
-				$(this).text("a");
-			});
-				
-			// tang so luong don hang
-			$(".up-qty").click(function(e) {
+			
+			$(".QuantitySize").on('keyup click change mouseleave',function(e) {
 				e.preventDefault();
-				var idProduct = parseInt($("#product_id").val());
+				var id = parseInt($(this).val());
+				//id product
+				var idProduct = e.target.id;
 				$.ajax({
-					url: '@Url.Action("EditQuantity", "Cart")',
+					url: '@Url.Action("EditSizeMouseleave", "Cart")',
 					type: "GET",
 					contentType: "application/json; charset=utf-8",
 					dataType: "json",
-					data: { 'id': idProduct, 'quantity': id },
+					data: { 'id': idProduct, 'size': id },
 					async: true,
 					cache: false,
 					success: function() {
-						$("#Quantity").val(id + 1);
+						$(this).val(id);
 					}
 				});
 			});
+			
+//			// tang so luong don hang
+//			$(".up-qty").off('click').on('click',
+//				function(e) {
+//
+//				e.preventDefault();
+//				var idProduct = parseInt($("#product_id").val());
+//				$.ajax({
+//					url: '@Url.Action("EditQuantity", "Cart")',
+//					type: "GET",
+//					contentType: "application/json; charset=utf-8",
+//					dataType: "json",
+//					data: { 'id': idProduct, 'quantity': id },
+//					async: true,
+//					cache: false,
+//					success: function() {
+//						$("#Quantity").val(id + 1);
+//						
+//					}
+//				});
+//			});
+			
+			//format jquery format number to currency
+			
+			
+			$("#total_price").scroll(function(){
+				var input= $(this).html();
+				var output=parseInt(input).toLocaleString();
+				$(this).text(output + " VND");
+			});
+			
+			var price= $("#formatprice").html();
+			var priceOut=parseInt(price).toLocaleString();
+			$("#formatprice").text(priceOut + " VND");
 		});
 	</script>
 }

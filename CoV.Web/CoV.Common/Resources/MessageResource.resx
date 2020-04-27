@@ -270,6 +270,7 @@
      <data name="UserNameNotNull" xml:space="preserve">
     <value>Username Not Null  </value>
   </data>
+  
    <data name="UserNameMaxLength" xml:space="preserve">
     <value>User Name Max length 35 word</value>
   </data>
@@ -294,5 +295,20 @@
   <data name="DateTimeMin" xml:space="preserve">
     <value>Vui lòng nhập DateTime Lớn hơn </value>
   </data>
+   <data name="NotNullValue" xml:space="preserve">
+    <value>Vui lòng điền vào mục này.</value>
+  </data>
+     <data name="MaxWord" xml:space="preserve">
+    <value>Tối đa 30 ký tự</value>
+  </data>
+  <data name="MinWord" xml:space="preserve">
+    <value>Tối thiểu 1 ký tự</value>
+  </data>
   
+   <data name="MaxlengthNumber" xml:space="preserve">
+    <value>Tối đa 15 ký tự</value>
+  </data>
+  <data name="MinlengthNumber" xml:space="preserve">
+    <value>Tối thiểu 9 ký tự</value>
+  </data>
 </root>

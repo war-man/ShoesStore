@@ -65,6 +65,15 @@ namespace CoV.Service.Repository
             ICartRespository CartRespository { get; }
             
             /// <summary>
+            /// Repository Product Category
+            /// </summary>
+            IOrderRespository OrderRespository { get; }
+
+            /// <summary>
+            /// Repository Product Category
+            /// </summary>
+            IOrderStatusRespository OrderStatusRespository  { get; }
+            /// <summary>
             ///  AppDbContext
             /// </summary>
             AppDbContext AppDbContext { get; }
@@ -95,7 +104,9 @@ namespace CoV.Service.Repository
         private MakerProductRepository _makerProductRepository;
         private StatusProductRepository _statusProductRepository;
         private CartRespository _cartRespository;
+        private OrderRespository _orderRespository;
         private CustomerRespository _customerRespository;
+        private OrderStatusRespository _orderStatusRespository;
         #endregion
         
         /// <summary>
@@ -245,6 +256,29 @@ namespace CoV.Service.Repository
             get {
                 return _customerRespository = 
                     _customerRespository ?? new CustomerRespository(_appDbContext);
+            }
+        }
+        
+        
+        /// <summary>
+        /// Initialization cart   Order repository 1
+        /// </summary>
+        public  IOrderRespository OrderRespository 
+        {
+            get {
+                return _orderRespository = 
+                    _orderRespository ?? new OrderRespository(_appDbContext);
+            }
+        }
+        
+        /// <summary>
+        /// Initialization cart   Order repository 1
+        /// </summary>
+        public  IOrderStatusRespository OrderStatusRespository 
+        {
+            get {
+                return _orderStatusRespository = 
+                    _orderStatusRespository ?? new OrderStatusRespository(_appDbContext);
             }
         }
         

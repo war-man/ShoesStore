@@ -21,6 +21,8 @@ namespace CoV.DataAccess.Data
         public  virtual  DbSet<Gender> Genders { get; set; }
         public  virtual  DbSet<Cart> Carts { get; set; }
         public  virtual  DbSet<Customer> Customers { get; set; }
+        public  virtual  DbSet<Order> Orders { get; set; }
+        public  virtual  DbSet<StatusOrder> StatusOrder { get; set; }
         
         /// <summary>
         /// Name Tabel
@@ -47,6 +49,11 @@ namespace CoV.DataAccess.Data
             modelBuilder.Entity<Cart>().ToTable("Cart");
 
             modelBuilder.Entity<Customer>().ToTable("Customer");
+            
+            modelBuilder.Entity<Order>().ToTable("Order");
+            
+            modelBuilder.Entity<StatusOrder>().ToTable("StatusOrder");
+            
         } 
     }
 }

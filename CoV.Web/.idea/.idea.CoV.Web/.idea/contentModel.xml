@@ -54,6 +54,7 @@
             <e p="MakerProduct.cs" t="Include" />
             <e p="Order.cs" t="Include" />
             <e p="Product.cs" t="Include" />
+            <e p="StatusOrder.cs" t="Include" />
             <e p="StatusProduct.cs" t="Include" />
             <e p="Suport.cs" t="Include" />
           </e>
@@ -88,6 +89,8 @@
             <e p="GenderViewModel.cs" t="Include" />
             <e p="ImageProductViewModel.cs" t="Include" />
             <e p="MakerProductViewModel.cs" t="Include" />
+            <e p="OrderStatusViewModel.cs" t="Include" />
+            <e p="OrderViewModel.cs" t="Include" />
             <e p="ProductViewCart.cs" t="Include" />
             <e p="ProductViewModel.cs" t="Include" />
             <e p="StatusProductViewModel.cs" t="Include" />
@@ -106,6 +109,8 @@
             <e p="GenderRepository.cs" t="Include" />
             <e p="ImageRepository.cs" t="Include" />
             <e p="MakerProductRepository.cs" t="Include" />
+            <e p="OrderRespository.cs" t="Include" />
+            <e p="OrderStatusRespository.cs" t="Include" />
             <e p="ProductRespository.cs" t="Include" />
             <e p="StatusProduct.cs" t="Include" />
           </e>
@@ -122,6 +127,8 @@
             <e p="GenderService.cs" t="Include" />
             <e p="ImageProductService.cs" t="Include" />
             <e p="Oder Detail.cs" t="Include" />
+            <e p="OrderService.cs" t="Include" />
+            <e p="OrderStatusService.cs" t="Include" />
             <e p="ProductService.cs" t="Include" />
             <e p="SizeProductService.cs" t="Include" />
             <e p="StatusProductService.cs" t="Include" />
@@ -144,9 +151,11 @@
           <e p="AccountController.cs" t="Include" />
           <e p="AdminController.cs" t="Include" />
           <e p="CartController.cs" t="Include" />
+          <e p="Checkout02Controller.cs" t="Include" />
           <e p="CustomerController.cs" t="Include" />
           <e p="ErrorController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
+          <e p="OrderController.cs" t="Include" />
           <e p="ProductController.cs" t="Include" />
           <e p="RoleController.cs" t="Include" />
           <e p="TokenController.cs" t="Include" />
@@ -173,6 +182,8 @@
               <e p="ColorProductMapper.cs" t="Include" />
               <e p="CustomerMapper.cs" t="Include" />
               <e p="GenderMapper.cs" t="Include" />
+              <e p="OrderMaper.cs" t="Include" />
+              <e p="OrderStatusMapper.cs" t="Include" />
               <e p="ProductMapper.cs" t="Include" />
               <e p="SizeProductMapper.cs" t="Include" />
               <e p="StatusProductMapper.cs" t="Include" />
@@ -187,6 +198,8 @@
           </e>
           <e p="SessionHelper" t="Include" />
           <e p="Validations" t="Include">
+            <e p="CustomerCreateValidation.cs" t="Include" />
+            <e p="CustomerLoginValidation.cs" t="Include" />
             <e p="LoginValidation.cs" t="Include" />
             <e p="UserViewValidation.cs" t="Include" />
           </e>
@@ -194,6 +207,7 @@
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
         </e>
+        <e p="Pages" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -211,6 +225,10 @@
           </e>
           <e p="Cart" t="Include">
             <e p="Index.cshtml" t="Include" />
+            <e p="index2.cshtml" t="Include" />
+          </e>
+          <e p="Checkout02" t="Include">
+            <e p="Checkout02.cshtml" t="Include" />
           </e>
           <e p="Customer" t="Include">
             <e p="CreateAndUpdate.cshtml" t="Include" />
@@ -234,6 +252,9 @@
             <e p="ProductDetail.cshtml" t="Include" />
             <e p="Singin.cshtml" t="Include" />
             <e p="TemplateInvoid.cshtml" t="Include" />
+          </e>
+          <e p="Order" t="Include">
+            <e p="GetAll.cshtml" t="Include" />
           </e>
           <e p="Product" t="Include">
             <e p="CreateOrUpdate.cshtml" t="Include" />
@@ -263,10 +284,6 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="log" t="Include">
-          <e p="log-20200220-CoV.txt" t="Include" />
-          <e p="log-20200221-CoV.txt" t="Include" />
-          <e p="log-20200223-CoV.txt" t="Include" />
-          <e p="log-20200224-CoV.txt" t="Include" />
           <e p="log-20200225-CoV.txt" t="Include" />
           <e p="log-20200226-CoV.txt" t="Include" />
           <e p="log-20200227-CoV.txt" t="Include" />
@@ -294,6 +311,10 @@
           <e p="log-20200417-CoV.txt" t="Include" />
           <e p="log-20200418-CoV.txt" t="Include" />
           <e p="log-20200419-CoV.txt" t="Include" />
+          <e p="log-20200421-CoV.txt" t="Include" />
+          <e p="log-20200422-CoV.txt" t="Include" />
+          <e p="log-20200423-CoV.txt" t="Include" />
+          <e p="log-20200424-CoV.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -3200,6 +3221,7 @@
             <e p="17a75250-6259-499a-ab19-06b27323f4b6_60001563_2772669116082432_98210109464772608_o.jpg" t="Include" />
             <e p="1c4eaa68-654b-4abf-a725-1f7c17b99bde_anh-hacker-noi-tieng_025626549.jpg" t="Include" />
             <e p="24fa54d2-fe5b-4fb5-aeff-d3254fd4aed5_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
+            <e p="25c63f1a-9b14-4ac2-999c-62a4b0660af2_adidas-yeezy-350-cream-white.jpg" t="Include" />
             <e p="276244d6-77c4-43d2-8dad-da41f597973b_Screenshot from 2020-02-12 00-21-25.png" t="Include" />
             <e p="29493a7b-4776-42c0-87ff-8716fb030240_img-product-02.jpg" t="Include" />
             <e p="2b307c8e-546a-4bf3-86ad-cea25e462543_unnamed.jpg" t="Include" />
@@ -3223,8 +3245,10 @@
             <e p="4c71ab6f-8eb1-46ee-8a5b-57c658af16e9_adidas-alphabounce-beyond-ghi-vang-replica.jpg" t="Include" />
             <e p="4d286d96-a018-44d9-8615-a241c0df378d_Black-Wallpaper-anh-nen-mau-den-15.jpg" t="Include" />
             <e p="4e76e1f5-8338-4972-8412-3af7097fc8db_img-product-03.jpg" t="Include" />
+            <e p="4f65c112-9d05-4170-bdc7-27719267bb1a_f36324_01_standard.jpg" t="Include" />
             <e p="506b5e99-30b9-4739-833a-db0282631e27_arnh-bifa.png" t="Include" />
             <e p="558f1dc8-d6ab-4ced-adad-4fd29d069ed9_images (copy).jpeg" t="Include" />
+            <e p="561656b2-b1f3-4603-90d2-98ab2340d726_nmd.jpg" t="Include" />
             <e p="5a6c07a9-be05-42d0-b7b4-1ac0b9f1c555_hinh-anh-nhung-chu-cho-de-thuong-nhat.jpg" t="Include" />
             <e p="5deb5dae-b9c4-4810-b58c-767ecae6baf9_nmd.jpg" t="Include" />
             <e p="5df170a5-e41b-473f-a8d2-4544f36db5f9_hinh-anh-hacker-anonymous_025627409.jpg" t="Include" />
@@ -3232,6 +3256,7 @@
             <e p="6339e46e-bdd2-47a4-b7ca-9af0473d8d3f_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="63b210e9-79df-4fc6-8e45-dd65fc41a236_Screenshot from 2020-01-15 15-23-07.png" t="Include" />
             <e p="64c0a8bd-6f93-4496-91dd-2742f247cb63_anh-hacker-noi-tieng_025626549.jpg" t="Include" />
+            <e p="65f065b8-39e5-41fa-9224-4cb9ccb013a3_f36324_01_standard.jpg" t="Include" />
             <e p="6ba6d9ca-3757-4114-afd4-f13c5b12329a_Adidas-Ultra-Boost-4-0-Running-White-Product.jpg" t="Include" />
             <e p="6e5cc19f-d694-4025-a569-5aac5e9c78b6_photo-1-15611010487262059848050.png" t="Include" />
             <e p="709a8b13-9f93-4c82-b562-d833d9988066_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
@@ -3239,9 +3264,12 @@
             <e p="742214d0-94a2-4279-84ac-9eb5b443c668_Adidas-Ultra-Boost-4-0-Running-White-Product.jpg" t="Include" />
             <e p="7a4723f4-4166-4d3b-8451-e48b7ef40774_60001563_2772669116082432_98210109464772608_o.jpg" t="Include" />
             <e p="7bae53da-df2a-450b-9e85-667c257cb81d_hinh-anh-hacker-anonymous_025627409.jpg" t="Include" />
+            <e p="7be49f38-e3fa-492c-916e-47f8dd03b5a4_unnamed.jpg" t="Include" />
             <e p="805f1419-5a28-46ea-9f96-cc3073c01b98_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="830103ff-a7a6-4141-a3dd-73e02695f995_anh-hacker-noi-tieng_025626549.jpg" t="Include" />
             <e p="843c8c99-54d5-438c-b6a3-bda99bfe1a7e_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
+            <e p="85ccaffb-0fe1-4b44-9009-f3d7765f6545_upload.jpg" t="Include" />
+            <e p="8635d13a-2cd4-4aef-b273-9c6e3942ab1e_3691giay-the-thao-unisex-vans-old-skool-vn-0d3hy28.jpg" t="Include" />
             <e p="8c257c76-7e80-48f5-81b3-f0f1f47e554f_anh-hacker-noi-tieng_025626549.jpg" t="Include" />
             <e p="8df348ff-c1e5-4665-8266-afc372cbe572_Wap102 (1) (copy).jpg" t="Include" />
             <e p="8eea3c36-6df6-47d1-aaff-7c082ff1ea44_60001563_2772669116082432_98210109464772608_o.jpg" t="Include" />
@@ -3273,7 +3301,9 @@
             <e p="bai-viet-4.jpg" t="Include" />
             <e p="banner-5.jpg" t="Include" />
             <e p="banner-6.jpg" t="Include" />
+            <e p="bd3c2624-2e75-4070-89ae-5ffcd8596e24_6-5.jpg" t="Include" />
             <e p="bd712388-1b2b-489c-9afa-f2114584996f_87288546_854735801701716_6191215311602057216_n.jpg" t="Include" />
+            <e p="be9b8e5f-874f-4418-8d7d-cf5c87b12889_unnamed.jpg" t="Include" />
             <e p="c688c3c8-5034-4a4d-b31e-a192f8afadfa_adidas-yeezy-350-cream-white.jpg" t="Include" />
             <e p="c69fd5dc-82dc-4c72-9127-7d172c9a7fac_87286948_854735898368373_6790153448831582208_n.jpg" t="Include" />
             <e p="c8466603-e897-4895-992a-80d502ea496f_hinh-anh-nhung-chu-cho-de-thuong-nhat.jpg" t="Include" />
@@ -3295,10 +3325,12 @@
             <e p="e4276851-ef09-4c10-9578-dad5060f07e3_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="e82c4ab7-4887-415c-b815-bd7fe04b5dfd_2127110712782716256153972203256067781783239n-1508668439694-1510242550909.jpg" t="Include" />
             <e p="ebb1081c-cf98-4c31-bd88-58b59e39014a_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
+            <e p="ebf15d85-80eb-44e2-8dbc-a2bc32692335_Converse-Example-1-Convert-Your-Shoe-Size.jpg" t="Include" />
             <e p="ec8e704f-6827-4214-a557-49f895893d71_hinh-anh-hacker-anonymous_025627409.jpg" t="Include" />
             <e p="edf486df-e2fa-4802-ae77-b2686f92377e_f36324_01_standard.jpg" t="Include" />
             <e p="f2274c6a-fa17-4ea0-82b5-ca4f2f25cc3a_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="f26131b7-b734-46d3-bc08-5b59ecd4a23d_Wap102 (1) (copy).jpg" t="Include" />
+            <e p="f666ffa4-dc5e-42fb-b3a5-73fd2329a5b7_unnamed.jpg" t="Include" />
             <e p="fad38c84-80d2-49d3-80b8-6e4985a9078e_images.jpeg" t="Include" />
             <e p="fe1fba42-1507-49aa-845a-836321add739_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="fea10810-1178-4342-a7b1-d16a927122b6_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />

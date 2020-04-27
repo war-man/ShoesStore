@@ -1,4 +1,5 @@
-﻿using CoV.Service.Service;
+﻿using System;
+using CoV.Service.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,10 +8,12 @@ namespace CoV.Web.Controllers
     public class HomeController : Controller
     {
         private readonly IProductService _productService;
+        private readonly ICustomerService _customerService;
 
-        public HomeController(IProductService productService)
+        public HomeController(IProductService productService , ICustomerService customerService)
         {
             _productService = productService;
+            _customerService = customerService;
         }
         
         
@@ -49,11 +52,16 @@ namespace CoV.Web.Controllers
             return View();
         }
         
-
-        
+        /// <summary>
+        /// Checkout Customer 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
         public IActionResult Checkout01()
         {
-            return View();
+            var id = Int32.Parse(HttpContext.Session.GetString("SessionId"));
+            var customer = _customerService.GetById(id);
+            return View(customer);
         }
         
         public IActionResult Checkout02()
@@ -61,8 +69,10 @@ namespace CoV.Web.Controllers
             return View();
         }
         
+        [HttpGet]
         public IActionResult Contact()
         {
+           
             return View();
         }
         
@@ -76,10 +86,10 @@ namespace CoV.Web.Controllers
         /// </summary>
         /// <returns>view</returns>
         [HttpGet]
-        public IActionResult ProductDetail( int id)
+        public IActionResult ProductDetail( )
         {
-            var model = _productService.GetById(id);
-            return View(model);
+//            var model = _productService.GetById(id);
+            return View();
         }
     }
     

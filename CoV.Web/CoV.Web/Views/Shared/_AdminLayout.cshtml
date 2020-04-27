@@ -8,29 +8,8 @@
   <!-- Navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#"><i class="fas fa-bars"></i></a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
-
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
+  
+  
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
@@ -155,33 +134,33 @@
       </div>
 
       <!-- Sidebar Menu -->
-      <nav class="mt-2">
+      <nav class="mt-2" >
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview">
+        <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i ></i>
-              <p>
-                Trang chủ
-                <i class="right fas fa-angle-left"></i>
-              </p>
+                <i class="fas fa-clinic-medical"></i>
+                <p style="color: white">
+                    Trang chủ
+                    <i class="right fas fa-angle-left"></i>
+                </p>
             </a>
             <ul class="nav nav-treeview">
-              <li class="nav-item" >
-                <a  asp-controller="Home" asp-action="Home" class="nav-link ">
-                  <p>Home Bitits</p>
-                </a>
-              </li>
+                <li class="nav-item" >
+                    <a  asp-controller="Home" asp-action="Home" class="nav-link ">
+                        <p>Home Bitits</p>
+                    </a>
+                </li>
             </ul>
-          </li>
-          
-          <li class="nav-item has-treeview">
+        </li>
+            
+            
+            <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
+                <i class="fas fa-coins"></i>
+
+              <p style="color: white">
                 Sản phẩm 
-                <i class="fas fa-angle-left right"></i>
+                  <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
@@ -206,15 +185,16 @@
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
+                <i class="fas fa-cart-plus"></i>
+                
+              <p style="color: white">
                 Đơn hàng  
                 <i class="fas fa-angle-left right"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item" >
-                <a  asp-controller="Product" asp-action="GetAll" class="nav-link ">
+                <a  asp-controller="Order" asp-action="GetAll" class="nav-link ">
                   <p>Quản lý đơn hàng </p>
                 </a>
               </li>
@@ -238,8 +218,8 @@
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
+                <i class="fas fa-dollar-sign"></i>
+              <p style="color: white">
                 Thanh toán   
                 <i class="fas fa-angle-left right"></i>
               </p>
@@ -260,8 +240,8 @@
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
+                <i class="far fa-list-alt"></i>
+              <p style="color: white">
                 Thống kê  
                 <i class="fas fa-angle-left right"></i>
               </p>
@@ -282,8 +262,8 @@
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
+                <i class="fas fa-ad"></i>
+              <p style="color: white">
                 Quảng cáo 
                 <i class="fas fa-angle-left right"></i>
               </p>
@@ -310,8 +290,8 @@
           
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link active">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
+             <i class="far fa-address-card"></i> 
+              <p style="color: white">
                 Quản lý tài khoản 
                 <i class="fas fa-angle-left right"></i>
               </p>
@@ -363,13 +343,230 @@
   <!-- /.content-wrapper -->
   
   
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2020 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.1
-    </div>
-  </footer>
+<footer class="footer">
+<div class="container p-0">
+<div class="top-footer">
+	<div class="row">
+		<div class="col-md-3">
+			<h3 class="title">
+				Trợ giúp
+			</h3>	
+			<div class="list-link">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Trạng thái đơn hàng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hình thức giao hàng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hình thức thanh toán
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Chính sách đổi trả
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Chính sách bảo hành
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Chính sách khách hàng thân thiết
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h3 class="title">
+				Thông tin
+			</h3>
+			<div class="list-link">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Tuyển Dụng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hệ thống cửa hàng
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Liên hệ hợp tác
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Q&A
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h3 class="title">
+				Về chúng tôi
+			</h3>
+			<div class="list-link">
+				<ul>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Về Bitis
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Câu chuyện Biti's
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Bước tiến phát triển
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Hoạt Động
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<i class="fas fa-chevron-right"></i>
+							Liên hệ
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="col-md-3">
+			<h3 class="title">
+				Liên hệ với chúng tôi
+			</h3>
+			<div class="list-contact">
+				<ul>
+					<li>
+						<div class="icon">
+							<i class="fas fa-map-marker-alt"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								ADDRESS
+							</h4>
+							<div class="dt-txt">
+								Minh Khai - Bắc Từ Liêm - Hà Nội
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="icon">
+							<i class="fas fa-mobile"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								PHONE
+							</h4>
+							<div class="dt-txt">
+								0965319086 (24/7 Support Line)
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="icon">
+							<i class="fas fa-fax"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								FAX
+							</h4>
+							<div class="dt-txt">
+								(123) 123-4567
+							</div>
+						</div>
+					</li>
+
+					<li>
+						<div class="icon">
+							<i class="fas fa-envelope"></i>
+						</div>
+						<div class="text">
+							<h4 class="title-text">
+								EMAIL
+							</h4>
+							<div class="dt-txt">
+								Chuonghvc2901@gmail.com
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="bot-footer">
+	<div class="row align-items-center justify-content-center">
+		<div class="col-md-4">
+			<ul class="list-ft">
+				<li>
+					<a href="#">
+						Điều khoản
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Chính sách bảo mật
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Hướng dẫn sử dụng
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="col-md-4">
+			<div class="img-ddk">
+				<img src="~/Frontend/images/Da-dang-ky-bo-cong-thuong.png" alt="">
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div>
+				Giấy CNĐKDN: 0301340497 được cấp ngày 20/01/1992,
+				được sửa đổi lần thứ 20 ngày 28/12/2015 bởi Sở Kế hoạch và Đầu tư TPHCM
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+</footer>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -387,7 +584,7 @@
 <script src="~/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
-  $.widget.bridge('uibutton', $.ui.button)
+    $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
 <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -414,7 +611,6 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="~/dist/js/pages/dashboard.js"></script>
 
-<script src="~/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="~/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- ChartJS -->
@@ -426,10 +622,12 @@
 <!-- page script -->
 <!-- AdminLTE for demo purposes -->
 <script src="~/dist/js/demo.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.js"></script>
+
 
 @RenderSection("Scripts", required: false)
 </body>

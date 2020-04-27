@@ -18,6 +18,7 @@
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
+
 </head>
 <body>
 <header>
@@ -200,59 +201,63 @@
 					<div class="col-md-8">
 						<ul class="ul_main">
 							<li class="active">
-								<a href="index.html">
-									Trang Chủ
+								<a  asp-controller="Home" asp-action="Home">
+									TRANG CHỦ
 								</a>
 							</li>
 							<li>
-								<a href="#">
-									Nam
-								</a>
-							</li>
-							<li>
-								<a href="blog.html">
-									Nữ
+								<a asp-controller="Home" asp-action="Blog">
+									GIÀY NAM 
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="blog.html">Tin nhà đất</a>
+										<a href="blog.html">Giày Cao Cổ</a>
 									</li>
 									<li>
-										<a href="blog.html">Tin nhà đất</a>
+										<a href="blog.html">Giày da</a>
 									</li>
 									<li>
-										<a href="blog.html">Tin nhà đất</a>
+										<a href="blog.html">Giày thể thao</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
 								<a href="product.html">
-									Bé trai
+									GIÀY NỮ
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="product.html">Nấm con cua</a>
+										<a href="product.html">Giày cao cổ</a>
 									</li>
 									<li>
-										<a href="product.html">Nấm con bò</a>
+										<a href="product.html">Giày công sở</a>
+									</li>
+								</ul>
+								
+							</li>
+							<li>
+								<a href="product.html">
+									GIÀY TRẺ EM 
+								</a>
+								<ul class="ul_sub">
+									<li>
+										<a href="product.html">Đáng yêu</a>
+									</li>
+									<li>
+										<a href="product.html">Phong cách</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
 								<a href="#">
-									Bé gái
+									GIÀY THỂ THAO 
 								</a>
 							</li>
 							<li>
 								<a href="#">
-									Công sở
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									Thể thao
+									GIÀY CÔNG SỞ
 								</a>
 							</li>
 							<li class="control_search">
@@ -271,7 +276,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a  asp-controller="Cart" asp-action="Index">
 									<i class="fas fa-shopping-cart"></i>
 								</a>
 							</li>

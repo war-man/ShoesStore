@@ -73,9 +73,13 @@ namespace CoV.Web
             services.AddScoped<IStatusProductService, StatusProductService>();
             services.AddScoped<ICartService, CartService>();
             services.AddScoped<ICustomerService, CustomerService>();
+            services.AddScoped<IOrderService, OrderService>();
+            services.AddScoped<IOrderStatusService, OrderStatusService>();
 
             services.AddTransient<IValidator<LoginModel>, LoginValidation>();
             services.AddTransient<IValidator<UserViewModel>, UserViewValidation>();
+            services.AddTransient<IValidator<CustomerViewModel>,CustomerCreateValidation>();
+            services.AddTransient<IValidator<loginCustomerViewModel>, CustomerLoginValidation>();
 
             //add mapping
             //services.AddAutoMapper(typeof(UserMapper.UserMapping));
@@ -90,6 +94,8 @@ namespace CoV.Web
             services.AddAutoMapper(typeof(StatusProductMapper));
             services.AddAutoMapper(typeof(CustomerMapper));
             services.AddAutoMapper(typeof(CartMapper));
+            services.AddAutoMapper(typeof(OrderMaper));
+            services.AddAutoMapper(typeof(OrderStatusMapper));
 
             // Config authentication
             services.AddAuthentication(options =>
@@ -180,7 +186,7 @@ namespace CoV.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Customer}/{action=CreateAndUpdate}/{id?}");
+                    template: "{controller=Customer}/{action=LoginCustomer}/{id?}");
             });
         }
     }

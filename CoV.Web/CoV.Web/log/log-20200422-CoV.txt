@@ -1,0 +1,174 @@
+2020-04-22 15:36:06.709 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Web.Controllers.CartController.Index() in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Controllers/CartController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-22 16:32:27.864 +07:00 [Error]  Error 404
+2020-04-22 16:38:26.746 +07:00 [Error]  Error 404
+2020-04-22 16:38:50.330 +07:00 [Error] Login with account :admin
+2020-04-22 16:48:28.801 +07:00 [Error]  Error 404
+2020-04-22 16:52:42.596 +07:00 [Error]  Error 404
+2020-04-22 16:54:45.832 +07:00 [Error]  Error 404
+2020-04-22 16:55:20.634 +07:00 [Error]  Error 404
+2020-04-22 16:55:56.540 +07:00 [Error]  Error 404
+2020-04-22 16:56:43.468 +07:00 [Error]  Error 404
+2020-04-22 16:56:48.660 +07:00 [Error]  Error 404
+2020-04-22 16:58:43.976 +07:00 [Error]  Error 404
+2020-04-22 16:59:06.257 +07:00 [Error]  Error 404
+2020-04-22 16:59:28.891 +07:00 [Error]  Error 404
+2020-04-22 16:59:44.984 +07:00 [Error]  Error 404
+2020-04-22 17:01:00.544 +07:00 [Error]  Error 404
+2020-04-22 17:02:22.705 +07:00 [Error]  Error 404
+2020-04-22 17:02:53.346 +07:00 [Error]  Error 404
+2020-04-22 17:03:48.883 +07:00 [Error]  Error 404
+2020-04-22 17:04:34.148 +07:00 [Error]  Error 404
+2020-04-22 17:05:18.008 +07:00 [Error]  Error 404
+2020-04-22 17:06:11.586 +07:00 [Error]  Error 404
+2020-04-22 17:06:53.535 +07:00 [Error]  Error 404
+2020-04-22 17:07:24.803 +07:00 [Error]  Error 404
+2020-04-22 17:08:14.274 +07:00 [Error]  Error 404
+2020-04-22 17:09:06.461 +07:00 [Error]  Error 404
+2020-04-22 17:09:37.916 +07:00 [Error]  Error 404
+2020-04-22 17:10:22.206 +07:00 [Error]  Error 404
+2020-04-22 17:10:58.459 +07:00 [Error]  Error 404
+2020-04-22 17:11:51.676 +07:00 [Error]  Error 404
+2020-04-22 17:12:36.740 +07:00 [Error]  Error 404
+2020-04-22 17:13:17.776 +07:00 [Error]  Error 404
+2020-04-22 17:13:30.192 +07:00 [Error]  Error 404
+2020-04-22 17:13:34.852 +07:00 [Error]  Error 404
+2020-04-22 17:13:37.733 +07:00 [Error]  Error 404
+2020-04-22 17:13:41.104 +07:00 [Error]  Error 404
+2020-04-22 17:13:44.391 +07:00 [Error]  Error 404
+2020-04-22 17:16:34.876 +07:00 [Error]  Error 404
+2020-04-22 17:16:34.881 +07:00 [Error]  Error 404
+2020-04-22 17:17:24.359 +07:00 [Error]  Error 404
+2020-04-22 17:17:24.373 +07:00 [Error]  Error 404
+2020-04-22 17:17:35.897 +07:00 [Error]  Error 404
+2020-04-22 17:17:35.898 +07:00 [Error]  Error 404
+2020-04-22 17:17:41.704 +07:00 [Error]  Error 404
+2020-04-22 17:17:41.718 +07:00 [Error]  Error 404
+2020-04-22 17:17:50.635 +07:00 [Error]  Error 404
+2020-04-22 17:17:50.635 +07:00 [Error]  Error 404
+2020-04-22 17:20:52.869 +07:00 [Error]  Error 404
+2020-04-22 17:21:08.043 +07:00 [Error]  Error 404
+2020-04-22 19:20:31.711 +07:00 [Error]  Error 404
+2020-04-22 19:21:00.242 +07:00 [Error]  Error 404
+2020-04-22 19:21:04.638 +07:00 [Error]  Error 404
+2020-04-22 19:21:09.769 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Web.Controllers.CartController.IsExist(Int32 id) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Controllers/CartController.cs:line 84
+   at CoV.Web.Controllers.CartController.EditQuantityMouseleave(Int32 id, Int32 quantity) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Controllers/CartController.cs:line 147
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-22 19:21:10.510 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Web.Controllers.Checkout02Controller.Checkout02() in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Controllers/Checkout02Controller.cs:line 30
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-22 19:21:12.884 +07:00 [Error] An unhandled exception has occurred while executing the request.
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at CoV.Web.Controllers.CartController.Index() in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Controllers/CartController.cs:line 26
+   at lambda_method(Closure , Object , Object[] )
+   at Microsoft.Extensions.Internal.ObjectMethodExecutor.Execute(Object target, Object[] parameters)
+   at Microsoft.AspNetCore.Mvc.Internal.ActionMethodExecutor.SyncActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeActionMethodAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeNextActionFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Rethrow(ActionExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker.InvokeInnerFilterAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeNextResourceFilter()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Rethrow(ResourceExecutedContext context)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeFilterPipelineAsync()
+   at Microsoft.AspNetCore.Mvc.Internal.ResourceInvoker.InvokeAsync()
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Routing.EndpointRoutingMiddleware.Invoke(HttpContext httpContext)
+   at CoV.Web.Infrastructure.Middleware.PageAccessdenied.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageAccessdenied.cs:line 19
+   at CoV.Web.Infrastructure.Middleware.PageNotFound.Invoke(HttpContext context) in /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/Infrastructure/Middleware/PageNotFound.cs:line 25
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Session.SessionMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2020-04-22 19:21:14.413 +07:00 [Error]  Error 404
+2020-04-22 19:21:14.414 +07:00 [Error]  Error 404
+2020-04-22 19:21:16.255 +07:00 [Error]  Error 404
+2020-04-22 19:21:16.256 +07:00 [Error]  Error 404
+2020-04-22 19:21:21.859 +07:00 [Error]  Error 404
+2020-04-22 19:21:21.866 +07:00 [Error]  Error 404
+2020-04-22 19:21:27.797 +07:00 [Error]  Error 404
+2020-04-22 19:21:27.802 +07:00 [Error]  Error 404
+2020-04-22 19:22:16.990 +07:00 [Error]  Error 404
+2020-04-22 19:22:16.995 +07:00 [Error]  Error 404
+2020-04-22 19:22:26.346 +07:00 [Error]  Error 404
+2020-04-22 19:22:26.353 +07:00 [Error]  Error 404
+2020-04-22 19:22:40.192 +07:00 [Error]  Error 404
+2020-04-22 19:22:40.206 +07:00 [Error]  Error 404
+2020-04-22 19:27:21.983 +07:00 [Error]  Error 404
+2020-04-22 19:27:21.989 +07:00 [Error]  Error 404
+2020-04-22 19:28:39.637 +07:00 [Error]  Error 404
+2020-04-22 19:28:39.641 +07:00 [Error]  Error 404
+2020-04-22 19:29:23.236 +07:00 [Error]  Error 404
+2020-04-22 19:29:23.243 +07:00 [Error]  Error 404
+2020-04-22 19:35:46.698 +07:00 [Error]  Error 404
+2020-04-22 19:35:46.700 +07:00 [Error]  Error 404

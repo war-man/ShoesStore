@@ -1,0 +1,175 @@
+﻿@using CoV.Service.DataModel
+@{
+    ViewBag.Title = "title";
+    Layout = "_FrontEndLayout";
+	var cart = (IEnumerable<CartViewModel>) ViewBag.cart;
+	var customer = (CustomerViewModel) ViewBag.customer;
+	var totalPrice = (int) ViewBag.totalprice;
+}
+		<section class="breadcrumb">
+			<div class="container p-0">
+				<div class="col-md-12">
+					<ul>
+						<li>
+							<a href="#">
+								Trang chủ
+							</a>
+						</li>
+						<li>
+							Thanh toán
+						</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<section class='box-checkout-02'>
+			<div class='container p-0'>
+				<div class='row m-0 bd-top'>
+					<div class="col-md-12 mt-3">
+						<h2 class="title-page">
+							Thanh toán
+						</h2>
+					</div>
+					<div class='col-md-6'>
+						<form action='#' class='sl-payment'>
+							<div class='list-ship'>
+								<h2 class='title-sl-payment'>1. Chọn hình thức vận chuyển</h2>
+								
+								<div class='item-payment m-border'>
+									<label class='radio-guide radio-guide-payment'>
+										Giao hàng tiêu chuẩn
+										<input name='htship' type='radio' value="1">
+										<span class='checkmark show-info-payment'></span>
+									</label>
+									<div class='info-payment'>
+										Giao hàng tiêu chuẩn là hình thức giao hàng thông thường mà các đơn vị vận chuyển cung cấp, bưu phẩm sẽ được chuyển đi theo thời gian định sẵn. Điều thu hút ở dịch vụ này đó là giá thành phải chăng và cực kỳ hợp lí. Với mức cước phí thấp như vậy, tốc độ giao hàng sẽ không thể bảo đảm nhanh chóng mà phải tuân theo trình tự lần lượt. Vì thế, dịch vụ này sẽ phù hợp cho những người không gấp gáp về mặt thời gian nhận hàng và ưu tiên chi phí rẻ.
+									</div>
+								</div>
+								<div class='item-payment m-border'>
+									<label class='radio-guide radio-guide-payment'>
+										Giao hàng COD
+										<input name='htship' type='radio'>
+										<span class='checkmark show-info-payment'></span>
+									</label>
+									<div class='info-payment'>
+										Khách hàng sẽ được xem hàng, nếu ưng ý mới phải trả tiền cho món đồ mình chọn mua. Còn không người mua sẽ có quyền từ chối nhận hàng và chuyển hàng trả lại người bán. (Việc được thử hàng hay bóc gói hàng sẽ phụ thuộc và người bán hàng quyết định, có rất nhiều khách hàng đồng ý cho xem bên ngoài bao bì của hàng nhưng không được bóc tem mác của sản phẩm…)
+									</div>
+								</div>
+							</div>
+							<div class='list-htpayment'>
+								<h2 class='title-sl-payment'>2. Chọn hình thức thanh toán</h2>
+								<div class='item-payment m-border m-border-blue'>
+									<label class='radio-guide radio-guide-payment'>
+										Thanh toán tiền mặt khi nhận hàng
+										<input checked='checked' name='htpayment' type='radio'>
+										<span class='checkmark show-info-payment'></span>
+									</label>
+									<div class='info-payment onblock'>
+										Tiết kiệm chi phí vận chuyển giao hàng thu tiền toàn quốc với Shipchung.vn. Tra cứu & so sánh phí vận chuyển của nhiều hãng ngay lập tức, chính xác.Thường xuyên có các chương trình khuyến mãi, ưu đãi tích điểm nhận quà.
+									</div>
+								</div>
+								<div class='item-payment m-border'>
+									<label class='radio-guide radio-guide-payment'>
+										Thanh toán bằng thể quốc tế Visa, Master Card
+										<input name='htpayment' type='radio'>
+										<span class='checkmark show-info-payment'></span>
+									</label>
+									<div class='info-payment'>
+										Tiết kiệm chi phí vận chuyển giao hàng thu tiền toàn quốc với Shipchung.vn. Tra cứu & so sánh phí vận chuyển của nhiều hãng ngay lập tức, chính xác.Thường xuyên có các chương trình khuyến mãi, ưu đãi tích điểm nhận quà.
+									</div>
+								</div>
+								<div class='item-payment m-border'>
+									<label class='radio-guide radio-guide-payment'>
+										Thanh toán ATM nội đia, Internet Banking (Miễn phí thanh toán)
+										<input name='htpayment' type='radio'>
+										<span class='checkmark show-info-payment'></span>
+									</label>
+									<div class='info-payment'>
+										Tiết kiệm chi phí vận chuyển giao hàng thu tiền toàn quốc với Shipchung.vn. Tra cứu & so sánh phí vận chuyển của nhiều hãng ngay lập tức, chính xác.Thường xuyên có các chương trình khuyến mãi, ưu đãi tích điểm nhận quà.
+									</div>
+								</div>
+							</div>
+							<a asp-action="Home" asp-controller="Home">
+								<button class='btn-blue w-100 mt-2' type='submit'>
+									Hoàn tất đơn hàng
+								</button>
+							</a>
+								<a class='to-checkout' asp-action="CreateOrder" asp-controller="Order" >
+										Hoàn tất đơn hàng
+								</a>
+							
+						</form>
+					</div>
+					<div class='moffset-1 col-md-5'>
+						<div class='list-ordered'>
+							<h2 class='title-ordered'>Đơn hàng: @cart.Count() sản phẩm</h2>
+							@foreach (var item in cart)
+							{
+								<div class='row item-ordered'>
+									<div class='img-ordered'>
+										<img alt='' src='~/Images/@item.Product.AvatarDetails'>
+									</div>
+									<div class='info-ordered'>
+										<h3 class='namr-ordered'>@item.Product.name</h3>
+										<div class='price'>@item.Product.Price đ</div>
+										<div ><b> Size: @item.Size</b></div>
+										@* <div class='old-price'> *@
+										@* 	<del>@item.Product.Price</del> *@
+										@* </div> *@
+									</div>
+									<div class='qty' ><b>X @item.Quantity</b></div>
+								</div>
+							}
+							
+							
+							<div class='row m-0 mt-3'>
+								<div class='col-md-6'>Phí shipping:</div>
+								<div class='col-md-6 text-right'>30.000 đ</div>
+							</div>
+							<div class='row mt-1 bd-top pt-1'>
+								<div class='col-md-6 fs-18'>Thành tiền:</div>
+								<div class='col-md-6 text-right'>
+									<b class="formatPrice01">@totalPrice</b>
+								</div>
+							</div>
+							<div class='row m-0 mt-3'>
+								<div class='col-md-6'>Tổng hóa đơn:</div>
+								<div class='col-md-6 text-right'>
+									<b class="formatPrice">@(totalPrice+30000)</b>
+								</div>
+							</div>
+						</div>
+						<div class='list-ordered mt-2'>
+							<h3 class='title-address'>Giao hàng đến</h3>
+							<div class='txt-address'>
+								<b class="address">@customer.Address - @customer.City </b>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+@section Scripts
+{
+	<script>
+	    //format jquery format number to currency
+	    var input= $(".formatPrice").html();
+	    var output=parseInt(input).toLocaleString();
+	    $(".formatPrice").text(output +" VND");
+		
+	    var input01= $(".formatPrice01").html();
+	    var output01=parseInt(input01).toLocaleString();
+	    $(".formatPrice01").text(output01 +" VND");
+		
+	    function ucwords (str) {
+	        return (str + '').replace(/^([a-z])|\s+([a-z])/g, function ($1) {
+	            return $1.toUpperCase();
+	        });
+	    }
+	    var oldstring = $(".address").html();
+	    $(".address").text(ucwords(oldstring.toLowerCase())) ;
+
+	</script>
+}

@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
+using Castle.Core.Internal;
 using CoV.Service.DataModel;
 using CoV.Service.Service;
 using CoV.Web.Infrastructure.Helper;
@@ -23,10 +24,23 @@ namespace CoV.Web.Controllers
         {
             var sessionEmail = HttpContext.Session.GetString("SessionEmail");
             var cart = SessionHelper.GetObjectFromJson<List<CartViewModel>>(HttpContext.Session, "cart");
-            var cartCustomer = cart.FindAll(x => x.Name == sessionEmail);
-            ViewBag.cart = cartCustomer;
+
+            if (cart != null)
+            {
+                var cartCustomer = cart.FindAll(x => x.Name == sessionEmail);
+                ViewBag.cart = cartCustomer;
+                ViewBag.total = cart.Count;
+                return View(ViewBag.cart);
+            }
+            return Redirect("/Cart/Index2");
+        }
+        
+        [HttpGet]
+        public IActionResult Index2()
+        {
             return View();
         }
+        
         
         [HttpGet]
         public IActionResult Buy(int id)
@@ -43,7 +57,7 @@ namespace CoV.Web.Controllers
                 {
                     List<CartViewModel> cart = new List<CartViewModel>();
                 
-                    cart.Add(new CartViewModel {Product =  product,Name = sessionEmail  ,ProductId = id, Quantity = 1 });
+                    cart.Add(new CartViewModel {Product =  product,Name = sessionEmail ,Size = 34,ProductId = id, Quantity = 1, TotalPrice = product.Price });
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
                 }
                 else
@@ -53,10 +67,13 @@ namespace CoV.Web.Controllers
                     if (index != -1)
                     {
                         cart[index].Quantity++;
+                        cart[index].TotalPrice= cart[index].Product.Price* cart[index].Quantity;
                     }
                     else
                     {
-                        cart.Add(new CartViewModel {Product =  product,Name = sessionEmail  ,ProductId = id, Quantity = 1 });
+                        cart.Add(new CartViewModel {Product =  product,Name = sessionEmail ,Size = 34,ProductId = id, Quantity = 1, TotalPrice = product.Price });
+
+
                     }
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
                 }
@@ -102,6 +119,7 @@ namespace CoV.Web.Controllers
             if (index != -1)
             {
                 cart[index].Quantity = quantity + 1;
+                cart[index].TotalPrice = cart[index].Quantity * cart[index].Product.Price;
             }
             else
             {
@@ -129,6 +147,7 @@ namespace CoV.Web.Controllers
             else
             {
                 cart.Add(new CartViewModel {Product =  product, ProductId = id, Quantity = 1 });
+                cart[index].TotalPrice = cart[index].Quantity * cart[index].Product.Price;
 
             }
             SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
@@ -148,6 +167,30 @@ namespace CoV.Web.Controllers
             if (index != -1)
             {
                 cart[index].Quantity = quantity;
+                cart[index].TotalPrice = cart[index].Quantity * cart[index].Product.Price;
+            }
+            else
+            {
+                cart.Add(new CartViewModel {Product =  product, ProductId = id, Quantity = 1 });
+
+            }
+            SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
+            return new JsonResult(cart);
+        }
+        
+        [HttpGet]
+        public IActionResult EditSizeMouseleave( int id, int size)
+        {
+            List<CartViewModel> cart = SessionHelper.GetObjectFromJson<List<CartViewModel>>(HttpContext.Session, "cart");
+            var product = _productService.GetByIdCart(id);
+            int index = IsExist(id);
+            if (size <= 34 || size >=46)
+            {
+                return new JsonResult(cart);
+            }
+            if (index != -1)
+            {
+                cart[index].Size = size;
             }
             else
             {

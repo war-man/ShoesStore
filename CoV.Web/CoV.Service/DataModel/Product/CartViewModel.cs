@@ -12,6 +12,10 @@ namespace CoV.Service.DataModel
         
         public int ProductId { get; set; }
         
+        public int TotalPrice { get; set; } 
+        
+        public int Size { get; set; } 
+        
         public ProductViewModel Product { get; set; }
     }
 }

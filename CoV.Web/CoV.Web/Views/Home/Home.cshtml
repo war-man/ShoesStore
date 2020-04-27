@@ -1,4 +1,6 @@
 ﻿@using CoV.Service.DataModel
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
 @{
     ViewBag.Title = "title";
     Layout = "_FrontEndLayout";
@@ -10,9 +12,16 @@
 
 <div class="nen-mo"></div>
 <div class="hop-thoai">
-	<i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%;opacity: 1;"  class="far fa-check-circle "></i>
+	<i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%;"  class="far fa-check-circle "></i>
 	<h3 style="color: white; ">Sản phẩm được thêm vào giỏ hàng</h3>
 </div>
+
+<div class="nen-mo-login"></div>
+<div class="hop-thoai-login">
+	<i style="font-size: 120px; color: #00bfa5; padding-left: 32%; margin-top: 7%; margin-bottom: 5%; color: red"  class="fab fa-amazon-pay"></i>
+	<h3 style="color: white; ">Vui lòng đăng nhập để mua hàng </h3>
+</div>
+
 
 <section class="banner-ss">
 	<div class="container p-0">
@@ -98,7 +107,7 @@
 									</a>
 								</h3>
 								<div class="price-product">
-									<span>@item.Price đ</span>
+									<span class="numberPrice" >@item.Price đ</span>
 									@* <del> *@
 									@* 	@item.Price *@
 									@* </del> *@
@@ -835,8 +844,9 @@
 {
 	<script>
 		//mua hang luong don hang
+		var SessionEmail = '@HttpContextAccessor.HttpContext.Session.GetString("SessionName")';
 		$(document).ready(function() {
-			$(".buy").off('click').on('click',function(e) {
+			$(".buy").off('click').on('click', function(e) {
 				var id = $(this).attr("id");
 				e.preventDefault();
 				$.ajax({
@@ -844,24 +854,43 @@
 					type: "GET",
 					contentType: "application/json; charset=utf-8",
 					dataType: "json",
-					data: { id : id},
+					data: { id: id },
 					async: true,
 					cache: false,
 					success: function() {
 					}
 				});
-			});
-			$(document).ready(function() {
-				$('.btn-open').click(function(event) {
+		});
+			
+			
+		$(document).ready(function() {
+			$('.btn-open').on('click', (function(event) {
+				if (SessionEmail == "") {
+					$('.hop-thoai-login').addClass('hien-ra-login');
+					$('.nen-mo-login').addClass('hien-ra-login');
+					setTimeout(function() {
+							$('.hop-thoai-login').removeClass('hien-ra-login');
+							$('.nen-mo-login').removeClass('hien-ra-login');
+						},
+						1500);
+				} 
+				else {
 					$('.hop-thoai').addClass('hien-ra');
 					$('.nen-mo').addClass('hien-ra');
-					setTimeout(function(){
-						$('.hop-thoai').removeClass('hien-ra');
-						$('.nen-mo').removeClass('hien-ra');
-					},1000);
-				});
-			});   
-		
+					setTimeout(function() {
+							$('.hop-thoai').removeClass('hien-ra');
+							$('.nen-mo').removeClass('hien-ra');
+						},
+						1000);
+				}
+			}));
 		});
+
+		//format jquery format number to currency
+
+//			var input= $(".numberPrice").html();
+//			var output=parseInt(input).toLocaleString();
+//			$(".numberPrice").text(output +" đ");
+	});
 	</script>
 }

@@ -1,4 +1,4 @@
-﻿
+﻿@model CoV.Service.DataModel.CustomerViewModel
 @{
     ViewBag.Title = "title";
     Layout = "_FrontEndLayout";
@@ -39,89 +39,33 @@
 							<form action="#">
 								<div class="order">
 									<h3 class="mb-1">Thông tin khách hàng</h3>
+									<label style="float: left">Họ</label>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Họ:">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Tên:">
+										<input type="text" class="form-control" placeholder="Họ:" asp-for="FirstName">
 									</div>
 									<div class="form-group">
-										<input type="number" class="form-control" placeholder="Số điện thoại:">
+										<input type="text" class="form-control" placeholder="Tên:" asp-for="LastName">
 									</div>
 									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email:">
+										<input type="number" class="form-control" placeholder="Số điện thoại:" asp-for="PhoneNumber">
 									</div>
-									<div class="form-group select">
-										<select class="form-control">
-											<option value="">Tỉnh / Thành phố</option>
-											<option value="">Hà Nội</option>
-											<option value="">Kiên Giang</option>
-											<option value="">Thái Bình</option>
-										</select>
-										<span class="icon-select">
-											<i class="fas fa-chevron-down"></i>
-										</span>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Email:" asp-for="Email">
 									</div>
-									<div class="form-group select">
-										<select class="form-control">
-											<option value="">Quận huyện</option>
-											<option value="">Hà Nội</option>
-											<option value="">Kiên Giang</option>
-											<option value="">Thái Bình</option>
-										</select>
-										<span class="icon-select">
-											<i class="fas fa-chevron-down"></i>
-										</span>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Tỉnh.." asp-for="City">
+									</div>
+									<div class="form-group">
+										<input type="text" class="form-control" placeholder="Địa chỉ..." asp-for="Address">
 									</div>
 									<div class="form-group">
 										<textarea rows="5" class="textarea"></textarea>
 									</div>
 									<div class="row form-group">
-										<input type="checkbox" checked="checked" class="my-checkbox mr-1" id="check-order" />
+										<input type="checkbox" checked="checked" class="my-checkbox mr-1" id="check-order"  placeholder="Thêm chú ý..."/>
 										<label for="check-order" class="check-order">
 											Sử dụng cùng một địa chỉ cho thanh toán và vận chuyển?
 										</label>
-									</div>
-								</div>
-
-								<div class="order-to">
-									<h3 class="mb-1">Thông tin nhận hàng</h3>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Họ:">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Tên:">
-									</div>
-									<div class="form-group">
-										<input type="number" class="form-control" placeholder="Số điện thoại:">
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Email:">
-									</div>
-									<div class="form-group select">
-										<select class="form-control">
-											<option value="">Tỉnh / Thành phố</option>
-											<option value="">Hà Nội</option>
-											<option value="">Kiên Giang</option>
-											<option value="">Thái Bình</option>
-										</select>
-										<span class="icon-select">
-											<i class="fas fa-chevron-down"></i>
-										</span>
-									</div>
-									<div class="form-group select">
-										<select class="form-control">
-											<option value="">Quận huyện</option>
-											<option value="">Hà Nội</option>
-											<option value="">Kiên Giang</option>
-											<option value="">Thái Bình</option>
-										</select>
-										<span class="icon-select">
-											<i class="fas fa-chevron-down"></i>
-										</span>
-									</div>
-									<div class="form-group">
-										<textarea rows="5" class="textarea"></textarea>
 									</div>
 								</div>
 
