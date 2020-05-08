@@ -16,9 +16,5 @@ namespace CoV.DataAccess.Data
         [Column(TypeName = "nvarchar(20)")]
         public string Color  { get; set; }
         
-        /// <summary>
-        /// 
-        /// </summary>
-        public ICollection<Product> ColorsProducts { get; set; }
     }
 }

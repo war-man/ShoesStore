@@ -73,6 +73,11 @@ namespace CoV.Service.Repository
             /// Repository Product Category
             /// </summary>
             IOrderStatusRespository OrderStatusRespository  { get; }
+            
+            /// <summary>
+            /// Repository Product Category
+            /// </summary>
+            IProductDetailsRespository ProductDetailsRespository  { get; }
             /// <summary>
             ///  AppDbContext
             /// </summary>
@@ -107,6 +112,7 @@ namespace CoV.Service.Repository
         private OrderRespository _orderRespository;
         private CustomerRespository _customerRespository;
         private OrderStatusRespository _orderStatusRespository;
+        private ProductDetailsRespository _productDetailsRespository;
         #endregion
         
         /// <summary>
@@ -279,6 +285,17 @@ namespace CoV.Service.Repository
             get {
                 return _orderStatusRespository = 
                     _orderStatusRespository ?? new OrderStatusRespository(_appDbContext);
+            }
+        }
+        
+        /// <summary>
+        /// Initialization product details repository 1
+        /// </summary>
+        public  IProductDetailsRespository ProductDetailsRespository 
+        {
+            get {
+                return _productDetailsRespository = 
+                    _productDetailsRespository ?? new ProductDetailsRespository(_appDbContext);
             }
         }
         

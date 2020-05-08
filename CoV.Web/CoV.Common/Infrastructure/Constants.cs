@@ -157,11 +157,9 @@
         public class Role
         {
             public const string Admin = "Admin";
-            public const string User = "User";
-            public const string UserEndDate = "User1";
-            public const string Employee = "Employee";
+            public const string Accountant = "Kế toán";
+            public const string Employee = "Nhân viên";
             public const string Shiper = "Shiper";
-            public const string CustomerNew = "CustomerNew";
         }
         
         public class StatusOrder
@@ -191,20 +189,25 @@
         
         public class  ColorProduct
         {
-            public const string RED = "RED";
-            public const string BLUE = "BLUE";
-            public const string GREEN = "GREEN";
-            public const string YELLOW = "YELLOW";
-            public const string BLACK = "BLACK";
-            public const string WHITE = "WHITE";
+            public const string Red = "RED";
+            public const string Blue = "BLUE";
+            public const string Green = "GREEN";
+            public const string Yellow = "YELLOW";
+            public const string Black = "BLACK";
+            public const string White = "WHITE";
+            public const string Pink = "PINK";
         }
 
         public class CategoryProduct
         {
             public const string ShoesLong = "Giày cao cổ";
+            public const string ShoesCs = "Giày Công sở";
             public const string Shoeshirst = "Giày thấp cổ";
             public const string Giayluoi = "Giày lười";
             public const string Giaythethao = "Giày thể thao";
+            public const string GiayDangYeu = "Giày đáng yêu";
+            public const string GiayPhongCach = "Giày phong cách";
+            public const string GiayDa = "Giày Da";
         }
         
         public class  MakerProduct
@@ -216,16 +219,17 @@
         }
         public class GenderProduct
         {
-            public const string Male = "Male";    
-            public const string Female  = "Female";
-            public const string UnknownGender  = "UnknownGender";
+            public const string Male = "Nam";    
+            public const string Female  = "Nữ";
+            public const string UnknownGender  = "Mọi người";
+            public const string Baby  = "Em bé";
             
         }
         
         public class  StatusProduct
         {
-            public const string action = "ACTION";
-            public const string stop = "STOP";
+            public const string Action = "Đang hoạt động";
+            public const string Stop = "Tạm đừng";
             
         }
     }

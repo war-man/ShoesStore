@@ -16,9 +16,6 @@ namespace CoV.DataAccess.Data
         [Column(TypeName = "nvarchar(50)")]
         public string status  { get; set; }
         
-        /// <summary>
-        /// 
-        /// </summary>
-        public  ICollection<Product> StatusProducts { get; set; }
+
     }
 }

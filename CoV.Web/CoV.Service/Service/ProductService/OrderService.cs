@@ -33,6 +33,8 @@ namespace CoV.Service.Service
         OrderViewModel getById(int id);
 
         OrderViewModel UpdateToShiper(int id);
+        
+        void Delete(int id) ;
     }
 
     public class OrderService : IOrderService
@@ -40,11 +42,13 @@ namespace CoV.Service.Service
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly IProductService _productService;
+        private readonly IProductDetailsService _productDetailsService;
 
-        public OrderService(IUnitOfWork unitOfWork, IMapper mapper, IProductService productService)
+        public OrderService(IUnitOfWork unitOfWork, IMapper mapper, IProductService productService, IProductDetailsService productDetailsService)
         {
             _unitOfWork = unitOfWork;
             _productService = productService;
+            _productDetailsService = productDetailsService;
             _mapper = mapper;
         }
 
@@ -62,12 +66,24 @@ namespace CoV.Service.Service
         {
             foreach (var item in cart)
             {
+                var productdetails = _productDetailsService
+                    .GetByProductColor(item.ProductId, item.Size);
+                if (productdetails != null)
+                {
+                    productdetails.NumberProduct = productdetails.NumberProduct - item.Quantity;
+                    _unitOfWork.ProductDetailsRespository.Update(_mapper.Map<ProductDetails>(productdetails));
+                }
+                _unitOfWork.Save();
+
+            }
+            foreach (var item in cart)
+            {
                 var order = new OrderViewModel
                 {
                     Name = item.Name,
                     CreateDate = DateTime.Now,
                     Product = _productService.GetByIdCart(item.ProductId),
-                    TotalPrice = item.TotalPrice,
+                    TotalPrice = item.TotalPrice + 30000,
                     Quantity = item.Quantity,
                     StatusId = 1,
                     Size = item.Size,
@@ -99,6 +115,13 @@ namespace CoV.Service.Service
             }
 
             return _mapper.Map<OrderViewModel>(order);
+        }
+
+        public void Delete(int id)
+        {
+            var orDefault = _unitOfWork.OrderRespository.ObjectContext.FirstOrDefault(x => x.Id.Equals(id));
+            _unitOfWork.OrderRespository.Delete(orDefault);
+            _unitOfWork.Save();
         }
 
     }

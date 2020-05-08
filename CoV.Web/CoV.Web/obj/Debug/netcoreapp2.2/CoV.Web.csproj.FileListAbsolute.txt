@@ -655,6 +655,7 @@
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Account/Login.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Admin/Index.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Cart/Index.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Cart/index2.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Checkout02/Checkout02.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Customer/CreateAndUpdate.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Customer/GetAll.g.cshtml.cs
@@ -673,8 +674,12 @@
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Home/ProductDetail.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Home/Singin.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Home/TemplateInvoid.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Order/GetAll.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/CreateOrUpdate.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAll.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/ProductDetails/Add.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/ProductDetails/CreateOrUpdate.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/ProductDetails/GetAll.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Role/GetAll.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Shared/Error.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Shared/FilterExpired.g.cshtml.cs
@@ -696,5 +701,13 @@
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/CoV.Web.csproj.CopyComplete
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/CoV.Web.dll
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/CoV.Web.pdb
-/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Cart/index2.g.cshtml.cs
-/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Order/GetAll.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllMale.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllBaby.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllFemale.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoesCs.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoeSporst.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoeLong.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoesDa.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoesBabyLovely.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoesBabyStyle.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/Search.g.cshtml.cs

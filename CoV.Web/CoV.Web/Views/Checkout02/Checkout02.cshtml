@@ -90,13 +90,11 @@
 									</div>
 								</div>
 							</div>
-							<a asp-action="Home" asp-controller="Home">
-								<button class='btn-blue w-100 mt-2' type='submit'>
-									Hoàn tất đơn hàng
-								</button>
-							</a>
+						
 								<a class='to-checkout' asp-action="CreateOrder" asp-controller="Order" >
+									<button class='btn-blue w-100 mt-2' type='button'>
 										Hoàn tất đơn hàng
+									</button>
 								</a>
 							
 						</form>
@@ -111,7 +109,7 @@
 										<img alt='' src='~/Images/@item.Product.AvatarDetails'>
 									</div>
 									<div class='info-ordered'>
-										<h3 class='namr-ordered'>@item.Product.name</h3>
+										<h3 class='namr-ordered'>@item.Product.Name</h3>
 										<div class='price'>@item.Product.Price đ</div>
 										<div ><b> Size: @item.Size</b></div>
 										@* <div class='old-price'> *@

@@ -75,6 +75,7 @@ namespace CoV.Web
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderStatusService, OrderStatusService>();
+            services.AddScoped<IProductDetailsService, ProductDetailsService>();
 
             services.AddTransient<IValidator<LoginModel>, LoginValidation>();
             services.AddTransient<IValidator<UserViewModel>, UserViewValidation>();
@@ -96,6 +97,7 @@ namespace CoV.Web
             services.AddAutoMapper(typeof(CartMapper));
             services.AddAutoMapper(typeof(OrderMaper));
             services.AddAutoMapper(typeof(OrderStatusMapper));
+            services.AddAutoMapper(typeof(ProductDetailsMapper));
 
             // Config authentication
             services.AddAuthentication(options =>
@@ -131,8 +133,12 @@ namespace CoV.Web
             {
                 options.AddPolicy("Admin", policy => policy.RequireAssertion(context =>
                     context.User.IsInRole(Constants.Role.Admin)));
-                options.AddPolicy("User", policy => policy.RequireAssertion(context =>
-                    context.User.IsInRole(Constants.Role.User) || context.User.IsInRole(Constants.Role.Admin)));
+                options.AddPolicy("Employee", policy => policy.RequireAssertion(context =>
+                    context.User.IsInRole(Constants.Role.Employee) || context.User.IsInRole(Constants.Role.Admin)));
+                options.AddPolicy("Accountant", policy => policy.RequireAssertion(context =>
+                    context.User.IsInRole(Constants.Role.Accountant) || context.User.IsInRole(Constants.Role.Admin)));
+                options.AddPolicy("Shiper", policy => policy.RequireAssertion(context =>
+                    context.User.IsInRole(Constants.Role.Shiper) || context.User.IsInRole(Constants.Role.Admin)));
             });
 
             // Adds a default in-memory implementation of IDistributedCache
@@ -143,7 +149,7 @@ namespace CoV.Web
             {
                 //options.IdleTimeout = TimeSpan.FromSeconds(10);
                 options.Cookie.HttpOnly = true;
-//                options.Cookie.IsEssential = true;
+                options.Cookie.IsEssential = true;
             });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2).AddFluentValidation();
@@ -186,7 +192,7 @@ namespace CoV.Web
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Customer}/{action=LoginCustomer}/{id?}");
+                    template: "{controller=Admin}/{action=Index}/{id?}");
             });
         }
     }

@@ -25,7 +25,7 @@ namespace CoV.DataAccess.Data
                     };
                     var role2 = new Role
                     {
-                        RoleName = Constants.Role.User,
+                        RoleName = Constants.Role.Accountant,
                     };
                     var role3 = new Role
                     {
@@ -59,105 +59,79 @@ namespace CoV.DataAccess.Data
                     
                     var user2 = new User
                     {
-                        UserName = Constants.Role.User,
-                        Password = Constants.Role.User,
+                        UserName = "Accountant" ,
+                        Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
                         ExpiredDate = DateTime.MaxValue,
-                        RoleId = (int)Common.Infrastructure.Role.User,
+                        RoleId = (int)Common.Infrastructure.Role.Accountant,
                     };
                     context.Users.Add(user2);
                     context.SaveChanges();
                     
                     var user3 = new User
                     {
-                        UserName = Constants.Role.UserEndDate,
-                        Password = Constants.Role.User,
+                        UserName = "Employee",
+                        Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
-                        ExpiredDate = DateTime.Now.AddDays(-5),
-                        RoleId = (int)Common.Infrastructure.Role.Customer,
+                        ExpiredDate = DateTime.MaxValue,
+                        RoleId = (int)Common.Infrastructure.Role.Employee,
                     };
                     context.Users.Add(user3);
                     context.SaveChanges();
                     
-                    var Customer = new User
+                    var Shipper = new User
                     {
-                        UserName = Constants.Role.Employee,
-                        Password = Constants.Role.Employee,
+                        UserName = "Shipper",
+                        Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
-                        ExpiredDate = DateTime.Now.AddDays(-5),
-                        RoleId = (int)Common.Infrastructure.Role.Customer,
-                    };
-                    context.Users.Add(Customer);
-                    context.SaveChanges();
-                    
-                    var CustomerNew = new User
-                    {
-                        UserName = Constants.Role.CustomerNew,
-                        Password = Encryptor.CalculateHash(Constants.Role.Admin),
-                        ImageAvatar = Constants.ImageUserDefail.imageAvatar,
-                        FirstDate = DateTime.Now,
                         ExpiredDate = DateTime.MaxValue,
-                        RoleId = (int)Common.Infrastructure.Role.Admin,
+                        RoleId = (int)Common.Infrastructure.Role.Shiper,
                     };
-                    context.Users.Add(CustomerNew);
+                    context.Users.Add(Shipper);
                     context.SaveChanges();
-                    
-                    
-                    for (int i = 2; i < 100; i++)
-                    {
-                        var user5 = new User
-                        {
-                            UserName = Constants.Role.User + i,
-                            Password = Constants.Role.User,
-                            ImageAvatar = Constants.ImageUserDefail.imageAvatar,
-                            FirstDate = DateTime.Now,
-                            ExpiredDate = DateTime.Now.AddDays(-5),
-                            RoleId = (int)Common.Infrastructure.Role.User,
-                        };
-                        context.Users.Add(user5);
-                    }
-                    
-                    context.SaveChanges();
-                    
                 }
                 
                 // Inser Color
                 if (!context.ColorProducts.Any())
                 {
-                    var RED = new ColorProduct
+                    var red = new ColorProduct
                     {
-                        Color = Constants.ColorProduct.RED
+                        Color = Constants.ColorProduct.Red
                     };
-                    var BLACK = new ColorProduct
+                    var black = new ColorProduct
                     {
-                        Color = Constants.ColorProduct.BLACK
+                        Color = Constants.ColorProduct.Black
                     };
-                    var BLUE = new ColorProduct
+                    var blue = new ColorProduct
                     {
-                        Color = Constants.ColorProduct.BLUE
+                        Color = Constants.ColorProduct.Blue
                     };
-                    var GREEN = new ColorProduct
+                    var green = new ColorProduct
                     {
-                        Color = Constants.ColorProduct.GREEN
+                        Color = Constants.ColorProduct.Green
                     };
-                    var WHITE = new ColorProduct
+                    var white = new ColorProduct
                     {
-                        Color = Constants.ColorProduct.WHITE
+                        Color = Constants.ColorProduct.White
                     };
-                    var YELLOW = new ColorProduct
+                    var yellow = new ColorProduct
                     {
-                        Color = Constants.ColorProduct.YELLOW
+                        Color = Constants.ColorProduct.Yellow
+                    };
+                    var pinl = new ColorProduct
+                    {
+                        Color = Constants.ColorProduct.Pink
                     };
                     
-                    context.ColorProducts.Add(RED);
-                    context.ColorProducts.Add(BLUE);
-                    context.ColorProducts.Add(BLACK);
-                    context.ColorProducts.Add(GREEN);
-                    context.ColorProducts.Add(YELLOW);
-                    context.ColorProducts.Add(WHITE);
+                    context.ColorProducts.Add(red);
+                    context.ColorProducts.Add(blue);
+                    context.ColorProducts.Add(black);
+                    context.ColorProducts.Add(green);
+                    context.ColorProducts.Add(yellow);
+                    context.ColorProducts.Add(white);
                     context.SaveChanges();
                 }
                 
@@ -195,11 +169,11 @@ namespace CoV.DataAccess.Data
                 {
                     var action = new StatusProduct
                     {
-                        status = Constants.StatusProduct.action
+                        status = Constants.StatusProduct.Action
                     };
                     var stop = new StatusProduct
                     {
-                        status = Constants.StatusProduct.stop
+                        status = Constants.StatusProduct.Stop
                     };
                     context.StatusProducts.Add(action);
                     context.StatusProducts.Add(stop);
@@ -227,10 +201,31 @@ namespace CoV.DataAccess.Data
                     {
                         CategoryName = Constants.CategoryProduct.Giaythethao,
                     };
+                    
+                    var category4 = new CategoryProduct
+                    {
+                        CategoryName = Constants.CategoryProduct.GiayDangYeu,
+                    };
+                    var category5 = new CategoryProduct
+                    {
+                        CategoryName = Constants.CategoryProduct.GiayPhongCach,
+                    };
+                    var category6 = new CategoryProduct
+                    {
+                        CategoryName = Constants.CategoryProduct.ShoesCs,
+                    };
+                    var category7 = new CategoryProduct
+                    {
+                        CategoryName = Constants.CategoryProduct.GiayDa,
+                    };
                     context.CategoryProducts.Add(category);
                     context.CategoryProducts.Add(category1);
                     context.CategoryProducts.Add(category2);
                     context.CategoryProducts.Add(category3);
+                    context.CategoryProducts.Add(category4);
+                    context.CategoryProducts.Add(category5);
+                    context.CategoryProducts.Add(category6);
+                    context.CategoryProducts.Add(category7);
                     context.SaveChanges();
                 }
                 
@@ -245,14 +240,19 @@ namespace CoV.DataAccess.Data
                     {
                         GenderName = Constants.GenderProduct.Female,
                     };
-                    var UnknownGender = new Gender
+                    var unknownGender = new Gender
                     {
                         GenderName = Constants.GenderProduct.UnknownGender,
+                    };
+                    var Baby = new Gender
+                    {
+                        GenderName = Constants.GenderProduct.Baby,
                     };
 
                     context.Genders.Add(male);
                     context.Genders.Add(female);
-                    context.Genders.Add(UnknownGender);
+                    context.Genders.Add(unknownGender);
+                    context.Genders.Add(Baby);
                     context.SaveChanges();
                 }
 
@@ -260,55 +260,44 @@ namespace CoV.DataAccess.Data
                 {
                     var product = new Product
                     {
-                        name = "Ustraboost",
+                        Name = "Ustraboost",
                         Sku = "Das12",
                         Price = 25000,
+                        PriceNew = 24000,
                         FirstDate = DateTime.Now,
-                        Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "6ba6d9ca-3757-4114-afd4-f13c5b12329a_Adidas-Ultra-Boost-4-0-Running-White-Product.jpg",
-                        ColorProductId = 1,
                         MakerProductId = 1,
-                        StatusProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
+                        Details = "Product new ",
                         CategoryProductId = 1,
                         GenderProductId = 1,
-
                     };
                     
                     
                     var product1 = new Product
                     {
-                        name = "Vans Old School",
+                        Name = "Vans Old School",
                         Sku = "vans",
                         Price = 220000,
+                        PriceNew = 24000,
                         FirstDate = DateTime.Now,
+                        MakerProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
                         Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 2,
-                        MakerProductId = 3,
-                        StatusProductId = 2,
                         CategoryProductId = 2,
                         GenderProductId = 2,
-
                     };
                     
                     
                     var product2 = new Product
                     {
-                        name = "Yeezy 350",
+                        Name = "Yeezy 350",
                         Sku = "Yeezy12",
                         Price = 35000,
+                        PriceNew = 35000,
                         FirstDate = DateTime.Now,
-                        Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 1,
                         MakerProductId = 1,
-                        StatusProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
+                        Details = "Product new ",
                         CategoryProductId = 1,
                         GenderProductId = 1,
 
@@ -317,34 +306,28 @@ namespace CoV.DataAccess.Data
                     
                     var product3 = new Product
                     {
-                        name = "Giầy running Adidas ASWEEGO",
+                        Name = "Giầy running Adidas ASWEEGO",
                         Sku = "adidas1",
                         Price = 255000,
+                        PriceNew = 255000,
                         FirstDate = DateTime.Now,
+                        MakerProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
                         Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 3,
-                        MakerProductId = 2,
-                        StatusProductId = 1,
                         CategoryProductId = 2,
                         GenderProductId = 2,
                     };
                     
                     var product4 = new Product
                     {
-                        name = "P.rophere Grey Solar Red",
+                        Name = "P.rophere Grey Solar Red",
                         Sku = "P1",
                         Price = 55000,
+                        PriceNew = 55000,
                         FirstDate = DateTime.Now,
+                        MakerProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
                         Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 5,
-                        MakerProductId = 3,
-                        StatusProductId =1,
                         CategoryProductId = 3,
                         GenderProductId = 1,
                     };
@@ -352,89 +335,73 @@ namespace CoV.DataAccess.Data
                     
                     var product5 = new Product
                     {
-                        name = "CV Chuck 70 Low Top Black (1970s)",
+                        Name = "CV Chuck 70 Low Top Black (1970s)",
                         Sku = "CV1",
                         Price = 252000,
+                        PriceNew = 252000,
                         FirstDate = DateTime.Now,
+                        MakerProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
                         Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 1,
-                        MakerProductId = 3,
-                        StatusProductId = 1,
                         CategoryProductId = 4,
                         GenderProductId = 2,
                     };
                     
                     var product6 = new Product
                     {
-                        name = "Old Skool Classic Black",
+                        Name = "Old Skool Classic Black",
                         Sku = "v1",
                         Price = 500000,
+                        PriceNew = 500000,
                         FirstDate = DateTime.Now,
+                        MakerProductId = 1,
                         Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 4,
-                        MakerProductId = 3,
-                        StatusProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
                         CategoryProductId = 1,
                         GenderProductId = 1,
                     };
                     
                     var product7 = new Product
                     {
-                        name = "Style 36 “Marshmallow” Racing Red",
+                        Name = "Style 36 “Marshmallow” Racing Red",
                         Sku = "v23",
                         Price = 990000    ,
+                        PriceNew = 990000    ,
+                        MakerProductId = 1,
                         FirstDate = DateTime.Now,
                         Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 1,
-                        MakerProductId = 1,
-                        StatusProductId = 1,
+                        AvatarDetails = "img-detail-02.jpg",
                         CategoryProductId = 1,
                         GenderProductId = 2,
                     };
                     
                     var product8 = new Product
                     {
-                        name = "NMD R1 Triple White",
+                        Name = "NMD R1 Triple White",
                         Sku = "NMD",
                         Price = 1190000,
-                        FirstDate = DateTime.Now,
-                        Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 1,
+                        PriceNew= 1190000,
                         MakerProductId = 1,
-                        StatusProductId = 1,
+                        FirstDate = DateTime.Now,
+                        AvatarDetails = "img-detail-02.jpg",
+                        Details = "Product new ",
                         CategoryProductId = 1,
                         GenderProductId = 1,
                     };
                     
                     var product9 = new Product
                     {
-                        name = "Alphabounce Beyond Cloud White",
+                        Name = "Alphabounce Beyond Cloud White",
                         Sku = "Al1",
                         Price = 9900000,
-                        FirstDate = DateTime.Now,
-                        Details = "Product new ",
-                        AddressProduction = "HA NOI",
-                        Number = 25,
-                        AvatarDetails = "1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg",
-                        ColorProductId = 3,
+                        PriceNew = 9900000,
                         MakerProductId = 1,
-                        StatusProductId = 1,
+                        FirstDate = DateTime.Now,
+                        AvatarDetails = "img-detail-02.jpg",
+                        Details = "Product new ",
                         CategoryProductId = 1,
                         GenderProductId = 2,
                     };
-                    
                     context.Products.Add(product);
                     context.Products.Add(product1);
                     context.Products.Add(product2);
@@ -445,7 +412,6 @@ namespace CoV.DataAccess.Data
                     context.Products.Add(product7);
                     context.Products.Add(product8);
                     context.Products.Add(product9);
-                  
                     context.SaveChanges();
                 }
                 

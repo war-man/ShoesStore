@@ -15,7 +15,7 @@ namespace CoV.Service.DataModel
         /// <summary>
         /// Name Product 
         /// </summary>
-        public  string name { get; set; }
+        public  string Name { get; set; }
         
         /// <summary>
         /// Code Product (Ma san pham)
@@ -28,6 +28,11 @@ namespace CoV.Service.DataModel
         public int  Price { get; set; }
         
         /// <summary>
+        /// price product 
+        /// </summary>
+        public int  PriceNew { get; set; }
+        
+        /// <summary>
         ///  date of import (Ngay nhap hang hoa )
         /// </summary>
         public  DateTime FirstDate { get; set; }
@@ -38,11 +43,6 @@ namespace CoV.Service.DataModel
         public  string Details { get; set; }
         
         /// <summary>
-        /// Address produc (Noi san xuat cua san pham )
-        /// </summary>
-        public  string  AddressProduction { get; set; }
-        
-        /// <summary>
         ///  Image Detail (hinh anh mo ta san pham )
         /// </summary>
         public  string AvatarDetails { get; set; }
@@ -50,74 +50,33 @@ namespace CoV.Service.DataModel
         /// <summary>
         /// get Path
         /// </summary>
-        public IFormFile photoPath { get; set;  }
+        public IFormFile PhotoPath { get; set;  }
+
         
         /// <summary>
-        /// Number Product (so luong san pham )
-        /// </summary>
-        public  int Number { get; set; }
-        
-        //link the tables
-        
-        /// <summary>
-        /// Id table ColorProduct ForeignKey
-        /// </summary>
-        public int ColorProductId { get; set; }
-        public ColorProduct ColorProduct { get; set; }
-        
-        /// <summary>
-        /// Get Attribute ColorProductViewModel
-        /// </summary>
-        public  List<ColorProductViewModel> ColorProductViewModels { get; set; }
-        
-        /// <summary>
-        /// Id table SizeProduct ForeignKey
-        /// </summary>
-        public int MakerProductId { get; set; }
-        public MakerProduct MakerProduct { get; set; }
-        
-        /// <summary>
-        /// Get Attribute SizeProducts 
-        /// </summary>
-        public  List<MakerProductViewModel> MakerProductViewModels { get; set; }
-        
-        /// <summary>
-        /// Id table StatusProduct ForeignKey
-        /// </summary>
-        public int StatusProductId { get; set; }
-        public StatusProduct StatusProduct { get; set; }
-        
-        /// <summary>
-        /// Get Attribute Status Product view Model 
-        /// </summary>
-        public List<StatusProductViewModel> StatusProductViewModels { get; set; }
-        
-        /// <summary>
-        /// Id table Image ForeignKey
-        /// </summary>
-        public int ImageId  { get; set; }
-        public Image Image { get; set; }
-        
-        /// <summary>
-        /// Id table Image ForeignKey
+        /// Id table Image ForeignKey (the loai san pam)
         /// </summary>
         public int CategoryProductId  { get; set; }
         public CategoryProduct CategoryProduct { get; set; }
+        public List<CategoryProductViewModel> CategoryProductViewModels { get; set; }
         
         /// <summary>
-        ///  Get list CategoryProductViewModel
-        /// </summary>
-        public List<CategoryProductViewModel>CategoryProductViewModels { get; set; }
-        
-        /// <summary>
-        /// id GenderProduct
+        /// id GenderProduct (gio tinh)
         /// </summary>
         public  int GenderProductId { get; set; }
         public  Gender Gender { get; set; }
+        public List<GenderViewModel> GenderViewModels { get; set; }
+
         
         /// <summary>
-        /// Get list GenderViewModel 
+        /// id GenderProduct (gio tinh)
         /// </summary>
-        public List<GenderViewModel > GenderViewModels { get; set; }
+        public  int MakerProductId  { get; set; }
+        public  MakerProduct MakerProduct { get; set; }
+        public List<MakerProductViewModel> MakerProductViewModels { get; set; }
+
+        
+    
+       
     }
 }

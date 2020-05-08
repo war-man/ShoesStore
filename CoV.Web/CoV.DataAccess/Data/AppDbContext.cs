@@ -23,6 +23,8 @@ namespace CoV.DataAccess.Data
         public  virtual  DbSet<Customer> Customers { get; set; }
         public  virtual  DbSet<Order> Orders { get; set; }
         public  virtual  DbSet<StatusOrder> StatusOrder { get; set; }
+        public  virtual  DbSet<SizeProduct> SizeProducts { get; set; }
+        public  virtual  DbSet<ProductDetails> ProductDetailses { get; set; }
         
         /// <summary>
         /// Name Tabel
@@ -53,6 +55,10 @@ namespace CoV.DataAccess.Data
             modelBuilder.Entity<Order>().ToTable("Order");
             
             modelBuilder.Entity<StatusOrder>().ToTable("StatusOrder");
+            
+            modelBuilder.Entity<SizeProduct>().ToTable("SizeProduct");
+            
+            modelBuilder.Entity<ProductDetails>().ToTable("ProductDetails");
             
         } 
     }

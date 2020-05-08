@@ -7,50 +7,51 @@
 
  <div class="row">
         <div class="col-12">
-            <h1 style="text-align: center" ><a  asp-controller="Product" asp-action="GetAll">Danh sách sản phẩm</a></h1>
+            <h1 style="text-align: center" ><a  asp-controller="Product" asp-action="GetAll">Danh mục sản phẩm</a></h1>
         </div>
     </div>
     <div class="row">
-        <div class="col-sm-12 table-responsive">
+        <div class="col-sm-12 table-responsive">    
             <table  id="ShowClass" class="table table-bordered table-hover">
                 <thead class="thead-light">       
                 <tr style="background-color: darkgrey"> 
                     <td >Tên sản phẩm </td> 
                     <td >Mã Sản phẩm</td> 
                     <td >Giá</td> 
+                    <td >Giá mới </td> 
                     <td >Ảnh</td> 
                     <td >Ngày nhập</td> 
                     <td >Mô tả</td> 
-                    <td >Kho nhập</td> 
-                    <td >Số lượng </td> 
-                    <td >Màu sắc</td> 
                     <td >Hãng</td> 
-                    <td >Trạng thái</td> 
                     <td >Thể loại</td> 
                     <td >Giới tính</td> 
-                    <td style="text-align: center">Update - Delete</td>
+                    <td style="text-align: center">Thêm sản phẩm</td>
+                    <td style="text-align: center">Cập nhật</td>
+                    <td style="text-align: center">Xóa</td>
                 </tr>
                 
                 <tbody>
                 @foreach(var item in Model)
                 { 
                     <tr style="text-align: center"> 
-                        <td >@item.name</td> 
+                        <td >@item.Name</td> 
                         <td >@item.Sku</td> 
                         <td >@item.Price</td> 
-                        <td  style="width: 120px; height: 100px" ><img src="~/Images/@item.AvatarDetails"/></td> 
+                        <td >@item.PriceNew</td> 
+                        <td  style="width: 20px; height: 20px" ><img src="~/Images/@item.AvatarDetails"/></td> 
                         <td >@item.FirstDate</td> 
                         <td  id="details" >@item.Details</td> 
-                        <td >@item.AddressProduction</td> 
-                        <td >@item.Number</td> 
-                        <td >@item.ColorProduct.Color</td> 
                         <td >@item.MakerProduct.MakerName </td> 
-                        <td >@item.StatusProduct.status</td> 
                         <td >@item.CategoryProduct.CategoryName</td> 
                         <td >@item.Gender.GenderName</td> 
                         <td style="text-align: center"> 
+                            <a class="btn btn-primary "  asp-controller="ProductDetails"  asp-action="Add"  asp-route-id="@item.Id"  > <i class="fas fa-plus-square"></i></a> 
+                        </td>  
+                        <td style="text-align: center"> 
                             <a class="btn btn-primary "  asp-controller="Product"  asp-action="CreateOrUpdate"  asp-route-id="@item.Id"  > <i  class="fas fa-edit"></i></a> 
-                            <a class="btn btn-primary "  asp-controller="Product"  asp-action="Delete" asp-route-id="@item.Id"  ><i style="color: red" class="fas fa-trash-alt"></i></a> 
+                        </td> 
+                        <td style="text-align: center"> 
+                            <a class="btn btn-primary btn-danger "  asp-controller="Product"  asp-action="Delete"  asp-route-id="@item.Id"  > <i style="color: white" class="far fa-trash-alt"></i></a> 
                         </td> 
                     </tr> 
                 } 

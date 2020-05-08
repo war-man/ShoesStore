@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using AutoMapper;
 using Castle.Core.Internal;
+using CoV.Common.Infrastructure;
 using CoV.Service.DataModel;
 using CoV.Service.Service;
 using CoV.Web.Infrastructure.Helper;
@@ -12,17 +13,19 @@ namespace CoV.Web.Controllers
     public class CartController : Controller
     {
         private readonly IProductService _productService;
-        private readonly IMapper _mapper;
+        private readonly IProductDetailsService _productDetailsService;
+        private readonly IColorProductService _colorProductService;
 
-        public CartController(IProductService productService, IMapper mapper)
+        public CartController(IProductService productService, IMapper mapper, IProductDetailsService productDetailsService, IColorProductService colorProductService)
         {
             _productService = productService;
-            _mapper = mapper;
+            _productDetailsService = productDetailsService;
+            _colorProductService = colorProductService;
         }
         [HttpGet]
         public IActionResult Index()
         {
-            var sessionEmail = HttpContext.Session.GetString("SessionEmail");
+            var sessionEmail = HttpContext.Session.GetString("SessionName");
             var cart = SessionHelper.GetObjectFromJson<List<CartViewModel>>(HttpContext.Session, "cart");
 
             if (cart != null)
@@ -30,7 +33,8 @@ namespace CoV.Web.Controllers
                 var cartCustomer = cart.FindAll(x => x.Name == sessionEmail);
                 ViewBag.cart = cartCustomer;
                 ViewBag.total = cart.Count;
-                return View(ViewBag.cart);
+                ViewBag.color =  _colorProductService.GetAll();
+                return View(cart);
             }
             return Redirect("/Cart/Index2");
         }
@@ -43,9 +47,9 @@ namespace CoV.Web.Controllers
         
         
         [HttpGet]
-        public IActionResult Buy(int id)
+        public IActionResult Buy(int id, int size, int quantity)
         {
-            var sessionEmail = HttpContext.Session.GetString("SessionEmail");
+            var sessionEmail = HttpContext.Session.GetString("SessionName");
             if (sessionEmail == null)
             {
                 return Redirect("/Customer/CreateAndUpdate");
@@ -57,27 +61,29 @@ namespace CoV.Web.Controllers
                 {
                     List<CartViewModel> cart = new List<CartViewModel>();
                 
-                    cart.Add(new CartViewModel {Product =  product,Name = sessionEmail ,Size = 34,ProductId = id, Quantity = 1, TotalPrice = product.Price });
+                    cart.Add(new CartViewModel {Product =  product,Name = sessionEmail ,Size = size, ProductId = id, Quantity = quantity, TotalPrice = product.Price*quantity });
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
                 }
                 else
                 {
                     List<CartViewModel> cart = SessionHelper.GetObjectFromJson<List<CartViewModel>>(HttpContext.Session, "cart");
+                    
                     int index = IsExist(id);
                     if (index != -1)
                     {
-                        cart[index].Quantity++;
-                        cart[index].TotalPrice= cart[index].Product.Price* cart[index].Quantity;
+                        if (cart[index].Size == size)
+                        {
+                            cart[index].Quantity = cart[index].Quantity+ quantity;
+                            cart[index].TotalPrice= cart[index].Product.Price * cart[index].Quantity;
+                        }
                     }
                     else
                     {
-                        cart.Add(new CartViewModel {Product =  product,Name = sessionEmail ,Size = 34,ProductId = id, Quantity = 1, TotalPrice = product.Price });
-
-
+                        cart.Add(new CartViewModel {Product =  product,Name = sessionEmail ,Size = size, ProductId = id, Quantity = quantity, TotalPrice = product.Price*quantity });
                     }
                     SessionHelper.SetObjectAsJson(HttpContext.Session, "cart", cart);
                 }
-                return Redirect("/home/home");
+                return Redirect("/Cart/Index");
             }
         }
         
@@ -94,7 +100,7 @@ namespace CoV.Web.Controllers
 
         private int IsExist(int id)
         {
-            var sessionEmail = HttpContext.Session.GetString("SessionEmail");
+            var sessionEmail = HttpContext.Session.GetString("SessionName");
             List<CartViewModel> cart = SessionHelper.GetObjectFromJson<List<CartViewModel>>(HttpContext.Session, "cart");
             for (int i = 0; i < cart.Count; i++)
             {

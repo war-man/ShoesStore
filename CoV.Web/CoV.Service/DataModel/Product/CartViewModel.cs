@@ -1,6 +1,4 @@
-﻿using CoV.DataAccess.Data;
-
-namespace CoV.Service.DataModel
+﻿namespace CoV.Service.DataModel
 {
     public class CartViewModel
     {

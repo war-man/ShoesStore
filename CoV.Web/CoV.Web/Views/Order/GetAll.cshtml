@@ -18,7 +18,9 @@
                     <td >Tên khách hàng </td>
                     <td >Tên sản phẩm </td>
                     <td >Mã Sản phẩm</td>
-                    <td >Ảnh</td>
+                    <td > TổngGiá</td>
+                    <td > Size</td>
+                    <td > Ảnh</td>
                     <td >Ngày nhập</td>
                     <td >Số lượng </td>
                     <td >Trạng thái</td>
@@ -30,15 +32,17 @@
                 { 
                     <tr style="text-align: center" > 
                         <td >@item.Name</td> 
-                        <td >@item.Product.name</td> 
+                        <td >@item.Product.Name</td> 
                         <td >@item.Product.Sku</td> 
-                        <td  style="width: 120px; height: 100px" ><img src="~/Images/@item.Product.AvatarDetails"/></td> 
+                        <td >@item.TotalPrice</td> 
+                        <td >@item.Size</td> 
+                        <td  style="width: 20px; height: 20px" ><img src="~/Images/@item.Product.AvatarDetails"/></td> 
                         <td >@item.CreateDate</td> 
                         <td >@item.Quantity</td> 
                         <td style="color: blue" ><button id="@item.Id" class=" btn btn-primary status">@item.StatusOrder.Status </button> </td> 
                         <td style="text-align: center"> 
-                            <a class="btn btn-primary "  asp-controller="Product"  asp-action="CreateOrUpdate"  asp-route-id="@item.Id"  > <i  class="fas fa-edit"></i></a> 
-                            <a class="btn btn-primary "  asp-controller="Product"  asp-action="Delete" asp-route-id="@item.Id"  ><i style="color: red" class="fas fa-trash-alt"></i></a> 
+                            <a class="btn btn-primary "  asp-route-id="@item.Id"  > <i  class="fas fa-edit"></i></a> 
+                            <a class="btn btn-primary "  asp-controller="Order"  asp-action="Delete" asp-route-id="@item.Id"  ><i style="color: red" class="fas fa-trash-alt"></i></a> 
                         </td> 
                     </tr> 
                 } 
@@ -68,7 +72,7 @@
                         async: true,
                         cache: false,
                         success: function() {
-                            $('#' + id).text("Đang chờ shiper");
+                            $('#' + id).text("Đang chờ");
                             $('#' + id).css("background-color","red");
                         }
                     });

@@ -4,465 +4,271 @@
 @{
     ViewBag.Title = "title";
     Layout = "_FrontEndLayout";
-	var listFamale = (List<ProductViewModel>) ViewBag.getLishFamale;
-	var listMale = (List<ProductViewModel>) ViewBag.getLishMale;
-	var name = ViewBag.name;
+    var listFamale = (List<ProductViewModel>) ViewBag.getLishFamale;
+    var listMale = (List<ProductViewModel>) ViewBag.getLishMale;
+    var listbaby = (List<ProductViewModel>)   ViewBag.getLishBaby;
+    var listSprost = (List<ProductViewModel>)   ViewBag.getLishSporst;
+    var name = ViewBag.name;
 }
 
 
 <div class="nen-mo"></div>
 <div class="hop-thoai">
-	<i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%;"  class="far fa-check-circle "></i>
-	<h3 style="color: white; ">Sản phẩm được thêm vào giỏ hàng</h3>
+    <i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%;" class="far fa-check-circle "></i>
+    <h3 style="color: white;">Sản phẩm được thêm vào giỏ hàng</h3>
 </div>
 
 <div class="nen-mo-login"></div>
 <div class="hop-thoai-login">
-	<i style="font-size: 120px; color: #00bfa5; padding-left: 32%; margin-top: 7%; margin-bottom: 5%; color: red"  class="fab fa-amazon-pay"></i>
-	<h3 style="color: white; ">Vui lòng đăng nhập để mua hàng </h3>
+    <i style="font-size: 120px; color: #00bfa5; padding-left: 32%; margin-top: 7%; margin-bottom: 5%; color: red" class="fab fa-amazon-pay"></i>
+    <h3 style="color: white;">Vui lòng đăng nhập để mua hàng </h3>
 </div>
 
 
 <section class="banner-ss">
-	<div class="container p-0">
-		<div class="row">
-			<div class="col-md-2">
-				<div class="item-banner-ss first-item">
-					<a href="#">
-						<img src="~/Frontend/images/img-banner-ss-01.png" style="height:410px" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-5">
-				<div class="item-banner-ss">
-					<a href="#">
-						<img src="~/Frontend/images/img-banner-ss-02.png" alt="">
-					</a>
-				</div>
-				<div class="item-banner-ss">
-					<a href="#">
-						<img src="~/Frontend/images/img-banner-ss-03.jpg" alt="">
-					</a>
-				</div>
-			</div>
-			<div class="col-md-5">
-				<div class="item-banner-ss">
-					<a href="#">
-						<img src="~/Frontend/images/img-banner-ss-03.jpg" alt="">
-					</a>
-				</div>
-				<div class="item-banner-ss">
-					<a href="#">
-						<img src="~/Frontend/images/img-banner-ss-02.png" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-md-2">
+                <div class="item-banner-ss first-item">
+                    <a href="#">
+                        <img src="~/Frontend/images/img-banner-ss-01.png" style="height: 410px" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="item-banner-ss">
+                    <a href="#">
+                        <img src="~/Frontend/images/img-banner-ss-02.png" alt="">
+                    </a>
+                </div>
+                <div class="item-banner-ss">
+                    <a href="#">
+                        <img src="~/Frontend/images/img-banner-ss-03.jpg" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div class="item-banner-ss">
+                    <a href="#">
+                        <img src="~/Frontend/images/img-banner-ss-03.jpg" alt="">
+                    </a>
+                </div>
+                <div class="item-banner-ss">
+                    <a href="#">
+                        <img src="~/Frontend/images/img-banner-ss-02.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
-
 
 
 <div class="wrapper">
 <section class="product-ss">
-	<div class="container p-0">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="name-cate">
-					Giành cho nam 
-				</h2>
-			</div>
-			<div class="col-md-12">
-				<div class="owl-carousel owl-theme product_slide" id="product_slide_men">
-					@foreach (var item in listFamale )
-					{
-						<div class="item">
-							<div class="item-product">
-								<div class="img-item">
-									<a>
-										<img src="~/Images/@item.AvatarDetails" alt="">
-									</a>
-								</div>
-								<div class="box-size">
-									<div class="count-size">
-										+9 size
-									</div>
-									<div class="list-size">
-										<span>36</span>
-										<span>37</span>
-										<span>38</span>
-										<span>39</span>
-										<span>40</span>
-										<span>41</span>
-										<span>42</span>
-										<span>43</span>
-										<span>44</span>
-										<span>45</span>
-									</div>
-								</div>
-									
-								<h3 class="name-product">
-									<a href="#">
-										@item.name
-									</a>
-								</h3>
-								<div class="price-product">
-									<span class="numberPrice" >@item.Price đ</span>
-									@* <del> *@
-									@* 	@item.Price *@
-									@* </del> *@
-								</div>
-								<a>
-									<div class="add-to-cart"  >
-										<a  class="buy" id="@item.Id"    >
-											<button  class="btn-open"  >Mua hàng</button>
-										</a>
-									</div>
-								</a>
-							</div>
-						</div>
-					}
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="name-cate">
+                    Giành cho nam
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme product_slide" id="product_slide_men">
+                    @foreach (var item in listFamale)
+                    {
+                        <div class="item">
+                            <div class="item-product">
+                                <div class="img-item">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        <img src="~/Images/@item.AvatarDetails" alt="">
+                                    </a>
+                                </div>
+                                <div class="box-size">
+                                    <div class="count-size">
+                                        +9 size
+                                    </div>
+                                    <div class="list-size">
+                                        <span>36</span>
+                                        <span>37</span>
+                                        <span>38</span>
+                                        <span>39</span>
+                                        <span>40</span>
+                                        <span>41</span>
+                                        <span>42</span>
+                                        <span>43</span>
+                                        <span>44</span>
+                                        <span>45</span>
+                                    </div>
+                                </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+                                <h3 class="name-product">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        @item.Name
+                                    </a>
+                                </h3>
+                                <div class="price-product">
+                                    <span class="numberPrice">@item.PriceNew đ</span>
+                                    <del>
+                                        @item.Price đ
+                                    </del>
+                                </div>
+                                <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                    <div class="add-to-cart">
+                                        @* <a  class="buy" id="@item.Id"    > *@
+                                        <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                           Mua hàng
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 
 <section class="product-ss">
-	<div class="container p-0">
-		<div class="row">
-			<div class="col-md-12">
-				<h2 class="name-cate">
-					Giành cho nữ
-				</h2>
-			</div>
-			<div class="col-md-12">
-				<div class="owl-carousel owl-theme product_slide" id="product_slide_girl">
-					@foreach (var item in listMale)
-					{
-						<div class="item">
-							<div class="item-product">
-								<div class="img-item">
-									<a href="#">
-										<img src="~/Images/@item.AvatarDetails" alt="">
-									</a>
-								</div>
-								<div class="box-size">
-									<div class="count-size">
-										+9 size
-									</div>
-									<div class="list-size">
-										<span>36</span>
-										<span>37</span>
-										<span>38</span>
-										<span>39</span>
-										<span>40</span>
-										<span>41</span>
-										<span>42</span>
-										<span>43</span>
-										<span>44</span>
-										<span>45</span>
-									</div>
-								</div>
-									
-								<h3 class="name-product">
-									<a href="#">
-										@item.name
-									</a>
-								</h3>
-								<div class="price-product">
-									<span>@item.Price đ</span>
-									@* <del> *@
-									@* 	399.000 đ *@
-									@* </del> *@
-								</div>
-								<div class="add-to-cart"  >
-									<a  class="buy" id="@item.Id"    >
-										<button  class="btn-open"  >Mua hàng</button>
-									</a>
-								</div>
-							</div>
-						</div>
-					}
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="name-cate">
+                    Giành cho nữ
+                </h2>
+            </div>
+            <div class="col-md-12">
+                <div class="owl-carousel owl-theme product_slide" id="product_slide_girl">
+                    @foreach (var item in listMale)
+                    {
+                        <div class="item">
+                            <div class="item-product">
+                                <div class="img-item">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        <img src="~/Images/@item.AvatarDetails" alt="">
+                                    </a>
+                                </div>
+                                <div class="box-size">
+                                    <div class="count-size">
+                                        +9 size
+                                    </div>
+                                    <div class="list-size">
+                                        <span>36</span>
+                                        <span>37</span>
+                                        <span>38</span>
+                                        <span>39</span>
+                                        <span>40</span>
+                                        <span>41</span>
+                                        <span>42</span>
+                                        <span>43</span>
+                                        <span>44</span>
+                                        <span>45</span>
+                                    </div>
+                                </div>
 
-				</div>
-			</div>
-		</div>
-	</div>
+                                <h3 class="name-product">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        @item.Name
+                                    </a>
+                                </h3>
+                                <div class="price-product">
+                                    <span>@item.PriceNew đ</span>
+                                    <del>
+                                        @item.Price đ
+                                    </del>
+                                </div>
+                                <div class="add-to-cart">
+                                    @* <a  class="buy" id="@item.Id"    > *@
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                       Mua hàng
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="banner-ss-full">
-	<div class="container p-0">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="img-banner-ss">
-					<a href="#">
-						<img src="~/Frontend/images/banner-ss-01.png" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="img-banner-ss">
+                    <a href="#">
+                        <img src="~/Frontend/images/banner-ss-01.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="product-ss">
 <div class="container p-0">
 <div class="row">
 <div class="col-md-12">
-	<h2 class="name-cate">
-		Giành cho bé trai
-	</h2>
+    <h2 class="name-cate">
+        Giành cho Em bé
+    </h2>
 </div>
 <div class="col-md-12">
 <div class="owl-carousel owl-theme product_slide" id="product_slide_child_girl">
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-01.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-02.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-03.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-04.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-05.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-01.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
+ @foreach (var item in listbaby)
+                    {
+                        <div class="item">
+                            <div class="item-product">
+                                <div class="img-item">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        <img src="~/Images/@item.AvatarDetails" alt="">
+                                    </a>
+                                </div>
+                                <div class="box-size">
+                                    <div class="count-size">
+                                        +9 size
+                                    </div>
+                                    <div class="list-size">
+                                        <span>36</span>
+                                        <span>37</span>
+                                        <span>38</span>
+                                        <span>39</span>
+                                        <span>40</span>
+                                        <span>41</span>
+                                        <span>42</span>
+                                        <span>43</span>
+                                        <span>44</span>
+                                        <span>45</span>
+                                    </div>
+                                </div>
+
+                                <h3 class="name-product">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        @item.Name
+                                    </a>
+                                </h3>
+                                <div class="price-product">
+                                    <span class="numberPrice">@item.PriceNew đ</span>
+                                    <del>
+                                        @item.Price đ
+                                    </del>
+                                </div>
+                                <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                    <div class="add-to-cart">
+                                        @* <a  class="buy" id="@item.Id"    > *@
+                                        <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                           Mua hàng
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
 </div>
 </div>
 </div>
@@ -470,275 +276,78 @@
 </section>
 
 <section class="banner-ss-full">
-	<div class="container p-0">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="img-banner-ss">
-					<a href="#">
-						<img src="~/Frontend/images/banner-ss-02.png" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="img-banner-ss">
+                    <a href="#">
+                        <img src="~/Frontend/images/banner-ss-02.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <section class="product-ss">
 <div class="container p-0">
 <div class="row">
 <div class="col-md-12">
-	<h2 class="name-cate">
-		Giành cho bé gái
-	</h2>
+    <h2 class="name-cate">
+        Giành thể thao
+    </h2>
 </div>
 <div class="col-md-12">
 <div class="owl-carousel owl-theme product_slide" id="product_slide_child_men">
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-01.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-02.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-03.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-04.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-05.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
-<div class="item">
-	<div class="item-product">
-		<div class="img-item">
-			<a href="#">
-				<img src="~/Frontend/images/img-product-01.jpg" alt="">
-			</a>
-		</div>
-		<div class="box-size">
-			<div class="count-size">
-				+7 size
-			</div>
-			<div class="list-size">
-				<span>38</span>
-				<span>39</span>
-				<span>40</span>
-				<span>41</span>
-				<span>42</span>
-				<span>43</span>
-				<span>44</span>
-				<span>45</span>
-			</div>
-		</div>
-									
-		<h3 class="name-product">
-			<a href="#">
-				Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
-			</a>
-		</h3>
-		<div class="price-product">
-			<span>299.000 đ</span>
-			<del>
-				399.000 đ
-			</del>
-		</div>
-		<div class="add-to-cart">
-			<a href="#">
-				Mua hàng
-			</a>
-		</div>
-	</div>
-</div>
+@foreach (var item in listSprost)
+                    {
+                        <div class="item">
+                            <div class="item-product">
+                                <div class="img-item">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        <img src="~/Images/@item.AvatarDetails" alt="">
+                                    </a>
+                                </div>
+                                <div class="box-size">
+                                    <div class="count-size">
+                                        +9 size
+                                    </div>
+                                    <div class="list-size">
+                                        <span>36</span>
+                                        <span>37</span>
+                                        <span>38</span>
+                                        <span>39</span>
+                                        <span>40</span>
+                                        <span>41</span>
+                                        <span>42</span>
+                                        <span>43</span>
+                                        <span>44</span>
+                                        <span>45</span>
+                                    </div>
+                                </div>
+
+                                <h3 class="name-product">
+                                    <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                        @item.Name
+                                    </a>
+                                </h3>
+                                <div class="price-product">
+                                    <span class="numberPrice">@item.PriceNew đ</span>
+                                    <del>
+                                        @item.Price đ
+                                    </del>
+                                </div>
+                                <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                    <div class="add-to-cart">
+                                        @* <a  class="buy" id="@item.Id"    > *@
+                                        <a asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                                           Mua hàng
+                                        </a>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    }
 </div>
 </div>
 </div>
@@ -746,94 +355,94 @@
 </section>
 
 <section class="the-news">
-	<div class="container p-0">
-		<div class="row">
-			<div class="col-md-12 text-center mb-1">
-				<h2 class="title-section">Tin tức</h2>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-md-3">
-				<div class="item-farm p-0">
-					<div class="img-item">
-						<a href="#">
-							<img src="~/Frontend/images/img-product-01.jpg" alt="">
-						</a>
-					</div>
-					<div class="p-1">
-						<h3 class="title">
-							<a href="#">
-								Đâu là địa chỉ nha khoa Quận 1 Sài Gòn an toàn – uy tín?
-							</a>
-						</h3>
-						<div class="summary">
-							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
-						</div>
-					</div>
-				</div>
-			</div>
+    <div class="container p-0">
+        <div class="row">
+            <div class="col-md-12 text-center mb-1">
+                <h2 class="title-section">Tin tức</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="item-farm p-0">
+                    <div class="img-item">
+                        <a href="#">
+                            <img src="~/Frontend/images/img-product-01.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-1">
+                        <h3 class="title">
+                            <a href="#">
+                                Đâu là địa chỉ nha khoa Quận 1 Sài Gòn an toàn – uy tín?
+                            </a>
+                        </h3>
+                        <div class="summary">
+                            Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<div class="col-md-3">
-				<div class="item-farm p-0">
-					<div class="img-item">
-						<a href="#">
-							<img src="~/Frontend/images/img-product-02.jpg" alt="">
-						</a>
-					</div>
-					<div class="p-1">
-						<h3 class="title">
-							<a href="#">
-								Răng bị chết tủy phải làm sao? Quy trình điều trị răng chết tủy như thế nào?
-							</a>
-						</h3>
-						<div class="summary">
-							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="col-md-3">
+                <div class="item-farm p-0">
+                    <div class="img-item">
+                        <a href="#">
+                            <img src="~/Frontend/images/img-product-02.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-1">
+                        <h3 class="title">
+                            <a href="#">
+                                Răng bị chết tủy phải làm sao? Quy trình điều trị răng chết tủy như thế nào?
+                            </a>
+                        </h3>
+                        <div class="summary">
+                            Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<div class="col-md-3">
-				<div class="item-farm p-0">
-					<div class="img-item">
-						<a href="#">
-							<img src="~/Frontend/images/img-product-04.jpg" alt="">
-						</a>
-					</div>
-					<div class="p-1">
-						<h3 class="title">
-							<a href="#">
-								Những lưu ý sau khi tẩy trắng răng tại nhà bạn không nên bỏ qua
-							</a>
-						</h3>
-						<div class="summary">
-							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
-						</div>
-					</div>
-				</div>
-			</div>
+            <div class="col-md-3">
+                <div class="item-farm p-0">
+                    <div class="img-item">
+                        <a href="#">
+                            <img src="~/Frontend/images/img-product-04.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-1">
+                        <h3 class="title">
+                            <a href="#">
+                                Những lưu ý sau khi tẩy trắng răng tại nhà bạn không nên bỏ qua
+                            </a>
+                        </h3>
+                        <div class="summary">
+                            Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<div class="col-md-3">
-				<div class="item-farm p-0">
-					<div class="img-item">
-						<a href="#">
-							<img src="~/Frontend/images/img-product-01.jpg" alt="">
-						</a>
-					</div>
-					<div class="p-1">
-						<h3 class="title">
-							<a href="#">
-								Đâu là địa chỉ nha khoa Quận 1 Sài Gòn an toàn – uy tín?
-							</a>
-						</h3>
-						<div class="summary">
-							Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+            <div class="col-md-3">
+                <div class="item-farm p-0">
+                    <div class="img-item">
+                        <a href="#">
+                            <img src="~/Frontend/images/img-product-01.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="p-1">
+                        <h3 class="title">
+                            <a href="#">
+                                Đâu là địa chỉ nha khoa Quận 1 Sài Gòn an toàn – uy tín?
+                            </a>
+                        </h3>
+                        <div class="summary">
+                            Trái với quan điểm chung của số đông, Lorem Ipsum không phải chỉ là một đoạn văn bản ngẫu nhiên. Người ta tìm thấy nguồn gốc của nó từ những tác phẩm văn học la-tinh.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 </div>
 
@@ -842,10 +451,11 @@
 
 @section Scripts
 {
-	<script>
-		//mua hang luong don hang
-		var SessionEmail = '@HttpContextAccessor.HttpContext.Session.GetString("SessionName")';
-		$(document).ready(function() {
+    <script>
+        //mua hang luong don hang
+        var SessionEmail = '@HttpContextAccessor.HttpContext.Session.GetString("SessionName")';
+     
+/*       $(document).ready(function() {
 			$(".buy").off('click').on('click', function(e) {
 				var id = $(this).attr("id");
 				e.preventDefault();
@@ -861,36 +471,36 @@
 					}
 				});
 		});
-			
-			
-		$(document).ready(function() {
-			$('.btn-open').on('click', (function(event) {
-				if (SessionEmail == "") {
-					$('.hop-thoai-login').addClass('hien-ra-login');
-					$('.nen-mo-login').addClass('hien-ra-login');
-					setTimeout(function() {
-							$('.hop-thoai-login').removeClass('hien-ra-login');
-							$('.nen-mo-login').removeClass('hien-ra-login');
-						},
-						1500);
-				} 
-				else {
-					$('.hop-thoai').addClass('hien-ra');
-					$('.nen-mo').addClass('hien-ra');
-					setTimeout(function() {
-							$('.hop-thoai').removeClass('hien-ra');
-							$('.nen-mo').removeClass('hien-ra');
-						},
-						1000);
-				}
-			}));
-		});
 
-		//format jquery format number to currency
+
+            $(document).ready(function() {
+                $('.btn-open').on('click',
+                    (function(event) {
+                        if (SessionEmail == "") {
+                            $('.hop-thoai-login').addClass('hien-ra-login');
+                            $('.nen-mo-login').addClass('hien-ra-login');
+                            setTimeout(function() {
+                                    $('.hop-thoai-login').removeClass('hien-ra-login');
+                                    $('.nen-mo-login').removeClass('hien-ra-login');
+                                },
+                                1500);
+                        } else {
+                            $('.hop-thoai').addClass('hien-ra');
+                            $('.nen-mo').addClass('hien-ra');
+                            setTimeout(function() {
+                                    $('.hop-thoai').removeClass('hien-ra');
+                                    $('.nen-mo').removeClass('hien-ra');
+                                },
+                                1000);
+                        }
+                    }));
+            });*/
+
+            //format jquery format number to currency
 
 //			var input= $(".numberPrice").html();
 //			var output=parseInt(input).toLocaleString();
 //			$(".numberPrice").text(output +" đ");
-	});
-	</script>
+//      });
+    </script>
 }

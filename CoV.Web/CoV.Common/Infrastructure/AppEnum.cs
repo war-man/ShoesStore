@@ -3,7 +3,8 @@
     public enum Role
     {
         Admin = 1,
-        User =2,
-        Customer =3
+        Accountant=2,
+        Employee =3,
+        Shiper =4,
     }
 }

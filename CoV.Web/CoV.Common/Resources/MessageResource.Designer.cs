@@ -429,5 +429,11 @@ namespace CoV.Common.Resources {
                 return ResourceManager.GetString("MinlengthNumber", resourceCulture);
             }
         }
+        
+        public static string ProductdetailNull {
+            get {
+                return ResourceManager.GetString("ProductdetailNull", resourceCulture);
+            }
+        }
     }
 }

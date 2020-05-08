@@ -25,7 +25,6 @@ namespace CoV.DataAccess.Data
         [Column(TypeName = "nvarchar(50)")]
         public string Password { get; set; }
         
-        
         /// <summary>
         /// FirstDate
         /// </summary>

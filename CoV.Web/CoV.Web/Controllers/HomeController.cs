@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
 using CoV.Service.Service;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq;
+using CoV.Service.DataModel;
 
 namespace CoV.Web.Controllers
 {
@@ -9,11 +12,13 @@ namespace CoV.Web.Controllers
     {
         private readonly IProductService _productService;
         private readonly ICustomerService _customerService;
+        private readonly IProductDetailsService _productDetailsService;
 
-        public HomeController(IProductService productService , ICustomerService customerService)
+        public HomeController(IProductService productService , ICustomerService customerService, IProductDetailsService productDetailsService)
         {
             _productService = productService;
             _customerService = customerService;
+            _productDetailsService = productDetailsService;
         }
         
         
@@ -22,6 +27,8 @@ namespace CoV.Web.Controllers
         {
             ViewBag.getLishFamale = _productService.GetListShoesFemale();
             ViewBag.getLishMale = _productService.GetListShoesMale();
+            ViewBag.getLishBaby = _productService.GetListShoesBaby();
+            ViewBag.getLishSporst= _productService.GetListShoesSporst();
             ViewBag.Name = HttpContext.Session.GetString("SessionName");  
             ViewBag.Email = HttpContext.Session.GetString("SessionEmail");  
             return View();
@@ -64,11 +71,6 @@ namespace CoV.Web.Controllers
             return View(customer);
         }
         
-        public IActionResult Checkout02()
-        {
-            return View();
-        }
-        
         [HttpGet]
         public IActionResult Contact()
         {
@@ -86,13 +88,25 @@ namespace CoV.Web.Controllers
         /// </summary>
         /// <returns>view</returns>
         [HttpGet]
-        public IActionResult ProductDetail( )
+        public IActionResult ProductDetail(int id )
         {
-//            var model = _productService.GetById(id);
-            return View();
+           var product = _productService.GetById(id);
+            ViewBag.product = product;
+            ViewBag.productDetail = _productDetailsService.GetByIdCart(product.Id);
+            var producdetails =_productDetailsService.GetByIdCart(product.Id);
+            var pro =_productService.GetAll();
+            List<ProductViewModel> list = new List<ProductViewModel>();
+            foreach (var item in pro)
+            {
+                if(list.Count >=9){break;}
+                else
+                {
+                    list.Add(item);
+
+                }
+            }
+            ViewBag.model = list;
+            return View( );
         }
     }
-    
-  
-        
 }

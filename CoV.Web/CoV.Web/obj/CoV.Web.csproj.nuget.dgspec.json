@@ -266,6 +266,10 @@
               "target": "Package",
               "version": "[0.0.0.2, )"
             },
+            "AspNetCoreCurrentRequestContext": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
             "AuthorizationMiddlewareExtension": {
               "target": "Package",
               "version": "[1.2.3, )"
@@ -314,6 +318,10 @@
               "target": "Package",
               "version": "[1.6.0, )"
             },
+            "Microsoft.AspNet.Session": {
+              "target": "Package",
+              "version": "[1.0.0-rc1-final, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -334,6 +342,10 @@
             },
             "Microsoft.AspNetCore.Razor.Design": {
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Session": {
               "target": "Package",
               "version": "[2.2.0, )"
             },
@@ -363,9 +375,17 @@
               "target": "Package",
               "version": "[4.13.1, )"
             },
+            "Serilog.Enrichers.AspNetCore.HttpContext": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "Serilog.Extensions.Logging.File": {
               "target": "Package",
               "version": "[2.0.0-dev-00039, )"
+            },
+            "SessionManager": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             },
             "System.Security.Claims": {
               "target": "Package",

@@ -52,5 +52,15 @@ namespace CoV.Web.Controllers
             
             return  new JsonResult(order);
         }
+        
+        /// <summary>
+        /// Delete Product 
+        /// </summary>
+        /// <param name="id"></param>
+        public IActionResult Delete(int id)
+        {
+            _orderService.Delete(id);
+            return RedirectToAction("GetAll");
+        }
     }
 }

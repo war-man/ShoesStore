@@ -1,0 +1,60 @@
+﻿@model IEnumerable<CoV.Service.DataModel.ProductDetailsViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+ <div class="row">
+        <div class="col-12">
+            <h1 style="text-align: center" ><a  asp-controller="ProductDetails" asp-action="GetAll">Danh sách sản phẩm Chi tiết</a></h1>
+        </div>
+    </div>
+<div class="row">
+    <div class="col-sm-12 table-responsive">
+        <table  id="ShowClass" class="table table-bordered table-hover">
+            <thead class="thead-light">       
+            <tr style="background-color: darkgrey"> 
+                <td >Tên sản phẩm </td> 
+                <td >Mã sản phẩm </td> 
+                <td >Hình ảnh </td> 
+                <td >Size</td> 
+                <td >Trạng thái</td> 
+                <td >Số lượng</td> 
+                <td style="text-align: center">Cập nhật</td>
+                <td style="text-align: center">Xóa</td>
+            </tr>
+                
+            <tbody>
+            @foreach(var item in Model)
+            { 
+                <tr style="text-align: center"> 
+                    <td >@item.Product.Name</td> 
+                    <td >@item.Product.Sku</td> 
+                    <td  style="width: 20px; height: 20px" ><img src="~/Images/@item.AvatarDetails"/></td> 
+                    <td >@item.SizeProduct</td> 
+                    <td >@item.StatusProduct.Status</td> 
+                    <td >@item.NumberProduct</td> 
+
+                    <td style="text-align: center"> 
+                        <a class="btn btn-primary "  asp-controller="ProductDetails"  asp-action="CreateOrUpdate"  asp-route-id="@item.Id" > <i  class="fas fa-edit"></i></a> 
+                    </td> 
+                    <td style="text-align: center"> 
+                        <a class="btn btn-primary btn-danger "  asp-controller="ProductDetails"  asp-action="Delete" asp-route-id="@item.Id"  ><i style="color: white" class="far fa-trash-alt"></i></a> 
+                    </td> 
+                </tr> 
+            } 
+            </tbody>
+            </thead>
+        </table>
+    </div>
+</div>
+
+@section Scripts{
+    <script>    
+        $(document).ready(function() {
+            $('#ShowClass').DataTable();
+        });
+    </script>
+}
+

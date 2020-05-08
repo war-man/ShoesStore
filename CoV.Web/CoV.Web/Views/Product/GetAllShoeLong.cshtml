@@ -1,0 +1,355 @@
+﻿@using CoV.Service.DataModel
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_FrontEndLayout";
+    var product = (List<ProductViewModel>) ViewBag.product;
+}
+
+<section class="breadcrumb">
+    <div class="container p-0">
+        <div class="col-md-12">
+            <ul>
+                <li>
+                    <a asp-action="Home" asp-controller="Home">
+                        Trang chủ
+                    </a>
+                </li>
+                <li>
+                    Giầy cao cổ
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="product-ss product-page">
+<div class="container p-0">
+<div class="row align-items-center">
+    <div class="col-md-9">
+        <h2 class="name-cate mb-0">
+            Giành cho nam
+
+        </h2>
+    </div>
+    <div class="col-md-3">
+        <div class='sort-by'>
+            <form action='#'>
+                <div class='select'>
+                    <select class='form-control'>
+                        <option value=''>
+                            Giá thấp trước
+                        </option>
+                        <option value=''>
+                            Giá Cao trước
+                        </option>
+                        <option value=''>
+                            Từ A-Z
+                        </option>
+                        <option value=''>
+                            Từ Z-A
+                        </option>
+                    </select>
+                    <span class='icon-select'>
+                        <i class='fas fa-chevron-down'></i>
+                    </span>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row product_slide">
+<div class="col-md-3">
+    <div class='side-bar-product'>
+        <div class='item-bar'>
+            <h3 class='title-side-ba'>
+                Giành cho nam
+            </h3>
+            <ul class="list-inline">
+                <li>
+                    <a href='product-list.html'>
+                        Thời trang
+                        <span class='count-cate'>
+                            (9)
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href='product-list.html'>
+                        Thời trang nam
+                        <span class='count-cate'>
+                            (9)
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href='product-list.html'>
+                        Thời trang nữ
+                        <span class='count-cate'>
+                            (9)
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href='product-list.html'>
+                        Phụ kiện nam
+                        <span class='count-cate'>
+                            (9)
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href='product-list.html'>
+                        Phụ kiện nữ
+                        <span class='count-cate'>
+                            (9)
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class='item-bar mt-3'>
+            <h3 class='title-side-ba'>
+                Size
+            </h3>
+            <ul class="list-tb">
+                <li>
+                    <a href='#'>
+                        34
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        35
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        36
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        37
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        38
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        39
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        40
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        41
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        42
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        42
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class='item-bar mt-3'>
+            <h3 class='title-side-ba'>
+                Màu sắc
+            </h3>
+            <ul class="list-cl">
+                <li class="" style="background-color: #ff6600;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+
+                <li class="" style="background-color: #000;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+
+                <li class="" style="background-color: #cc0000;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+
+                <li class="" style="background-color: #ff0000;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+                <li class="" style="background-color: #ffff00;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+
+                <li class="" style="background-color: #fff;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+
+                <li class="" style="background-color: red;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+
+                <li class="" style="background-color: blue;">
+                    <a href='#'>
+                        &nbsp;
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class='item-bar mt-3'>
+            <h3 class='title-side-ba'>
+                Khoảng giá
+            </h3>
+            <ul class="list-inline">
+                <li>
+                    <a href='#'>
+                        100.000 đ - 500.000 đ
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        500.000 đ - 1.000.000 đ
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        1.000.000 đ - 3.000.000 đ
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        3.000.000 đ - 5.000.000 đ
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        5.000.000 đ - 7.000.000 đ
+                    </a>
+                </li>
+                <li>
+                    <a href='#'>
+                        > 7.000.000 đ
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="col-md-9 p-0">
+<div class="row">
+@foreach (var item in product)
+{
+    <div class="col-md-4 p-0">
+        <div class="item-product">
+            <div class="img-item">
+                <a  asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                    <img src="~/Images/@item.AvatarDetails" alt="">
+                </a>
+            </div>
+            <div class="box-size">
+                <div class="count-size">
+                    +7 size
+                </div>
+                <div class="list-size">
+                    <span>35</span>
+                    <span>36</span>
+                    <span>47</span>
+                    <span>38</span>
+                    <span>39</span>
+                    <span>40</span>
+                    <span>41</span>
+                    <span>42</span>
+                    <span>43</span>
+                    <span>44</span>
+                    <span>45</span>
+                </div>
+            </div>
+
+            <h3 class="name-product">
+                <a  asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id">
+                    <b>@item.Name</b>
+                </a>
+            </h3>
+            <div class="price-product">
+                <span>@item.Price đ</span>
+                <del>
+                    @item.PriceNew đ
+                </del>
+            </div>
+            <div class="add-to-cart">
+                <a  asp-controller="Home" asp-action="ProductDetail" asp-route-id="@item.Id" >
+                    Mua hàng
+                </a>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+<div class="col-md-12">
+    <div class='pagination pt-1'>
+        <ul>
+            <li>
+                <a href='#'>
+                    <i class='fas fa-arrow-left'></i>
+                </a>
+            </li>
+            <li class='active'>
+                <a href='#'>1</a>
+            </li>
+            <li>
+                <a href='#'>2</a>
+            </li>
+            <li>
+                <a href='#'>3</a>
+            </li>
+            <li>
+                <a href='#'>...</a>
+            </li>
+            <li>
+                <a href='#'>4</a>
+            </li>
+            <li>
+                <a href='#'>5</a>
+            </li>
+            <li>
+                <a href='#'>
+                    <i class='fas fa-arrow-right'></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+</div>
+</div>
+
+
+</div>
+</div>
+</section>

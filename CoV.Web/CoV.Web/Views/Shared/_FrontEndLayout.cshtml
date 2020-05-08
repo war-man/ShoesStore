@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="~/Frontend/css/font-icon.css">
     <link rel="stylesheet" href="~/Frontend/css/font-arsenal.css">
 	<link rel="stylesheet" href="~/Frontend/css/animate.css">
+
+	<link rel="stylesheet" href="~/Frontend/css/thumbnail-slider.css">
+	<link rel="stylesheet" href="~/Frontend/css/ninja-slider.css">
 	
 	<link rel="stylesheet" href="~/Frontend/css/dialog_modal.css">
 
@@ -83,6 +86,7 @@
 						<div class="logo">
 							<a asp-controller="Home" asp-action="Home">
 								<img src="~/Frontend/images/my-logo.png" alt="">
+								@* <img src="~/Images/logo.png" width="50px" height="150px"  alt=""> *@
 							</a>
 						</div>
 					</div>
@@ -94,57 +98,57 @@
 								</a>
 							</li>
 							<li>
-								<a asp-controller="Home" asp-action="Blog">
+								<a asp-controller="Product" asp-action="GetAllMale">
 									GIÀY NAM 
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="blog.html">Giày Cao Cổ</a>
+										<a asp-controller="Product" asp-action="GetAllShoeLong">Giày Cao Cổ</a>
 									</li>
 									<li>
-										<a href="blog.html">Giày da</a>
+										<a asp-controller="Product" asp-action="GetAllShoesDa">Giày da</a>
 									</li>
 									<li>
-										<a href="blog.html">Giày thể thao</a>
+										<a asp-controller="Product" asp-action="GetAllShoeSporst">Giày thể thao</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
-								<a href="product.html">
+								<a asp-controller="Product" asp-action="GetAllFemale">
 									GIÀY NỮ
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="product.html">Giày cao cổ</a>
+										<a asp-controller="Product" asp-action="GetAllShoeLong" >Giày cao cổ</a>
 									</li>
 									<li>
-										<a href="product.html">Giày công sở</a>
+										<a asp-controller="Product" asp-action="GetAllShoesCs" >Giày công sở</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
-								<a href="product.html">
+								<a asp-controller="Product" asp-action="GetAllBaby">
 									GIÀY TRẺ EM 
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="product.html">Đáng yêu</a>
+										<a asp-controller="Product" asp-action="GetAllShoesBabyLovely" >Đáng yêu</a>
 									</li>
 									<li>
-										<a href="product.html">Phong cách</a>
+										<a asp-controller="Product" asp-action="GetAllShoesBabyStyle" >Phong cách</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
-								<a href="#">
+								<a asp-controller="Product" asp-action="GetAllShoeSporst">
 									GIÀY THỂ THAO 
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a asp-controller="Product" asp-action="GetAllShoesCs">
 									GIÀY CÔNG SỞ
 								</a>
 							</li>
@@ -174,9 +178,9 @@
 				<div class="search">
 					<div class="row justify-content-center">
 						<div class="col-md-12">
-							<form action="#" class="form-search">
+							<form asp-action="Search" method="get" asp-controller="Product" class="form-search" >
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Tìm kiếm" />
+									<input class="form-control" type="text" placeholder="Tìm kiếm"  name="input"  />
 									<button class="btn-search" type="submit">
 										<i class="fas fa-search"></i>
 									</button>
@@ -193,8 +197,9 @@
 				<div class="row align-items-center">
 					<div class="col-md-2">
 						<div class="logo">
-							<a href="index.html">
+							<a asp-controller="Home" asp-action="Home">
 								<img src="~/Frontend/images/my-logo.png" alt="">
+								@* <img src="~/Images/logo.png" width="50px" height="150px"  alt=""> *@
 							</a>
 						</div>
 					</div>
@@ -206,57 +211,57 @@
 								</a>
 							</li>
 							<li>
-								<a asp-controller="Home" asp-action="Blog">
+								<a asp-controller="Product" asp-action="GetAllMale">
 									GIÀY NAM 
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="blog.html">Giày Cao Cổ</a>
+										<a asp-controller="Product" asp-action="GetAllShoeLong">Giày Cao Cổ</a>
 									</li>
 									<li>
-										<a href="blog.html">Giày da</a>
+										<a asp-controller="Product" asp-action="GetAllShoesDa">Giày da</a>
 									</li>
 									<li>
-										<a href="blog.html">Giày thể thao</a>
+										<a asp-controller="Product" asp-action="GetAllShoeSporst">Giày thể thao</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
-								<a href="product.html">
+								<a asp-controller="Product" asp-action="GetAllFemale">
 									GIÀY NỮ
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="product.html">Giày cao cổ</a>
+										<a asp-controller="Product" asp-action="GetAllShoeLong" >Giày cao cổ</a>
 									</li>
 									<li>
-										<a href="product.html">Giày công sở</a>
+										<a asp-controller="Product" asp-action="GetAllShoesCs" >Giày công sở</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
-								<a href="product.html">
+								<a asp-controller="Product" asp-action="GetAllBaby">
 									GIÀY TRẺ EM 
 								</a>
 								<ul class="ul_sub">
 									<li>
-										<a href="product.html">Đáng yêu</a>
+										<a asp-controller="Product" asp-action="GetAllShoesBabyLovely" >Đáng yêu</a>
 									</li>
 									<li>
-										<a href="product.html">Phong cách</a>
+										<a asp-controller="Product" asp-action="GetAllShoesBabyStyle" >Phong cách</a>
 									</li>
 								</ul>
 								
 							</li>
 							<li>
-								<a href="#">
+								<a asp-controller="Product" asp-action="GetAllShoeSporst">
 									GIÀY THỂ THAO 
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a asp-controller="Product" asp-action="GetAllShoesCs">
 									GIÀY CÔNG SỞ
 								</a>
 							</li>
@@ -286,9 +291,9 @@
 				<div class="search">
 					<div class="row justify-content-center">
 						<div class="col-md-12">
-							<form action="#" class="form-search">
+							<form asp-action="Search" method="get" asp-controller="Product">
 								<div class="form-group">
-									<input class="form-control" type="text" placeholder="Tìm kiếm" />
+									<input class="form-control" type="text" placeholder="Tìm kiếm"  name="input"/>
 									<button class="btn-search" type="submit">
 										<i class="fas fa-search"></i>
 									</button>
@@ -570,13 +575,20 @@
 </button>
 
 
+
+
 <script src="~/Frontend/js/jquery.js"></script>
 <script src="~/Frontend/js/owl.js"></script>
 <script src="~/Frontend/js/app.js"></script>
 <script src="~/Frontend/js/wow.js"></script>
+
+<script src="~/Frontend/js/thumbnail-slider.js"></script>
+<script src="~/Frontend/js/ninja-slider.js"></script>
+
 <script>
-    new WOW().init();
+	new WOW().init();
 </script>
+
 @RenderSection("Scripts", required: false)
 <script>
     // login logout customer
@@ -590,8 +602,6 @@
         $("#login_Customer").attr("hidden", "");
         $("#icon-customer").show();
     }
-    
-    
 </script>
 </body>
 

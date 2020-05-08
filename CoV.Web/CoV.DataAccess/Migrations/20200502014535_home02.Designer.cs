@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CoV.DataAccess.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20200322123118_customer23")]
-    partial class customer23
+    [Migration("20200502014535_home02")]
+    partial class home02
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -121,20 +121,48 @@ namespace CoV.DataAccess.Migrations
                     b.ToTable("MakerProduct");
                 });
 
+            modelBuilder.Entity("CoV.DataAccess.Data.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreateDate");
+
+                    b.Property<string>("Name");
+
+                    b.Property<int>("ProductId");
+
+                    b.Property<int>("Quantity");
+
+                    b.Property<string>("ShipCode");
+
+                    b.Property<int>("Size");
+
+                    b.Property<int>("StatusId");
+
+                    b.Property<int>("TotalPrice");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("StatusId");
+
+                    b.ToTable("Order");
+                });
+
             modelBuilder.Entity("CoV.DataAccess.Data.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("AddressProduction")
-                        .HasColumnType("nvarchar(200)");
-
                     b.Property<string>("AvatarDetails");
 
                     b.Property<int>("CategoryProductId");
 
-                    b.Property<int>("ColorProductId");
+                    b.Property<int?>("ColorProductId");
 
                     b.Property<string>("Details")
                         .HasColumnType("nvarchar(500)");
@@ -145,17 +173,15 @@ namespace CoV.DataAccess.Migrations
 
                     b.Property<int>("MakerProductId");
 
-                    b.Property<int>("Number");
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<int>("Price");
 
                     b.Property<string>("Sku")
                         .HasColumnType("nvarchar(30)");
 
-                    b.Property<int>("StatusProductId");
-
-                    b.Property<string>("name")
-                        .HasColumnType("nvarchar(100)");
+                    b.Property<int?>("StatusProductId");
 
                     b.HasKey("Id");
 
@@ -183,6 +209,33 @@ namespace CoV.DataAccess.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Role");
+                });
+
+            modelBuilder.Entity("CoV.DataAccess.Data.SizeProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("SizeName");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SizeProduct");
+                });
+
+            modelBuilder.Entity("CoV.DataAccess.Data.StatusOrder", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("StatusOrder");
                 });
 
             modelBuilder.Entity("CoV.DataAccess.Data.StatusProduct", b =>
@@ -232,8 +285,21 @@ namespace CoV.DataAccess.Migrations
             modelBuilder.Entity("CoV.DataAccess.Data.Cart", b =>
                 {
                     b.HasOne("CoV.DataAccess.Data.Product", "Product")
-                        .WithMany("Carts")
+                        .WithMany()
                         .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+                });
+
+            modelBuilder.Entity("CoV.DataAccess.Data.Order", b =>
+                {
+                    b.HasOne("CoV.DataAccess.Data.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("CoV.DataAccess.Data.StatusOrder", "StatusOrder")
+                        .WithMany("Orders")
+                        .HasForeignKey("StatusId")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
@@ -244,10 +310,9 @@ namespace CoV.DataAccess.Migrations
                         .HasForeignKey("CategoryProductId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("CoV.DataAccess.Data.ColorProduct", "ColorProduct")
+                    b.HasOne("CoV.DataAccess.Data.ColorProduct")
                         .WithMany("ColorsProducts")
-                        .HasForeignKey("ColorProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("ColorProductId");
 
                     b.HasOne("CoV.DataAccess.Data.Gender", "Gender")
                         .WithMany("GenderProduct")
@@ -259,10 +324,9 @@ namespace CoV.DataAccess.Migrations
                         .HasForeignKey("MakerProductId")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("CoV.DataAccess.Data.StatusProduct", "StatusProduct")
+                    b.HasOne("CoV.DataAccess.Data.StatusProduct")
                         .WithMany("StatusProducts")
-                        .HasForeignKey("StatusProductId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("StatusProductId");
                 });
 
             modelBuilder.Entity("CoV.DataAccess.Data.User", b =>

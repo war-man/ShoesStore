@@ -44,27 +44,27 @@
         <e p="CoV.DataAccess.csproj" t="IncludeRecursive" />
         <e p="Data" t="Include">
           <e p="AppDbContext.cs" t="Include" />
-          <e p="Product" t="Include">
-            <e p="Cart.cs" t="Include" />
-            <e p="CategoryProduct.cs" t="Include" />
-            <e p="ColorProduct.cs" t="Include" />
-            <e p="Customer.cs" t="Include" />
-            <e p="Gender.cs" t="Include" />
-            <e p="Image.cs" t="Include" />
-            <e p="MakerProduct.cs" t="Include" />
-            <e p="Order.cs" t="Include" />
-            <e p="Product.cs" t="Include" />
-            <e p="StatusOrder.cs" t="Include" />
-            <e p="StatusProduct.cs" t="Include" />
-            <e p="Suport.cs" t="Include" />
-          </e>
+          <e p="Cart.cs" t="Include" />
+          <e p="CategoryProduct.cs" t="Include" />
+          <e p="ColorProduct.cs" t="Include" />
+          <e p="Customer.cs" t="Include" />
+          <e p="Gender.cs" t="Include" />
+          <e p="Image.cs" t="Include" />
+          <e p="MakerProduct.cs" t="Include" />
+          <e p="Order.cs" t="Include" />
+          <e p="Product.cs" t="Include" />
+          <e p="ProductDetails.cs" t="Include" />
           <e p="Role.cs" t="Include" />
+          <e p="SizeProduct.cs" t="Include" />
+          <e p="StatusOrder.cs" t="Include" />
+          <e p="StatusProduct.cs" t="Include" />
+          <e p="Suport.cs" t="Include" />
           <e p="User.cs" t="Include" />
         </e>
         <e p="DbInitializer.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20200322123118_customer23.Designer.cs" t="Include" />
-          <e p="20200322123118_customer23.cs" t="Include" />
+          <e p="20200502014535_home02.Designer.cs" t="Include" />
+          <e p="20200502014535_home02.cs" t="Include" />
           <e p="AppDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="bin" t="ExcludeRecursive" />
@@ -91,8 +91,10 @@
             <e p="MakerProductViewModel.cs" t="Include" />
             <e p="OrderStatusViewModel.cs" t="Include" />
             <e p="OrderViewModel.cs" t="Include" />
+            <e p="ProductDetailsViewModel.cs" t="Include" />
             <e p="ProductViewCart.cs" t="Include" />
             <e p="ProductViewModel.cs" t="Include" />
+            <e p="Search.cs" t="Include" />
             <e p="StatusProductViewModel.cs" t="Include" />
             <e p="loginCustomerViewModel.cs" t="Include" />
           </e>
@@ -111,6 +113,7 @@
             <e p="MakerProductRepository.cs" t="Include" />
             <e p="OrderRespository.cs" t="Include" />
             <e p="OrderStatusRespository.cs" t="Include" />
+            <e p="ProductDetailsRespository.cs" t="Include" />
             <e p="ProductRespository.cs" t="Include" />
             <e p="StatusProduct.cs" t="Include" />
           </e>
@@ -129,6 +132,7 @@
             <e p="Oder Detail.cs" t="Include" />
             <e p="OrderService.cs" t="Include" />
             <e p="OrderStatusService.cs" t="Include" />
+            <e p="ProductDetailsService.cs" t="Include" />
             <e p="ProductService.cs" t="Include" />
             <e p="SizeProductService.cs" t="Include" />
             <e p="StatusProductService.cs" t="Include" />
@@ -157,6 +161,7 @@
           <e p="HomeController.cs" t="Include" />
           <e p="OrderController.cs" t="Include" />
           <e p="ProductController.cs" t="Include" />
+          <e p="ProductDetailsController.cs" t="Include" />
           <e p="RoleController.cs" t="Include" />
           <e p="TokenController.cs" t="Include" />
           <e p="UserApiController.cs" t="Include" />
@@ -184,6 +189,7 @@
               <e p="GenderMapper.cs" t="Include" />
               <e p="OrderMaper.cs" t="Include" />
               <e p="OrderStatusMapper.cs" t="Include" />
+              <e p="ProductDetailsMapper.cs" t="Include" />
               <e p="ProductMapper.cs" t="Include" />
               <e p="SizeProductMapper.cs" t="Include" />
               <e p="StatusProductMapper.cs" t="Include" />
@@ -207,7 +213,6 @@
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
         </e>
-        <e p="Pages" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
@@ -259,6 +264,21 @@
           <e p="Product" t="Include">
             <e p="CreateOrUpdate.cshtml" t="Include" />
             <e p="GetAll.cshtml" t="Include" />
+            <e p="GetAllBaby.cshtml" t="Include" />
+            <e p="GetAllFemale.cshtml" t="Include" />
+            <e p="GetAllMale.cshtml" t="Include" />
+            <e p="GetAllShoeLong.cshtml" t="Include" />
+            <e p="GetAllShoeSporst.cshtml" t="Include" />
+            <e p="GetAllShoesBabyLovely.cshtml" t="Include" />
+            <e p="GetAllShoesBabyStyle.cshtml" t="Include" />
+            <e p="GetAllShoesCs.cshtml" t="Include" />
+            <e p="GetAllShoesDa.cshtml" t="Include" />
+            <e p="Search.cshtml" t="Include" />
+          </e>
+          <e p="ProductDetails" t="Include">
+            <e p="Add.cshtml" t="Include" />
+            <e p="CreateOrUpdate.cshtml" t="Include" />
+            <e p="GetAll.cshtml" t="Include" />
           </e>
           <e p="Role" t="Include">
             <e p="GetAll.cshtml" t="Include" />
@@ -284,13 +304,6 @@
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="log" t="Include">
-          <e p="log-20200225-CoV.txt" t="Include" />
-          <e p="log-20200226-CoV.txt" t="Include" />
-          <e p="log-20200227-CoV.txt" t="Include" />
-          <e p="log-20200228-CoV.txt" t="Include" />
-          <e p="log-20200304-CoV.txt" t="Include" />
-          <e p="log-20200313-CoV.txt" t="Include" />
-          <e p="log-20200317-CoV.txt" t="Include" />
           <e p="log-20200318-CoV.txt" t="Include" />
           <e p="log-20200319-CoV.txt" t="Include" />
           <e p="log-20200321-CoV.txt" t="Include" />
@@ -315,6 +328,13 @@
           <e p="log-20200422-CoV.txt" t="Include" />
           <e p="log-20200423-CoV.txt" t="Include" />
           <e p="log-20200424-CoV.txt" t="Include" />
+          <e p="log-20200427-CoV.txt" t="Include" />
+          <e p="log-20200501-CoV.txt" t="Include" />
+          <e p="log-20200502-CoV.txt" t="Include" />
+          <e p="log-20200503-CoV.txt" t="Include" />
+          <e p="log-20200504-CoV.txt" t="Include" />
+          <e p="log-20200506-CoV.txt" t="Include" />
+          <e p="log-20200507-CoV.txt" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -3214,7 +3234,10 @@
           <e p="Images" t="Include">
             <e p="002f1d1f-e239-4409-b8e6-72efa2824ba7_photo-1-15611010487262059848050.png" t="Include" />
             <e p="00a40a9c-32dd-4099-b452-1acf365aa03a_Wap102 (1) (copy).jpg" t="Include" />
+            <e p="012241bc-d9bd-4ac9-ab73-2e96d1133e19_6-5.jpg" t="Include" />
             <e p="0d293621-7c15-4c0e-a820-6198009f6015_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
+            <e p="0f384c5e-3cff-48d9-ad21-4922c2e532d8_unnamed.jpg" t="Include" />
+            <e p="1025fb6f-c721-44bc-bc6c-8863f098a756_Adidas-Ultra-Boost-4-0-Running-White-Product.jpg" t="Include" />
             <e p="10c43fe8-0fe9-4dfb-84fe-ead55a4d2fb4_img-detail-01.jpg" t="Include" />
             <e p="1248d9c8-37be-4cb9-bf38-061c1f56ac9f_Wap102 (1).jpg" t="Include" />
             <e p="14ce1271-58c9-41bb-a6bd-9fcc1b8531bd_img-detail-05.jpg" t="Include" />
@@ -3230,6 +3253,7 @@
             <e p="39518ad3-14b0-4c2e-af31-cbc71a70f2e9_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="396d5372-4cac-4700-b5d4-d296f7bd9e5f_anh-hacker-noi-tieng_025626549 (copy).jpg" t="Include" />
             <e p="399c1424-fa98-40f8-b17c-38191a66d253_5f734354-59a8-4184-a434-bc5f88b4359b_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
+            <e p="3b78860e-1d1f-4b1b-bdcc-678f64f15912_upload.jpg" t="Include" />
             <e p="3c2c73c4-9665-46bf-a6be-d33909f9464e_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="3cd4fcb5-e77e-476e-bc80-9d238d329687_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="3e74ef7d-ced1-4ec3-83e5-511c6004d05c_img-product-03.jpg" t="Include" />
@@ -3252,6 +3276,7 @@
             <e p="5a6c07a9-be05-42d0-b7b4-1ac0b9f1c555_hinh-anh-nhung-chu-cho-de-thuong-nhat.jpg" t="Include" />
             <e p="5deb5dae-b9c4-4810-b58c-767ecae6baf9_nmd.jpg" t="Include" />
             <e p="5df170a5-e41b-473f-a8d2-4544f36db5f9_hinh-anh-hacker-anonymous_025627409.jpg" t="Include" />
+            <e p="5ee4d694-f963-438f-ab00-033311ae0436_nmd.jpg" t="Include" />
             <e p="5f734354-59a8-4184-a434-bc5f88b4359b_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="6339e46e-bdd2-47a4-b7ca-9af0473d8d3f_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="63b210e9-79df-4fc6-8e45-dd65fc41a236_Screenshot from 2020-01-15 15-23-07.png" t="Include" />
@@ -3278,6 +3303,7 @@
             <e p="9835fd55-7c00-46b9-b2e0-ad9c8d65a13d_Wap102 (1) (copy).jpg" t="Include" />
             <e p="9a891ec2-aba8-4e83-a490-6501d71e6f9a_anh-hacker-noi-tieng_025626549.jpg" t="Include" />
             <e p="9b9a4432-68a4-4b2f-910e-dfc135b54371_Wap102 (1).jpg" t="Include" />
+            <e p="9c2e88b5-1da5-4a38-abf2-6ab8398713f1_adidas-yeezy-350-cream-white.jpg" t="Include" />
             <e p="9c57b0f5-3e27-4c84-92f5-a3eee0954d91_img-product-04.jpg" t="Include" />
             <e p="9d07dd02-00a4-4a90-a772-0d17cb12ec92_87288546_854735801701716_6191215311602057216_n.jpg" t="Include" />
             <e p="9dddfea3-82c2-4dd4-92db-495bb6e48801_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
@@ -3285,6 +3311,7 @@
             <e p="a4e0f2c5-6855-4720-8bf3-22a5aeca7e8a_photo-1-15611010487262059848050.png" t="Include" />
             <e p="a6e4b835-9a51-4fb4-89d9-1813445dc228_hinh-anh-hacker-anonymous_025627409.jpg" t="Include" />
             <e p="a9ab4688-26f8-4dde-8012-04fa21e9b37f_Wap102 (1).jpg" t="Include" />
+            <e p="aa2e2d25-4679-4a2d-bea1-8328a61be750_unnamed.jpg" t="Include" />
             <e p="aacd8b80-5525-4626-9ae7-47f67c2e8f86_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="ab50e3d1-6e38-4142-a1f0-5b9b611c3b63_3691giay-the-thao-unisex-vans-old-skool-vn-0d3hy28.jpg" t="Include" />
             <e p="ab7b4246-950d-4451-a000-04b4ec99f9f4_img-product-04.jpg" t="Include" />
@@ -3294,6 +3321,7 @@
             <e p="b25b109f-d9dc-4081-bd5d-32f4af5e0088_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="b3c479eb-3c7c-40af-8ef4-2a2576e91c2d_3691giay-the-thao-unisex-vans-old-skool-vn-0d3hy28.jpg" t="Include" />
             <e p="b9b5943f-1d36-41dd-b3c4-f48fc55ad2e5_hinh-anh-nhung-chu-cho-de-thuong-nhat.jpg" t="Include" />
+            <e p="b9b7b20f-512c-484c-a6e1-2552ff92509a_3691giay-the-thao-unisex-vans-old-skool-vn-0d3hy28.jpg" t="Include" />
             <e p="ba0e15bf-f88c-4790-aa0f-c0f6a79d12bc_Wap102 (1).jpg" t="Include" />
             <e p="bai-viet-1.jpg" t="Include" />
             <e p="bai-viet-2.jpg" t="Include" />
@@ -3312,6 +3340,7 @@
             <e p="d26582fd-ab31-425d-8b8e-d853f7a2e7d7_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="d43698a0-eefe-4ac8-b402-66e553740811_Wap102 (1).jpg" t="Include" />
             <e p="d6207007-0ea4-444c-a956-15b9bd160dd4_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
+            <e p="d64c6418-13f9-49a8-90b0-19dc5a0f5595_6-5.jpg" t="Include" />
             <e p="d71c23e1-58d4-43ea-bdd8-aa712a00fe5c_Screenshot from 2020-01-15 15-23-07.png" t="Include" />
             <e p="d9233edd-8017-4a67-9ccd-bfb833be4b02_img-product-02.jpg" t="Include" />
             <e p="dc992e34-3d17-4d52-bd83-f13f9f155b0b_Black-Wallpaper-anh-nen-mau-den-15.jpg" t="Include" />
@@ -3324,6 +3353,9 @@
             <e p="e399db81-d2c3-4f94-96e9-0d68713168ec_6-5.jpg" t="Include" />
             <e p="e4276851-ef09-4c10-9578-dad5060f07e3_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="e82c4ab7-4887-415c-b815-bd7fe04b5dfd_2127110712782716256153972203256067781783239n-1508668439694-1510242550909.jpg" t="Include" />
+            <e p="e84ce927-bf13-410f-9dab-7351eea13314_unnamed.jpg" t="Include" />
+            <e p="e8d7dcc1-a957-4367-a608-84cb7c71c67b_unnamed.jpg" t="Include" />
+            <e p="e9c59f7c-4027-4b05-a675-55235becc244_f36324_01_standard.jpg" t="Include" />
             <e p="ebb1081c-cf98-4c31-bd88-58b59e39014a_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="ebf15d85-80eb-44e2-8dbc-a2bc32692335_Converse-Example-1-Convert-Your-Shoe-Size.jpg" t="Include" />
             <e p="ec8e704f-6827-4214-a557-49f895893d71_hinh-anh-hacker-anonymous_025627409.jpg" t="Include" />
@@ -3332,6 +3364,7 @@
             <e p="f26131b7-b734-46d3-bc08-5b59ecd4a23d_Wap102 (1) (copy).jpg" t="Include" />
             <e p="f666ffa4-dc5e-42fb-b3a5-73fd2329a5b7_unnamed.jpg" t="Include" />
             <e p="fad38c84-80d2-49d3-80b8-6e4985a9078e_images.jpeg" t="Include" />
+            <e p="favicon.png" t="Include" />
             <e p="fe1fba42-1507-49aa-845a-836321add739_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="fea10810-1178-4342-a7b1-d16a927122b6_5d828e8d6f24eb1eb5148f5c.jpg" t="Include" />
             <e p="img-about-page.jpg" t="Include" />
@@ -3345,6 +3378,7 @@
             <e p="img-product-03.jpg" t="Include" />
             <e p="img-product-04.jpg" t="Include" />
             <e p="img-product-05.jpg" t="Include" />
+            <e p="logo.png" t="Include" />
             <e p="quang-cao-11.jpg" t="Include" />
             <e p="quang-cao-12.jpg" t="Include" />
             <e p="quang-cao-5.jpg" t="Include" />

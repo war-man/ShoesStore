@@ -41,8 +41,7 @@ namespace CoV.Service.Service
         public IEnumerable<ColorProductViewModel> GetAll()
         {
             var colorProducts = _unitOfWork.ColorProductRepository.GetAll();
-            var colorProductViewModels = _mapper.Map<IEnumerable<ColorProductViewModel>>(colorProducts);
-            return colorProductViewModels ;
+            return _mapper.Map<IEnumerable<ColorProductViewModel>>(colorProducts);
         }
     }
 }

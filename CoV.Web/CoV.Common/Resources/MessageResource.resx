@@ -311,4 +311,8 @@
   <data name="MinlengthNumber" xml:space="preserve">
     <value>Tối thiểu 9 ký tự</value>
   </data>
+  <data name="ProductdetailNull" xml:space="preserve">
+        <value>Sản phẩm đã tồn tại</value>
+  </data>
+
 </root>

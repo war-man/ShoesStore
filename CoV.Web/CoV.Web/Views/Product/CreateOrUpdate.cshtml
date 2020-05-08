@@ -14,36 +14,29 @@
                     <div class="col-6">
                         <div class="form-group">
                             <label >Tên sản phẩm </label>
-                            <input class="form-control" placeholder="....." required asp-for="name">
+                            <input class="form-control" placeholder="Tên sản phẩm" required asp-for="Name" required>
                         </div>
 
                         <div class="form-group">
                             <label >Mã sản phẩm</label>
-                            <input class="form-control" placeholder="....." asp-for="Sku">
+                            <input class="form-control" placeholder="Mã " asp-for="Sku" required>
                         </div>
 
                         <div class="form-group">
                             <label >Giá sản phẩm</label>
-                            <input class="form-control" placeholder="....." min="0" asp-for="Price">
+                            <input class="form-control" placeholder="Giá"   min="0" asp-for="Price"  min="1" type='number' step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
                         </div>
-
+                        
+                        <div class="form-group">
+                            <label >Giá khuyến mại</label>
+                            <input class="form-control" placeholder="Giá"  min="0" asp-for="PriceNew" min="0" min="1" type='number' step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
+                        </div>
+                        
                         <div class="form-group">
                             <label >Mô tả sản phẩm</label>
-                            <input class="form-control" placeholder="....." asp-for="Details">
-                        </div>
-
-                        <div class="form-group">
-                            <label >Kho nhập phẩm</label>
-                            <input class="form-control" placeholder="....." asp-for="AddressProduction">
-                        </div>
-
-                        <div class="form-group">
-                            <label >Số Lượng sản phẩm</label>
-                            <input class="form-control" placeholder="....." min="0" asp-for="Number">
-                        </div>
-                    </div>
-
-                    <div class="col-6">
+                            <input class="form-control" placeholder="Mô tả" asp-for="Details" required>
+                        </div> 
+                        
                         <div class="form-group">
                             <label >Hãng sản phẩm</label>
                             <select class="custom-select" asp-for="MakerProductId">
@@ -54,29 +47,6 @@
                                 }
                             </select>
                         </div>
-
-                        <div class="form-group">
-                            <label >Trạng thái sản phẩm</label>
-                            <select class="custom-select" asp-for="StatusProductId">
-
-                                @foreach (var item in Model.StatusProductViewModels)
-                                {
-                                    <option value="@item.Id">@item.Status</option>
-                                }
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label >Màu sắc</label>
-                            <select class="custom-select" asp-for="ColorProductId">
-
-                                @foreach (var item in Model.ColorProductViewModels)
-                                {
-                                    <option value="@item.Id">@item.Color</option>
-                                }
-                            </select>
-                        </div>
-
                         <div class="form-group">
                             <label >Giới tính </label>
                             <select class="custom-select" asp-for="GenderProductId">
@@ -98,42 +68,44 @@
                                 }
                             </select>
                         </div>
-                        
+
+                    </div>
+
+                    <div class="col-6">
                         <div class="form-group">
-                            <label> Avatar</label>
+                            <label>Hình ảnh mô tả</label>
                             <div class="input-group ">
                                 <div class="custom-file">
-                                    <input id="imgInp" type="file" class="custom-file-input" id="validatedCustomFile" class="rounded-pill" asp-for="photoPath">
-                                    <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                    <input id="imgInp" type="file" class="custom-file-input" id="validatedCustomFile" class="rounded-pill" asp-for="PhotoPath">
+                                    <label class="custom-file-label" for="validatedCustomFile">Chọn ảnh...</label>
                                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                                 </div>
                             </div>
                         </div>
-
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div >
+                                    <input class="custom-file-input" asp-for="AvatarDetails">
+                                    <img id="blah" src="~/Images/@Model.AvatarDetails" alt="Responsive image" class="rounded-pill"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div >
-                            <input class="custom-file-input" asp-for="AvatarDetails">
-                            <img id="blah" src="~/Images/@Model.AvatarDetails" alt="Responsive image" class="rounded-pill"/>
+                    <div class="col-6">
+                        <div style="text-align: center">
+                            <button type="submit" class="btn btn-primary">Tạo/Cập nhật danh mục </button>
                         </div>
                     </div>
-                    <div class="col-4"></div>
+                    <div class="col-6"></div>
+
                 </div>
                 
-                <div class="row">
-                    <div class="col-4"></div>
-                    <div class="col-4">
-                        <div class="card-footer" style="text-align: center">
-                            <button type="submit" class="btn btn-primary">Tạo/Cập nhật sản phẩm </button>
-                        </div>
-                    </div>
-                    <div class="col-4"></div>
-                </div>
-               
-              
+                
             </div>
         </form>
     </div>

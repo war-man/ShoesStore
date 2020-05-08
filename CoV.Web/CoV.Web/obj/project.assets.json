@@ -5360,6 +5360,7 @@
       "type": "package",
       "path": "aspnetcorecurrentrequestcontext/2.0.0",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "aspnetcorecurrentrequestcontext.2.0.0.nupkg.sha512",
         "aspnetcorecurrentrequestcontext.nuspec",
@@ -5725,6 +5726,7 @@
       "type": "package",
       "path": "microsoft.aspnet.session/1.0.0-rc1-final",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/dotnet5.4/Microsoft.AspNet.Session.dll",
         "lib/dotnet5.4/Microsoft.AspNet.Session.xml",
@@ -9159,6 +9161,7 @@
       "type": "package",
       "path": "serilog.enrichers.aspnetcore.httpcontext/1.0.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/Serilog.Enrichers.AspNetCore.HttpContext.dll",
         "serilog.enrichers.aspnetcore.httpcontext.1.0.1.nupkg.sha512",
@@ -9266,6 +9269,7 @@
       "type": "package",
       "path": "sessionmanager/1.0.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.0/SessionManager.dll",
         "sessionmanager.1.0.1.nupkg.sha512",
