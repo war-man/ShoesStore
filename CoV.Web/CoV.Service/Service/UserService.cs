@@ -24,6 +24,7 @@ namespace CoV.Service.Service
         /// <param name="User"></param>
         /// <returns></returns>
         User Login(LoginModel User);
+        UserViewModel LoginForgetPassword(LoginForgetPassword model);
         
         /// <summary>
         /// Insert a Entity User
@@ -106,11 +107,31 @@ namespace CoV.Service.Service
             }
             return account;
         }
+        
+        /// <summary>
+        /// Check User
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public UserViewModel LoginForgetPassword(LoginForgetPassword model)
+        {
+            var account = _unitOfWork.UserRepository.ObjectContext.Include(s  => s.Role).AsNoTracking()
+                .FirstOrDefault(s => s.UserName.Equals(model.Username)  && s.Password.Equals( model.Password));
+            if (account== null)  
+            {
+                Log.Error(Constants.Document.AccountNotPound);
+            }
+            else
+            {
+                Log.Error(Constants.Document.AccountName + model.Username);
+            }
+            return _mapper.Map<UserViewModel>(account);
+        }
    
         /// <summary>
         /// Create a User
         /// </summary>
-        /// <param name="userDto"></param>
+        /// <param name="model"></param>
         public void CreateOrUpdate(UserViewModel model)
         {
             string uniqueFileName = null;
@@ -132,7 +153,7 @@ namespace CoV.Service.Service
                     var user = _mapper.Map<UserViewModel, User>(model);
                     _unitOfWork.UserRepository.Add(user);
                 }
-                _unitOfWork.Save();            
+                _unitOfWork.SaveAsync();            
         }
 
         /// <summary>
@@ -186,7 +207,6 @@ namespace CoV.Service.Service
         public UserViewModel GetByName(string name)
         {
             var userModel = _unitOfWork.UserRepository.ObjectContext.FirstOrDefault(x => x.UserName == name);
-
             return _mapper.Map<UserViewModel>(userModel);
         }
     }

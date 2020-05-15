@@ -711,3 +711,12 @@
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoesBabyLovely.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/GetAllShoesBabyStyle.g.cshtml.cs
 /home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Product/Search.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Shiper/NhanHang.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Order/OrderBuy.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Account/LoginForgetPassword.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Shiper/DangGiao.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/OrderDetals/Index.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/Shiper/Giaothanhcong.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/OrderDetals/Ferfect.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/OrderDetals/Loading.g.cshtml.cs
+/home/cap/Desktop/ShoesStore/CoV.Web/CoV.Web/obj/Debug/netcoreapp2.2/Razor/Views/OrderDetals/Return.g.cshtml.cs

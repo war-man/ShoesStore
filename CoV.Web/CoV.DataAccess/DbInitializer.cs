@@ -47,7 +47,7 @@ namespace CoV.DataAccess.Data
                 {
                     var user = new User
                     {
-                        UserName = Constants.Role.Admin,
+                        UserName = "admin@gmail.com",
                         Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
@@ -59,7 +59,7 @@ namespace CoV.DataAccess.Data
                     
                     var user2 = new User
                     {
-                        UserName = "Accountant" ,
+                        UserName = "user@gmail.com" ,
                         Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
@@ -71,7 +71,7 @@ namespace CoV.DataAccess.Data
                     
                     var user3 = new User
                     {
-                        UserName = "Employee",
+                        UserName = "employee@gmail.com",
                         Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
@@ -81,16 +81,16 @@ namespace CoV.DataAccess.Data
                     context.Users.Add(user3);
                     context.SaveChanges();
                     
-                    var Shipper = new User
+                    var shipper = new User
                     {
-                        UserName = "Shipper",
+                        UserName = "shipper@gmail.com",
                         Password = Constants.Role.Admin,
                         FirstDate = DateTime.Now,
                         ImageAvatar = Constants.ImageUserDefail.imageAvatar,
                         ExpiredDate = DateTime.MaxValue,
                         RoleId = (int)Common.Infrastructure.Role.Shiper,
                     };
-                    context.Users.Add(Shipper);
+                    context.Users.Add(shipper);
                     context.SaveChanges();
                 }
                 
@@ -438,11 +438,16 @@ namespace CoV.DataAccess.Data
                     {
                         Status = Constants.StatusOrder.DC,
                     };
+                    var status5 = new StatusOrder
+                    {
+                        Status = Constants.StatusOrder.DH,
+                    };
                     context.StatusOrder.Add(status);
                     context.StatusOrder.Add(status1);
                     context.StatusOrder.Add(status2);
                     context.StatusOrder.Add(status3);
                     context.StatusOrder.Add(status4);
+                    context.StatusOrder.Add(status5);
                     context.SaveChanges();
                 }
             }

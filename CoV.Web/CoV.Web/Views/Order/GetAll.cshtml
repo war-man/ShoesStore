@@ -24,7 +24,8 @@
                     <td >Ngày nhập</td>
                     <td >Số lượng </td>
                     <td >Trạng thái</td>
-                    <td style="text-align: center">Update - Delete</td>
+                    <td style="text-align: center">Cập nhật</td>
+                    <td style="text-align: center">Xóa</td>
                 </tr>
                 
                 <tbody>
@@ -42,6 +43,8 @@
                         <td style="color: blue" ><button id="@item.Id" class=" btn btn-primary status">@item.StatusOrder.Status </button> </td> 
                         <td style="text-align: center"> 
                             <a class="btn btn-primary "  asp-route-id="@item.Id"  > <i  class="fas fa-edit"></i></a> 
+                        </td> 
+                        <td style="text-align: center"> 
                             <a class="btn btn-primary "  asp-controller="Order"  asp-action="Delete" asp-route-id="@item.Id"  ><i style="color: red" class="fas fa-trash-alt"></i></a> 
                         </td> 
                     </tr> 
@@ -72,7 +75,7 @@
                         async: true,
                         cache: false,
                         success: function() {
-                            $('#' + id).text("Đang chờ");
+                            $('#' + id).text("Đang chờ Shipper");
                             $('#' + id).css("background-color","red");
                         }
                     });

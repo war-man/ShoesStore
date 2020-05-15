@@ -435,5 +435,17 @@ namespace CoV.Common.Resources {
                 return ResourceManager.GetString("ProductdetailNull", resourceCulture);
             }
         }
+        
+        public static string skuProductKey {
+            get {
+                return ResourceManager.GetString("skuProductKey", resourceCulture);
+            }
+        }
+        
+        public static string UserNameExist {
+            get {
+                return ResourceManager.GetString("UserNameExist", resourceCulture);
+            }
+        }
     }
 }

@@ -76,11 +76,14 @@ namespace CoV.Web
             services.AddScoped<IOrderService, OrderService>();
             services.AddScoped<IOrderStatusService, OrderStatusService>();
             services.AddScoped<IProductDetailsService, ProductDetailsService>();
+            services.AddScoped<IOrderDetailsService, OrderDetailsService>();
 
             services.AddTransient<IValidator<LoginModel>, LoginValidation>();
             services.AddTransient<IValidator<UserViewModel>, UserViewValidation>();
             services.AddTransient<IValidator<CustomerViewModel>,CustomerCreateValidation>();
             services.AddTransient<IValidator<loginCustomerViewModel>, CustomerLoginValidation>();
+            services.AddTransient<IValidator<LoginForgetPassword>, LoginAccountValidate>();
+            services.AddTransient<IValidator<ProductViewModel>, CreateProductValidate>();
 
             //add mapping
             //services.AddAutoMapper(typeof(UserMapper.UserMapping));
@@ -98,6 +101,7 @@ namespace CoV.Web
             services.AddAutoMapper(typeof(OrderMaper));
             services.AddAutoMapper(typeof(OrderStatusMapper));
             services.AddAutoMapper(typeof(ProductDetailsMapper));
+            services.AddAutoMapper(typeof(OrderDetailsMapper));
 
             // Config authentication
             services.AddAuthentication(options =>

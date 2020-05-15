@@ -278,7 +278,7 @@
     <value> PassWord not found </value>
   </data>
    <data name="PasswordMinLength" xml:space="preserve">
-    <value> PassWord min length 3 word </value>
+    <value> Mật khẩu tối thiểu 5 ký tự </value>
   </data>
      <data name="PasswordMixLength" xml:space="preserve">
     <value> PassWord max length 30 word </value>
@@ -314,5 +314,11 @@
   <data name="ProductdetailNull" xml:space="preserve">
         <value>Sản phẩm đã tồn tại</value>
   </data>
-
+ <data name="skuProductKey" xml:space="preserve">
+        <value>Sản phẩm đã tồn tại</value>
+  </data>
+  
+  <data name="UserNameExist" xml:space="preserve">
+        <value>Tên tài khoản đã tồn tại</value>
+  </data>
 </root>

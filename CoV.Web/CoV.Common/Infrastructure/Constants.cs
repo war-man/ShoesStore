@@ -169,6 +169,7 @@
             public const string HoanHang = "Hoàn Hàng";
             public const string WIN = "Giao thành công";
             public const string DC = "Đang chờ shiper";
+            public const string DH = "Đặt hàng";
         }
         
         public class ImageUserDefail

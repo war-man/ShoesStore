@@ -17,13 +17,11 @@ namespace CoV.DataAccess.Data
         
         public int Size { get; set; } 
         
-        public  string ShipCode { get; set; }
-        
         public DateTime CreateDate { get; set; }
         
         public Product Product { get; set; }
         
-        public int StatusId { get; set; }
+        public int StatusId { get ; set; }
         [ForeignKey("StatusId")]
         public StatusOrder StatusOrder { get; set; }
     }

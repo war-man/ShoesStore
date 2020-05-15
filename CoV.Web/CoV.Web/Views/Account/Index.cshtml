@@ -4,7 +4,6 @@
     ViewBag.Title = "title";
     Layout = "_AdminLayout";
 }
-
     <div class="row">
         <div class="col-12" style="text-align: center">
           <b> <h1> <a  asp-controller="Account" asp-action="Index">DANH SÁCH TÀI KHOẢN QUẢN TRỊ</a></h1></b>
@@ -15,13 +14,14 @@
             <table  id="ShowClass" class="table table-bordered table-hover">
                 <thead class="thead-light">       
                 <tr style="background-color: darkgrey"> 
-                    <td >User Name</td>
-                    <td>ImageAvatar</td>
-                    <td >Police</td>
-                    <td >FirstDate</td>
-                    <td >ExpriredDate</td>
-                    <td>Request</td>
-                    <td style="text-align: center">Update - Delete</td>
+                    <td >Tên tài khoản</td>
+                    <td>Ảnh đại diên</td>
+                    <td >Quyền</td>
+                    <td >Ngày khởi tạo</td>
+                    <td >Hạn sử dụng</td>
+                    <td>Yêu cầu</td>
+                    <td style="text-align: center">Cập nhật</td>
+                    <td style="text-align: center">Xóa </td>
                 </tr>
                 <tbody>
                 @foreach (var item in Model)
@@ -35,6 +35,8 @@
                         <td>@item.Request</td>
                         <td style="text-align: center">
                             <a  asp-route-id="@item.Id" asp-controller="Account" asp-action="CreateOrUpdate"   > <i  class="fas fa-edit"></i></a>
+                        </td>
+                        <td style="text-align: center">
                             <a  asp-route-id="@item.Id" asp-action="Delete" asp-controller="Account"> <i style="color: red" class="fas fa-user-times"></i></a>
                         </td>
                     </tr>

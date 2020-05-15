@@ -25,6 +25,7 @@ namespace CoV.DataAccess.Data
         public  virtual  DbSet<StatusOrder> StatusOrder { get; set; }
         public  virtual  DbSet<SizeProduct> SizeProducts { get; set; }
         public  virtual  DbSet<ProductDetails> ProductDetailses { get; set; }
+        public  virtual  DbSet<OrderDetals> OrderDetalses { get; set; }
         
         /// <summary>
         /// Name Tabel
@@ -59,6 +60,9 @@ namespace CoV.DataAccess.Data
             modelBuilder.Entity<SizeProduct>().ToTable("SizeProduct");
             
             modelBuilder.Entity<ProductDetails>().ToTable("ProductDetails");
+            
+            modelBuilder.Entity<OrderDetals>().ToTable("OrderDetals");
+            
             
         } 
     }

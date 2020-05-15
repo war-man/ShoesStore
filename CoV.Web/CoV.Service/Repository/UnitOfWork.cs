@@ -78,6 +78,11 @@ namespace CoV.Service.Repository
             /// Repository Product Category
             /// </summary>
             IProductDetailsRespository ProductDetailsRespository  { get; }
+            
+            /// <summary>
+            /// Repository Product Category
+            /// </summary>
+            IOrderDetailsRespository OrderDetailsRespository  { get; }
             /// <summary>
             ///  AppDbContext
             /// </summary>
@@ -87,7 +92,9 @@ namespace CoV.Service.Repository
             /// funtion Save 
             /// </summary>
             void Save();
-         }
+
+             Task SaveAsync();
+        }
     
     /// <summary>
     /// Unit of work class
@@ -113,6 +120,7 @@ namespace CoV.Service.Repository
         private CustomerRespository _customerRespository;
         private OrderStatusRespository _orderStatusRespository;
         private ProductDetailsRespository _productDetailsRespository;
+        private OrderDetailsRespository _orderDetailsRespository;
         #endregion
         
         /// <summary>
@@ -299,6 +307,16 @@ namespace CoV.Service.Repository
             }
         }
         
+        /// <summary>
+        /// Initialization product details OrderDetails
+        /// </summary>
+        public  IOrderDetailsRespository OrderDetailsRespository 
+        {
+            get {
+                return _orderDetailsRespository = 
+                    _orderDetailsRespository ?? new OrderDetailsRespository(_appDbContext);
+            }
+        }
         #endregion
         
     }

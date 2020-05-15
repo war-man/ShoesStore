@@ -4,341 +4,551 @@
 @{
     ViewBag.Title = "title";
     Layout = "_FrontEndLayout";
-	var product = (ProductViewModel)ViewBag.product ;
-	var  modelproduct = (List<ProductViewModel>)ViewBag.model ;
-	var listImage = (List<ProductDetailsViewModel>)ViewBag.productDetail ;
-	
+    var product = (ProductViewModel) ViewBag.product;
+    var modelproduct = (List<ProductViewModel>) ViewBag.model;
+    var listImage = (List<ProductDetailsViewModel>) ViewBag.productDetail;
+    var size = (List<ProductDetailsViewModel>) ViewBag.productDetail;
 }
-		<section class="breadcrumb"  >
-			<div class="container p-0"  >
-				<div class="col-md-12">
-					<ul>
-						<li>
-							<a href="#">
-							</a>
-						</li>
-						<li>
-							<a href="#">
-								Giành cho bạn 
-							</a>
-						</li>
-						<li >
-							<label >@product.Name</label>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</section>
 
-		<section class='detail-product' >
-			<div class='container p-0'>
-				<div class='row'>
-					<div class="col-md-6">
-						<div class="slide-img-detail">
-							<div id='ninja-slider'>
-								<div class='slider-inner'>
-									<ul class='pt-max'>
-										@foreach (var item in listImage)
-										{
-											<li>
-												<a class='ns-img' href="/Images/@item.AvatarDetails"></a>
-											</li>
-										}
-										<li>
-											<a class='ns-img' href="/Images/@product.AvatarDetails"></a>
-										</li>
+<style>
+    .select-style {
+        border: 1px solid #ccc;
+        width: 120px;
+        border-radius: 3px;
+        overflow: hidden;
+        /*background: #fafafa url("/Images/Bitis_Hunter.jpg") no-repeat 90% 50%;*/
+    }
 
-									</ul>
-									<div class='fs-icon'></div>
-									<div id='thumbnail-slider'>
-										<div class='inner'>
-											<ul>
-												@foreach (var item in listImage)
-												{
-													<li>
-														<a class='thumb' href="/Images/@item.AvatarDetails"></a>
-													</li>
-												}
-												<li>
-													<a class='thumb' href="/Images/@product.AvatarDetails"></a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class='col-md-6'>
-						<h1 class='name-product'>
-							<strong><b>@product.Name</b></strong>
-						</h1>
-						<div class='rate-product'>
-							<i class='fas fa-star rated'></i>
-							<i class='fas fa-star rated'></i>
-							<i class='fas fa-star rated'></i>
-							<i class='fas fa-star rated'></i>
-							<i class='fas fa-star rated'></i>
-						</div>
-						<div class='priceNew' style="font-size: 40px; color: red;">
-							@product.PriceNew
-						</div>
-						<del class="price" style="font-size: 20px; color: black; opacity: 0.5">
-							@product.Price
-						</del>
-						<div class='summary-product'>
-							<b>@product.Details</b>
-						</div>
-						<div class='list-code'>
-							<div class='item-list'><b>Mã sản phẩm : <b>@product.Sku</b></b>0010
-							</div>
-							<div class='item-list'>
-								<b>Tình trạng :</b>
-								<b>còn hàng</b>
-							</div>
-							<div class='item-list'>
-								<b>Thưởng hiệu :</b>
-								<b> @product.MakerProduct.MakerName</b>
-							</div>
-						</div>
-						<div class='row' style="margin-top: 20px">
+    .select-style select {
+        padding: 5px 8px;
+        width: 130%;
+        border: none;
+        box-shadow: none;
+        background: transparent;
+        background-image: none;
+        -webkit-appearance: none;
+    }
+
+    .select-style select:focus { outline: none; }
+</style>
+
+<section class="breadcrumb">
+    <div class="container p-0">
+        <div class="col-md-12">
+            <ul>
+                <li>
+                    <a href="#">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        Giành cho bạn
+                    </a>
+                </li>
+                <li >
+                    <label >@product.Name</label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class='detail-product'>
+    <div class='container p-0'>
+        <div class='row'>
+            <div class="col-md-6">
+                <div class="slide-img-detail">
+                    <div id='ninja-slider'>
+                        <div class='slider-inner'>
+                            <ul class='pt-max'>
+                                @foreach (var item in listImage)
+                                {
+                                    <li>
+                                        <a class='ns-img' href="/Images/@item.AvatarDetails"></a>
+                                    </li>
+                                }
+                                <li>
+                                    <a class='ns-img' href="/Images/@product.AvatarDetails"></a>
+                                </li>
+
+                            </ul>
+                            <div class='fs-icon'></div>
+                            <div id='thumbnail-slider'>
+                                <div class='inner'>
+                                    <ul>
+                                        @foreach (var item in listImage)
+                                        {
+                                            <li>
+                                                <a class='thumb' href="/Images/@item.AvatarDetails"></a>
+                                            </li>
+                                        }
+                                        <li>
+                                            <a class='thumb' href="/Images/@product.AvatarDetails"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-6'>
+                <h1 class='name-product'>
+                    <strong>
+                        <b>@product.Name</b>
+                    </strong>
+                </h1>
+                <div class='rate-product'>
+                    <i class='fas fa-star rated'></i>
+                    <i class='fas fa-star rated'></i>
+                    <i class='fas fa-star rated'></i>
+                    <i class='fas fa-star rated'></i>
+                    <i class='fas fa-star rated'></i>
+                </div>
+                <div class='priceNew' style="font-size: 40px; color: red;">
+                    @product.PriceNew
+                </div>
+                <del class="price" style="font-size: 20px; color: black; opacity: 0.5">
+                    @product.Price
+                </del>
+                <div class='summary-product'>
+                    <b>@product.Details</b>
+                </div>
+                <div class='list-code'>
+                    <div class='item-list'>
+                        <b>Mã sản phẩm : <b>@product.Sku</b></b>0010
+                    </div>
+                    <div class='item-list'>
+                        <b>Tình trạng :</b>
+                        <b>còn hàng</b>
+                    </div>
+                    <div class='item-list'>
+                        <b>Thưởng hiệu :</b>
+                        <b> @product.MakerProduct.MakerName</b>
+                    </div>
+                </div>
+                @*<div class='row' style="margin-top: 20px">
 							
 							<div class='col-md-2 p-0' style="text-align: center; margin-top: 5px">
 								<b>Size</b>
 							</div>
 							<div class='col-md-4 p-0'>
 								<div class='form-group qty-product'>
-									<button class='down-qty'>
+									<button class='down-qty' onclick="DownSize()">
 										<i class='fas fa-minus'></i>
 									</button>
 									<input  style="color: #ff0000;" class='form-control' id="Size-Shoes" type='number' min="34" max="45" value="34" type='number' step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
-									<button class='up-qty'>
+									<button class='up-qty' onclick="UpSize()">
 										<i class='fas fa-plus'></i>
 									</button>
 								</div>
 							</div>
-							<div class='col-md-2 p-0' style="text-align: center; margin-top: 5px">
-								<b>Số lượng:</b>
-							</div>
+							<div class='col-md-2 p-0' >
 							<div class='col-md-4 p-0'>
-
-								<div class='form-group qty-product'>
-									<button class='down-qty'>
-										<i class='fas fa-minus'></i>
-									</button>
-									<input class='form-control' style="color: #ff0000;" id="Number-Shoes" type='number' min="1" value="1" type='number' step="5" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
-									<button class='up-qty'>
-										<i class='fas fa-plus'></i>
-									</button>
 								</div>
 							</div>
-						</div>
+						</div>*@
 
+                <div class='row' style="margin-top: 20px; margin-bottom: 10px">
 
-						<div class='row mt-1'>
+                    <div class='col-md-2 p-0' style="text-align: left; margin-top: 5px">
+                        <b>Size</b>
+                    </div>
+                    <div class='col-md-4 p-0'>
+                        <div class="select-style">
+                            <select id="Size-Shoes" style="text-align: center; color: red">
+                                @foreach (var item in size)
+                                {
+                                    <option style="text-align: center; color: red" value="@item.SizeProduct">@item.SizeProduct</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class='col-md-2 p-0'>
+                        <div class='col-md-4 p-0'>
+                        </div>
+                    </div>
+                </div>
 
-							<div class='col-md-6 p-0 btn-open ' style="text-align: center;">
-								<a class="buy" id="@product.Id">
-									<button class='add-to-cart  '>
-										<i class='fas fa-cart-plus'></i>
-									</button>
-									<b>Thêm vào giỏ hàng</b>
-								</a>
+                <div class='row'>
+                    <div class='col-md-2 p-0' style="margin-top: 5px">
+                        <b>Số lượng:</b>
+                    </div>
+                    <div class='col-md-4 p-0'>
 
-							</div>
-							<div class='col-md-6 p-0' style="text-align: left;">
-								<a  asp-controller="Cart" asp-action="Index"  >
-									<button type="submit"  style="margin-top: 22px; font-size: 22px; background-color: #ff0000"  class="btn-danger "> Giỏ hàng</button>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                        <div class='form-group qty-product'>
+                            <button class='down-qty' onclick="DownQuantity()">
+                                <i class='fas fa-minus'></i>
+                            </button>
+                            <input class='form-control' style="color: #ff0000;" id="Number-Shoes" type='number' min="1" value="1" type='number' step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
+                            <button class='up-qty' onclick="UpQuantity()">
+                                <i class='fas fa-plus'></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class='col-md-1 p-0'></div>
+                    <div class='col-md-5 p-0'>
+                        <div style="padding-top: 10px; color: red" id="show-number"></div>
+                    </div>
+                </div>
+
+                <div class='row mt-1'>
+
+                    <div class='col-md-6 p-0 btn-open ' style="text-align: center;">
+                        <a class="buy" id="@product.Id">
+                            <button class='add-to-cart  '>
+                                <i class='fas fa-cart-plus'></i>
+                            </button>
+                        </a>
+                        <span style="">Thêm vào giỏ hàng</span>
+                    </div>
+                    <div class='col-md-6 p-0' style="text-align: left;">
+                        <a asp-controller="Cart" asp-action="Index">
+                            <button type="submit" style="margin-top: 22px; font-size: 22px; background-color: #ff0000" class="btn-danger "> Giỏ hàng</button>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="product-ss">
+<div class="container p-0">
+<div class="row">
+<div class="col-md-12">
+    <h2 class="name-cate">
+        Sản phẩm bán chạy
+    </h2>
+</div>
+<div class="col-md-12">
+<div class="owl-carousel owl-theme product_slide" id="product_slide_men">
+<div class="item">
+    <div class="item-product">
+        <div class="img-item">
+            <a href="#">
+                <img src="images/img-product-01.jpg" alt="">
+            </a>
+        </div>
+        <div class="box-size">
+            <div class="count-size">
+                +7 size
+            </div>
+            <div class="list-size">
+                <span>38</span>
+                <span>39</span>
+                <span>40</span>
+                <span>41</span>
+                <span>42</span>
+                <span>43</span>
+                <span>44</span>
+                <span>45</span>
+            </div>
+        </div>
+
+        <h3 class="name-product">
+            <a href="#">
+                Giày Thể Thao Nam Biti's Hunter X - Summer 2k19 BKL DSMH01000TRG (Trắng)
+            </a>
+        </h3>
+        <div class="price-product">
+            <span>299.000 đ</span>
+            <del>
+                399.000 đ
+            </del>
+        </div>
+        <div class="add-to-cart">
+            <a href="#">
+                Mua hàng
+            </a>
+        </div>
+    </div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</section>
+
 
 <section class='detail-product pb-3'>
-	<div class='container p-0'>
-		<div class='row mt-3'>
-			<div class='col-md-9'>
-				<div class='my-tab info-prod-detail'>
-					<ul class='title-tab'>
-						<li>
-							<a class='active to-tab' data-id='tab-home' href='javascript:void(0)'>Mô tả sản phẩm</a>
-						</li>
-						<li>
-							<a class='to-tab' data-id='tab-about' href='javascript:void(0)'>Thông tin sản phẩm</a>
-						</li>
-					</ul>
-					<div class='txt-tab'>
-						<div class='item-txt-tab block' id='tab-home'>
-							@product.Name đã nâng cấp giày chạy bán chạy nhất của mình, Ultraboost, với phiên bản thứ 19, lần đầu tiên ra mắt vào đầu tháng 12 năm 2018. Giày nhanh chóng được bán hết và sau đó phát hành lại vào cuối tháng 2 với một số màu mới. Là đôi Giày sneaker có kiểu dáng sùng bái – đến nỗi thương hiệu 3 sọc đã mang lại colorway gốc ( Ultraboost 1.0 từ năm 2015) cũng vào cuối tháng 12, cũng nhanh chóng được bán hết. Ở thế hệ giày thứ 5, phiên bản mới của Ultra boost 19 có gì nổi bật? Liệu có khác biệt gì so với các thế hệ trước?
-							<h2>@product.Name 3.0</h2>
-							<p> Phiên bản 3.0 vẫn giữ nguyên form giày, phần upper được tối ưu hóa, cấu trức sườn 2 bên được sửa lại giúp tăng khả năng hỗ trợ, độ ôm chân và khả năng thoáng khí. Upper nhìn tổng thể liền và đồng màu.</p>
-							<h3>vẫn biết rằng</h3>
-							<img alt='' src='~/Images/@product.AvatarDetails'>
-							Ultra Boost 1.0 có phần vải Primeknit, kéo dài từ ngón chân đến giữa bàn chân của giày, phần còn lại của phần trên được làm bằng chất liệu lưới. Vải upper ở giữa là co giãn và có nhiều lỗ. Upper primeknit không bao hết giày mà có phần vải thêu ở gót có màu khác và vải thêu máy.
-							<h2>@product.Name @product.Details</h2>
-							<ul>
-								<li>
-									Đạt mọi tiêu chí về thể thao
-								</li>
-								<li>
-									Đẹp với mọi khách hàng, lứa tuổi
-								</li>
-								<li>
-									Đồng hành trên những chặng đường
-								</li>
-							</ul>
-							
-						</div>
-						<div class='item-txt-tab' id='tab-about'>
-							@product.Name
-							Trải qua 4 thế hệ, đã có những thay đổi khá rõ rệt trong cách sử dụng, phân bố chất liệu nhưng về cơ bản vẫn giữ nguyên thiết kế ban đầu. Thế hệ thứ 4 được cải tiến đáng kể, lượng Boost được tăng đáng kể, lớp vải Upper được dệt dày hơn, cấu trúc upper cùng lồng ren cage, đường sọc may nổi bật khiến đôi giày trông nam tính và nổi bật hơn đáng kể.
-							<img alt='' src='~/Images/@product.AvatarDetails'>						
-						</div>
-						
-					</div>
-				</div>
-			</div>
-			<div class='col-md-3'>
-				<div class='side-bar-detail mt-0'>
-					<div class='blog-related'>
-						<h3 class='title-bar mt-0'>Sản phẩm liên quan</h3>
-						<ul>
-							@foreach (var item in modelproduct)
-							{
-								<li class='row'>
-									<div class='col-md-4 p-0'>
-										<div class='img-related'>
-											<a href='blog-detail.html'>
-												<img alt='' src='~/Images/@item.AvatarDetails'>
-											</a>
-										</div>
-									</div>
-									<div class='col-md-8'>
-										<div class='info-related'>
-											<h3 class='name-related'>
-												<a href='blog-detail.html'>
-													@item.Name
-												</a>
-											</h3>
-											<div class='price-bar'>
-												<b class='color-danger' style="color: #ff0000">@item.PriceNew đ</b>
-												<del>@item.Price đ</del>
-											</div>
-										</div>
-									</div>
-								</li>
-							}
-						</ul>
-					</div>
-					<div class='blog-tags'>
-						<h3 class='title-bar'>Từ khóa</h3>
-						<ul>
-							<li>
-								<a href='#'>Giày đẹp</a>
-							</li>
-							<li>
-								<a href='#'>Giày trẻ chung</a>
-							</li>
-							<li>
-								<a href='#'>
-									Giày công sở
-								</a>
-							</li>
-							<li>
-								<a href='#'>Giày thịnh hành</a>
-							</li>
-							<li>
-								<a href='#'>Giày tiêu dùng</a>
-							</li>
-							<li>
-								<a href='#'>
-									Giày cho trẻ em
-								</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class='container p-0'>
+        <div class='row mt-3'>
+            <div class='col-md-9'>
+                <div class='my-tab info-prod-detail'>
+                    <ul class='title-tab'>
+                        <li>
+                            <a class='active to-tab' data-id='tab-home' href='javascript:void(0)'>Mô tả sản phẩm</a>
+                        </li>
+                        <li>
+                            <a class='to-tab' data-id='tab-about' href='javascript:void(0)'>Thông tin sản phẩm</a>
+                        </li>
+                    </ul>
+                    <div class='txt-tab'>
+                        <div class='item-txt-tab block' id='tab-home'>
+                            @product.Name đã nâng cấp giày chạy bán chạy nhất của mình, Ultraboost, với phiên bản thứ 19, lần đầu tiên ra mắt vào đầu tháng 12 năm 2018. Giày nhanh chóng được bán hết và sau đó phát hành lại vào cuối tháng 2 với một số màu mới. Là đôi Giày sneaker có kiểu dáng sùng bái – đến nỗi thương hiệu 3 sọc đã mang lại colorway gốc ( Ultraboost 1.0 từ năm 2015) cũng vào cuối tháng 12, cũng nhanh chóng được bán hết. Ở thế hệ giày thứ 5, phiên bản mới của Ultra boost 19 có gì nổi bật? Liệu có khác biệt gì so với các thế hệ trước?
+                            <h2>@product.Name 3.0</h2>
+                            <p> Phiên bản 3.0 vẫn giữ nguyên form giày, phần upper được tối ưu hóa, cấu trức sườn 2 bên được sửa lại giúp tăng khả năng hỗ trợ, độ ôm chân và khả năng thoáng khí. Upper nhìn tổng thể liền và đồng màu.</p>
+                            <h3>vẫn biết rằng</h3>
+                            <img alt='' src='~/Images/@product.AvatarDetails'>
+                            Ultra Boost 1.0 có phần vải Primeknit, kéo dài từ ngón chân đến giữa bàn chân của giày, phần còn lại của phần trên được làm bằng chất liệu lưới. Vải upper ở giữa là co giãn và có nhiều lỗ. Upper primeknit không bao hết giày mà có phần vải thêu ở gót có màu khác và vải thêu máy.
+                            <h2>@product.Name @product.Details</h2>
+                            <ul>
+                                <li>
+                                    Đạt mọi tiêu chí về thể thao
+                                </li>
+                                <li>
+                                    Đẹp với mọi khách hàng, lứa tuổi
+                                </li>
+                                <li>
+                                    Đồng hành trên những chặng đường
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class='item-txt-tab' id='tab-about'>
+                            @product.Name
+                            Trải qua 4 thế hệ, đã có những thay đổi khá rõ rệt trong cách sử dụng, phân bố chất liệu nhưng về cơ bản vẫn giữ nguyên thiết kế ban đầu. Thế hệ thứ 4 được cải tiến đáng kể, lượng Boost được tăng đáng kể, lớp vải Upper được dệt dày hơn, cấu trúc upper cùng lồng ren cage, đường sọc may nổi bật khiến đôi giày trông nam tính và nổi bật hơn đáng kể.
+                            <img alt='' src='~/Images/@product.AvatarDetails'>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class='col-md-3'>
+                <div class='side-bar-detail mt-0'>
+                    <div class='blog-related'>
+                        <h3 class='title-bar mt-0'>Sản phẩm tương tự</h3>
+                        <ul>
+                            @foreach (var item in modelproduct)
+                            {
+                                <li class='row'>
+                                    <div class='col-md-4 p-0'>
+                                        <div class='img-related'>
+                                            <a href='blog-detail.html'>
+                                                <img alt='' src='~/Images/@item.AvatarDetails'>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class='col-md-8'>
+                                        <div class='info-related'>
+                                            <h3 class='name-related'>
+                                                <a href='blog-detail.html'>
+                                                    @item.Name
+                                                </a>
+                                            </h3>
+                                            <div class='price-bar'>
+                                                <b class='color-danger' style="color: #ff0000">@item.PriceNew đ</b>
+                                                <del>@item.Price đ</del>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class='blog-tags'>
+                        <h3 class='title-bar'>Từ khóa</h3>
+                        <ul>
+                            <li>
+                                <a href='#'>Giày đẹp</a>
+                            </li>
+                            <li>
+                                <a href='#'>Giày trẻ chung</a>
+                            </li>
+                            <li>
+                                <a href='#'>
+                                    Giày công sở
+                                </a>
+                            </li>
+                            <li>
+                                <a href='#'>Giày thịnh hành</a>
+                            </li>
+                            <li>
+                                <a href='#'>Giày tiêu dùng</a>
+                            </li>
+                            <li>
+                                <a href='#'>
+                                    Giày cho trẻ em
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <div class="nen-mo"></div>
 <div class="hop-thoai">
-	<i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%;" class="far fa-check-circle "></i>
-	<h3 style="color: white;">Sản phẩm được thêm vào giỏ hàng</h3>
+    <i style="font-size: 120px; color: #00bfa5; padding-left: 35%; margin-top: 5%; margin-bottom: 5%;" class="far fa-check-circle "></i>
+    <h3 style="color: white;">Sản phẩm được thêm vào giỏ hàng</h3>
 </div>
 
 <div class="nen-mo-login"></div>
 <div class="hop-thoai-login">
-	<i style="font-size: 120px; color: #00bfa5; padding-left: 32%; margin-top: 7%; margin-bottom: 5%; color: red" class="fab fa-amazon-pay"></i>
-	<h3 style="color: white;">Vui lòng đăng nhập để mua hàng </h3>
+    <i style="font-size: 120px; color: #00bfa5; padding-left: 32%; margin-top: 7%; margin-bottom: 5%; color: red" class="fab fa-amazon-pay"></i>
+    <h3 style="color: white;">Vui lòng đăng nhập để mua hàng </h3>
+</div>
+
+<div class="nen-mo-max"></div>
+<div class="hop-thoai-max">
+    <i style="font-size: 80px; color: #00bfa5; padding-left: 40%; margin-top: 7%; margin-bottom: 5%; color: red" class="fas fa-exclamation-triangle"></i>
+    <h3 style="color: white;">Hiệp tai số lượng không đủ , vui lòng chọn lại </h3>
 </div>
 
 @section Scripts
 {
-	<script>
-		var SessionEmail = '@HttpContextAccessor.HttpContext.Session.GetString("SessionName")';
-	    $(document).ready(function() {
-	        $('.btn-open').on('click',
-	            (function(event) {
-	                event.preventDefault();
-	                if (SessionEmail == "") {
-	                    $('.hop-thoai-login').addClass('hien-ra-login');
-	                    $('.nen-mo-login').addClass('hien-ra-login');
-	                    setTimeout(function() {
-	                            $('.hop-thoai-login').removeClass('hien-ra-login');
-	                            $('.nen-mo-login').removeClass('hien-ra-login');
-	                        },
-	                        1500);
-	                } else {
-	                    $('.hop-thoai').addClass('hien-ra');
-	                    $('.nen-mo').addClass('hien-ra');
-	                    setTimeout(function() {
-	                            $('.hop-thoai').removeClass('hien-ra');
-	                            $('.nen-mo').removeClass('hien-ra');
-	                        },
-	                        1000);
-	                }
-	            }));
-	    });
-		
-	    //mua hang luong don hang
-	    $(document).ready(function() {
-	        $(".buy").off('click').on('click',
-	            function(e) {
-	                var id = $(this).attr("id");
-	                var size = parseInt($("#Size-Shoes").val());
-	                var quantity = parseInt($("#Number-Shoes").val());
-	                e.preventDefault();
-	                $.ajax({
-	                    url: '@Url.Action("Buy", "Cart")',
-	                    type: "GET",
-	                    contentType: "application/json; charset=utf-8",
-	                    dataType: "json",
-	                    data: {
-	                        id: id,
-	                        size: size,
-	                        quantity: quantity
-	                    },
-	                    async: true,
-	                    cache: false,
-	                    success: function() {
-	                    }
-	                });
-	            });
-	    });
+    <script src="~/Frontend/js/thumbnail-slider.js"></script>
+    <script src="~/Frontend/js/ninja-slider.js"></script>
+    <script>
+        var SessionEmail = '@HttpContextAccessor.HttpContext.Session.GetString("SessionName")';
+        $(document).ready(function() {
+            $('.btn-open').on('click',
+                (function(event) {
+                    event.preventDefault();
+                    if (SessionEmail == "") {
+                        $('.hop-thoai-login').addClass('hien-ra-login');
+                        $('.nen-mo-login').addClass('hien-ra-login');
+                        setTimeout(function() {
+                                $('.hop-thoai-login').removeClass('hien-ra-login');
+                                $('.nen-mo-login').removeClass('hien-ra-login');
+                            },
+                            1500);
+                    } else {
+                        var quantity = parseInt($("#Number-Shoes").val());
+                        if ($("#Number-Shoes").attr("max") < quantity) {
+                            $('.hop-thoai-max').addClass('hien-ra-max');
+                            $('.nen-mo-max').addClass('hien-ra-max');
+                            setTimeout(function() {
+                                    $('.hop-thoai-max').removeClass('hien-ra-max');
+                                    $('.nen-mo-max').removeClass('hien-ra-max');
+                                },
+                                1500);
+                        } else {
+                            $('.hop-thoai').addClass('hien-ra');
+                            $('.nen-mo').addClass('hien-ra');
+                            setTimeout(function() {
+                                    $('.hop-thoai').removeClass('hien-ra');
+                                    $('.nen-mo').removeClass('hien-ra');
+                                },
+                                1000);
+                        }
 
-	    //format jquery format number to currency
+                    }
+                }));
+        });
 
-	    var input = $(".priceNew").html();
-	    var output = parseInt(input).toLocaleString();
-	    $(".priceNew").text(output + " VND");
-	    var input = $(".price").html();
-	    var output = parseInt(input).toLocaleString();
-	    $(".price").text(output + " VND");
+        //mua hang luong don hang
+        $(document).ready(function() {
+            $(".buy").off('click').on('click',
+                function(e) {
+                    var id = $(this).attr("id");
+                    var size = parseInt($("#Size-Shoes").val());
+                    var quantity = parseInt($("#Number-Shoes").val());
+                    e.preventDefault();
+                    $.ajax({
+                        url: '@Url.Action("Buy", "Cart")',
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        data: {
+                            id: id,
+                            size: size,
+                            quantity: quantity
+                        },
+                        async: true,
+                        cache: false,
+                        success: function(resuls) {
 
-	</script>
+
+                        }
+                    });
+                });
+        });
+
+        $(document).ready(function() {
+            $("#Size-Shoes").off('keyup click change mouseleave').on('keyup click change mouseleave',
+                function(e) {
+                    e.preventDefault();
+                    var size = parseInt($(this).val());
+                    var id = parseInt($(".buy").attr("id"));
+                    if (size >= 34 && size <= 45) {
+                        $.ajax({
+                            url: '@Url.Action("CkeckNumber", "Cart")',
+                            type: "GET",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: {
+                                id: id,
+                                size: size
+                            },
+                            async: true,
+                            cache: false,
+                            success: function(result) {
+                                $("#show-number").text("Còn " + result + " Sản phẩm có sẵn");
+                                $("#Number-Shoes").attr("max", parseInt(result));
+                            }
+                        });
+                    }
+                });
+        });
+
+
+        $(document).ready(function() {
+            $("#Number-Shoes").off('keyup click change mouseleave').on('keyup click change mouseleave',
+                function(e) {
+                    e.preventDefault();
+                    var size = parseInt($("#Size-Shoes").val());
+                    var id = parseInt($(".buy").attr("id"));
+                    if (size >= 34 && size <= 45) {
+                        $.ajax({
+                            url: '@Url.Action("CkeckNumber", "Cart")',
+                            type: "GET",
+                            contentType: "application/json; charset=utf-8",
+                            dataType: "json",
+                            data: {
+                                id: id,
+                                size: size
+                            },
+                            async: true,
+                            cache: false,
+                            success: function(result) {
+                                $("#show-number").text("Còn " + result + " Sản phẩm có sẵn");
+                                $("#Number-Shoes").attr("max", parseInt(result));
+                            }
+                        });
+                    }
+                });
+        });
+
+
+        function UpQuantity() {
+            var quantity = parseInt($('#Number-Shoes').val());
+            var max = $('#Number-Shoes').attr('max');
+            if (quantity >= 0 && quantity < max) {
+                $('#Number-Shoes').val(quantity + 1);
+            }
+        }
+
+        function DownQuantity() {
+            var quantity = parseInt($('#Number-Shoes').val());
+            if (quantity > 0) {
+                $('#Number-Shoes').val(quantity - 1);
+            }
+        }
+
+
+        //format jquery format number to currency
+
+        var input = $(".priceNew").html();
+        var output = parseInt(input).toLocaleString();
+        $(".priceNew").text(output + " VND");
+        var input = $(".price").html();
+        var output = parseInt(input).toLocaleString();
+        $(".price").text(output + " VND");
+
+    </script>
 }

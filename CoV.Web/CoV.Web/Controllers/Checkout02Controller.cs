@@ -25,7 +25,7 @@ namespace CoV.Web.Controllers
         public IActionResult Checkout02()
         {
             // return cart
-            var sessionName = HttpContext.Session.GetString("SessionName");
+            var sessionName = HttpContext.Session.GetString("SessionPhone");
             var cart = SessionHelper.GetObjectFromJson<List<CartViewModel>>(HttpContext.Session, "cart");
             var cartCustomer = cart.FindAll(x => x.Name == sessionName);
             ViewBag.cart = cartCustomer;

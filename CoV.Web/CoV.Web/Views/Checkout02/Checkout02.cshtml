@@ -32,7 +32,7 @@
 						</h2>
 					</div>
 					<div class='col-md-6'>
-						<form action='#' class='sl-payment'>
+						<form enctype="multipart/form-data"  class='sl-payment' asp-controller="Order" asp-action="CreateOrder" method="get">
 							<div class='list-ship'>
 								<h2 class='title-sl-payment'>1. Chọn hình thức vận chuyển</h2>
 								
@@ -91,8 +91,8 @@
 								</div>
 							</div>
 						
-								<a class='to-checkout' asp-action="CreateOrder" asp-controller="Order" >
-									<button class='btn-blue w-100 mt-2' type='button'>
+								<a class='to-checkout'  >
+									<button class='btn-blue w-100 mt-2' type='submit'>
 										Hoàn tất đơn hàng
 									</button>
 								</a>

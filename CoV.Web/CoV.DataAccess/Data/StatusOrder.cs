@@ -11,5 +11,7 @@ namespace CoV.DataAccess.Data
         public string Status  { get; set; }
         
         public  ICollection<Order> Orders { get; set; }
+        public  ICollection<OrderDetals> Detalses { get; set; }
+        
     }
 }

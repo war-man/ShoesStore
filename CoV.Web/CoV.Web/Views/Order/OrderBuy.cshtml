@@ -1,0 +1,86 @@
+﻿@model IEnumerable<CoV.Service.DataModel.OrderViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+ <div class="row">
+        <div class="col-12">
+            <h1 style="text-align: center" ><a  asp-controller="Product" asp-action="GetAll">Danh sách đơn hàng </a></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+            <table  id="ShowClass" class="table table-bordered table-hover">
+                <thead class="thead-light">       
+                <tr style="background-color: darkgrey">
+                    <td >Tên khách hàng </td>
+                    <td >Tên sản phẩm </td>
+                    <td >Mã Sản phẩm</td>
+                    <td > TổngGiá</td>
+                    <td > Size</td>
+                    <td > Ảnh</td>
+                    <td >Ngày nhập</td>
+                    <td >Số lượng </td>
+                    <td >Trạng thái</td>
+                    <td style="text-align: center">Update - Delete</td>
+                </tr>
+                
+                <tbody>
+                @foreach(var item in Model)
+                { 
+                    <tr style="text-align: center" > 
+                        <td >@item.Name</td> 
+                        <td >@item.Product.Name</td> 
+                        <td >@item.Product.Sku</td> 
+                        <td >@item.TotalPrice</td> 
+                        <td >@item.Size</td> 
+                        <td  style="width: 20px; height: 20px" ><img src="~/Images/@item.Product.AvatarDetails"/></td> 
+                        <td >@item.CreateDate</td> 
+                        <td >@item.Quantity</td> 
+                        <td style="color: blue" ><button id="@item.Id" class=" btn btn-primary status">@item.StatusOrder.Status </button> </td> 
+                        <td style="text-align: center"> 
+                            <a class="btn btn-primary "  asp-route-id="@item.Id"  > <i  class="fas fa-edit"></i></a> 
+                            <a class="btn btn-primary "  asp-controller="Order"  asp-action="Delete" asp-route-id="@item.Id"  ><i style="color: red" class="fas fa-trash-alt"></i></a> 
+                        </td> 
+                    </tr> 
+                } 
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+@section Scripts{
+    <script>    
+        $(document).ready(function() {
+          
+            $(".status").on('click',
+                function(e) {
+                    e.preventDefault();
+                    //id order
+                    var id = e.target.id;
+
+                    $.ajax({
+                        url: '@Url.Action("UpdateStatus", "Order")',
+                        type: "GET",
+                        contentType: "application/json; charset=utf-8",
+                        dataType: "json",
+                        data: { 'id': id},
+                        async: true,
+                        cache: false,
+                        success: function() {
+                            $('#' + id).text("Đang chờ Shipper");
+                            $('#' + id).css("background-color","red");
+                        }
+                    });
+                });
+            $('#ShowClass').DataTable();
+
+        });
+    </script>
+
+}
+

@@ -26,6 +26,7 @@ namespace CoV.Service.Service
         /// <returns></returns>
         ProductDetailsViewModel GetById(int id);
         IEnumerable<ProductDetailsViewModel> GetByIdCart(int id);
+         ProductDetailsViewModel CheckProductDetails(int id, int size);
 
 
         /// <summary>
@@ -165,18 +166,28 @@ namespace CoV.Service.Service
         /// <returns></returns>
         public ProductDetailsViewModel GetByProductColor(int productId , int size)
         {
-            var productdetails = _unitOfWork.ProductDetailsRespository.ObjectContext
+            var productdetails = _unitOfWork.ProductDetailsRespository.ObjectContext.AsNoTracking()
                 .FirstOrDefault(x => 
                     x.ProductId.Equals(productId) && 
                     x.SizeProduct.Equals(size));
             return _mapper.Map<ProductDetailsViewModel>(productdetails);
         }
         
-        public IEnumerable<ProductDetailsViewModel> GetByIdCart(int id)
+        public IEnumerable<ProductDetailsViewModel> GetByIdCart(int id )
         {
             var productNew = _unitOfWork.ProductDetailsRespository.ObjectContext.Where(x =>x.ProductId.Equals(id));
             return _mapper.Map<List<ProductDetailsViewModel>>(productNew);
         }
-     
+
+        /// <summary>
+        /// check product Details
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public ProductDetailsViewModel CheckProductDetails(int id, int size)
+        {
+            var product = _unitOfWork.ProductDetailsRespository.ObjectContext.FirstOrDefault(x =>x.Product.Id.Equals(id) && x.SizeProduct.Equals(size));
+            return _mapper.Map<ProductDetailsViewModel>(product);
+        }
     }
 }

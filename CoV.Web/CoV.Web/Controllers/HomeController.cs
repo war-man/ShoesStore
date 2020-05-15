@@ -105,6 +105,7 @@ namespace CoV.Web.Controllers
 
                 }
             }
+
             ViewBag.model = list;
             return View( );
         }

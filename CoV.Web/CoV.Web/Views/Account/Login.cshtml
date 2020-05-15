@@ -14,7 +14,7 @@
         </span>
         <div asp-validation-summary="ModelOnly" class="text-danger"  style="text-align: center"></div>	
         <div class="wrap-input100 " >
-          <input class="input100" type="text"  asp-for="Username">
+          <input class="input100" type="email"  asp-for="Username">
           <span class="focus-input100"></span>
           <span class="label-input100">Email</span>
           
@@ -24,7 +24,7 @@
         <div class="wrap-input100 validate-input" >
           <input class="input100" type="password" asp-for="Password">
           <span class="focus-input100"></span>
-          <span class="label-input100">Password</span>
+          <span class="label-input100">Mật khẩu</span>
          
         </div>
         <span asp-validation-for="Password" class="text-danger"></span>
@@ -33,13 +33,13 @@
           <div >
             <input class="input-checkbox100" type="checkbox" name="remember-me">
             <label class="label-checkbox100" >
-              Remember me
+              Ghi nhớ
             </label>
           </div>
 
           <div>
-            <a href="#" class="txt1">
-              Forgot Password?
+            <a asp-action="LoginForgetPassword" asp-controller="Account">
+              Đổi mật khẩu?
             </a>
           </div>
         </div>
@@ -47,11 +47,11 @@
 
         <div class="container-login100-form-btn">
           <button class="login100-form-btn">
-            Login
+            Đăng nhập 
           </button>
         </div>
-					
-        <div class="text-center p-t-46 p-b-20">
+        
+        <div class="text-center p-t-46 p-b-20" style="padding-top: 10px;  padding-bottom: 10px;">
           <span class="txt2">
             or sign up using
           </span>
@@ -68,7 +68,7 @@
         </div>
       </form>
 
-      <div class="login100-more" style="background-image: url('/Images/5a6c07a9-be05-42d0-b7b4-1ac0b9f1c555_hinh-anh-nhung-chu-cho-de-thuong-nhat.jpg');">
+      <div class="login100-more" style="background-image: url('/Images/Bitis_Hunter.jpg');">
       </div>
     </div>
   </div>

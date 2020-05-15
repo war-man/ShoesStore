@@ -1,0 +1,64 @@
+﻿@model IEnumerable<CoV.Service.DataModel.OrderDetailsViewModel>
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_AdminLayout";
+}
+
+ <div class="row">
+        <div class="col-12">
+            <h1 style="text-align: center" ><a  asp-controller="Product" asp-action="GetAll">Đơn hàng giao thành công </a></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 table-responsive">
+            <table  id="ShowClass" class="table table-bordered table-hover">
+                <thead class="thead-light">       
+                <tr style="background-color: darkgrey">
+                    <td >Shipper</td>
+                    <td >Tên khách hàng </td>
+                    <td >Số điện thoại </td>
+                    <td >Tên sản phẩm </td>
+                    <td >Số lượng</td>
+                    <td > Tổng tiền </td>
+                    <td >Địa chỉ</td>
+                    <td >Ngày đặt</td>
+                    <td >Ngày Giao</td>
+                    <td >Trạng thái</td>
+                    <td style="text-align: center">Phí ship </td>
+                </tr>
+                
+                <tbody>
+                @foreach(var item in Model)
+                { 
+                    <tr style="text-align: center" > 
+                        <td >@item.Shipper</td> 
+                        <td >@item.NameCustomer</td> 
+                        <td >@item.PhoneNumber</td> 
+                        <td >@item.NameProduct</td> 
+                        <td >@item.NumberProduct SP</td> 
+                        <td >@item.TotalMoney</td> 
+                        <td >@item.Address</td> 
+                        <td >@item.CreateDate</td> 
+                        <td >@item.EndDate</td> 
+                        <td style="color: blue" ><button id="@item.Id" class=" btn btn-primary status">@item.StatusOrder.Status </button> </td> 
+                        <td >30.000 VND</td> 
+                    </tr> 
+                } 
+                </tbody>
+                </thead>
+            </table>
+        </div>
+    </div>
+
+
+@section Scripts{
+    <script>    
+        $(document).ready(function() {
+            $('#ShowClass').DataTable();
+
+        });
+    </script>
+
+}
+

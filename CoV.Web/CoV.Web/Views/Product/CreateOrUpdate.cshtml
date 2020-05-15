@@ -14,14 +14,16 @@
                     <div class="col-6">
                         <div class="form-group">
                             <label >Tên sản phẩm </label>
-                            <input class="form-control" placeholder="Tên sản phẩm" required asp-for="Name" required>
+                            <input class="form-control" placeholder="Tên sản phẩm" required asp-for="Name" >
                         </div>
-
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                        
                         <div class="form-group">
                             <label >Mã sản phẩm</label>
-                            <input class="form-control" placeholder="Mã " asp-for="Sku" required>
+                            <input class="form-control" placeholder="Mã " asp-for="Sku" >
+                            <div asp-validation-summary="ModelOnly" class="text-danger"  style="text-align: center"></div>	
                         </div>
-
+                        <span asp-validation-for="Sku" class="text-danger"></span>
                         <div class="form-group">
                             <label >Giá sản phẩm</label>
                             <input class="form-control" placeholder="Giá"   min="0" asp-for="Price"  min="1" type='number' step="1" onkeyup=" this.value = this.value.replace(/[^0-9]/g, '')">
@@ -34,9 +36,9 @@
                         
                         <div class="form-group">
                             <label >Mô tả sản phẩm</label>
-                            <input class="form-control" placeholder="Mô tả" asp-for="Details" required>
+                            <input class="form-control" placeholder="Mô tả" asp-for="Details" >
                         </div> 
-                        
+                        <span asp-validation-for="Details" class="text-danger"></span>
                         <div class="form-group">
                             <label >Hãng sản phẩm</label>
                             <select class="custom-select" asp-for="MakerProductId">

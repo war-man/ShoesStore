@@ -5,7 +5,6 @@ namespace CoV.Service.DataModel
     /// <summary>
     /// Login View  Model
     /// </summary>
-  
     public class LoginModel
     {
         /// <summary>
@@ -22,10 +21,5 @@ namespace CoV.Service.DataModel
         /// pass Word
         /// </summary>
         public string Password { get; set; }
-        
-        /// <summary>
-        /// role
-        /// </summary>
-        public int Role { get; set; }
     }
 }

@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using CoV.Common.Infrastructure;
+using CoV.Common.Resources;
 using CoV.Service.DataModel;
 using CoV.Service.Service;
 using Microsoft.AspNetCore.Mvc;
@@ -46,8 +48,36 @@ namespace CoV.Web.Controllers
         [HttpPost]
         public IActionResult CreateOrUpdate(ProductViewModel model)
         {
-             _productService.CreateOrUpdate(model);
-            return RedirectToAction("GetAll");
+            if (model.Id <= 0)
+            {
+                if (ModelState.IsValid)
+                {
+                    var product = _productService.GetAll().FirstOrDefault(x=> x.Sku.Equals(model.Sku));
+                    if (product !=null)
+                    {
+                        ModelState.AddModelError(String.Empty, MessageResource.skuProductKey);
+                        var productss = _productService.GetById(model.Id);
+                        return View(productss);
+                    }
+                    else
+                    {
+                        _productService.CreateOrUpdate(model);
+                        return RedirectToAction("GetAll");
+                    }
+                }
+            }
+            else
+            {
+                if (ModelState.IsValid)
+                {
+                
+                        _productService.CreateOrUpdate(model);
+                        return RedirectToAction("GetAll");
+                }
+            }
+            
+            var products = _productService.GetById(model.Id);
+            return View(products);
         }
         
         /// <summary>

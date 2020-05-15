@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Dynamic;
 using CoV.Service.DataModel;
 using System.Security.Claims;
 using System.Threading.Tasks;
@@ -147,8 +148,20 @@ namespace CoV.Web.Controllers
         [ValidateAntiForgeryToken]
         public IActionResult CreateOrUpdate(UserViewModel model)
         {
-            _userService.CreateOrUpdate(model);
-            return Redirect("/Account/index");
+            if (ModelState.IsValid)
+            {
+                _userService.CreateOrUpdate(model);
+                return Redirect("/Account/index");
+            }
+
+            model.Roles = _roleService.GetAll().Select(x => new RoleViewModel()
+            {
+                RoleName = x.RoleName,
+                Id = x.Id
+            }).ToList();
+            var user = _userService.GetbyId(model.Id);
+            user.Roles = model.Roles;
+            return View(user);
         }
 
         /// <summary>
@@ -189,6 +202,53 @@ namespace CoV.Web.Controllers
             user.ExpiredDate = model.ExpiredDate;
             _userService.CreateOrUpdate(user);
             return Redirect("/Student/show");
+        }
+
+        /// <summary>
+        ///  get view model login forget password
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        public IActionResult LoginForgetPassword()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// repose service login forget password
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IActionResult LoginForgetPassword(LoginForgetPassword model)
+        {
+            if (ModelState.IsValid)
+            {
+                if (model.PasswordNew != model.PasswordNewConfigure)
+                {
+                    ModelState.AddModelError(String.Empty, MessageResource.ConfiguePassword);
+                    return View(model);
+                }
+                else
+                {
+                    var user = _userService.LoginForgetPassword(model);
+                    if (user == null)
+                    {
+                        ModelState.AddModelError(String.Empty, MessageResource.UserLoginFailed);
+                        return View(model);
+                    }
+                    else
+                    {
+                        UserViewModel userViewModel = new UserViewModel();
+                        userViewModel = user;
+                        userViewModel.Password = model.PasswordNew;
+                        userViewModel.Id = user.Id;
+                        _userService.CreateOrUpdate(userViewModel);
+                        return Redirect("/Account/Login");
+                    }
+                }
+            }
+
+            return View();
         }
     }
 }

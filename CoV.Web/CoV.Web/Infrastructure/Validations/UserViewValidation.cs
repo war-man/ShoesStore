@@ -11,11 +11,11 @@ namespace CoV.Web.Infrastructure.Validations
     {
         public UserViewValidation()
         {
-            RuleFor(x => x.UserName).NotNull().WithMessage(MessageResource.UserNameNotNull);
-            RuleFor(x => x.UserName).MinimumLength(3).WithMessage(MessageResource.UserNameMaxLength);
+            RuleFor(x => x.UserName).NotNull().WithMessage(MessageResource.NotNullValue);
+            RuleFor(x => x.UserName).MinimumLength(3).WithMessage(MessageResource.MinimumLengthValidator);
                 
-            RuleFor(x => x.Password).NotNull().WithMessage(MessageResource.PassWorkNotNull);
-            RuleFor(x => x.Password).MinimumLength(3).WithMessage(MessageResource.PasswordMinLength);
+            RuleFor(x => x.Password).NotNull().WithMessage(MessageResource.NotNullValue);
+            RuleFor(x => x.Password).MinimumLength(5).WithMessage(MessageResource.PasswordMinLength);
         }
     }
 }
